@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "ff869a5c-6d0a-40a0-b190-d591a10a2d30",
+    "name": "form-with-crud",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}

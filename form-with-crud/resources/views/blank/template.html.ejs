@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-lg-12" ng-include="_$customSections.top" >
+    </div>
+</div>
+<% var children = children; %>
+<% var buildHierarchy = function(childRows) { %>
+    <% childRows.forEach(function (row) { %>
+        <div class="row">
+        <% row.cols.forEach(function (col) { %>
+            <% var className = '';
+
+                for (var breakpoint in col.breakpoints) {
+                    if (typeof col.breakpoints[breakpoint] === 'number') {
+                        className += 'col-' + breakpoint + '-' + col.breakpoints[breakpoint] + ' ';
+                    }
+                }
+
+                for (var hiddenAt in col.hidden) {
+                    if (col.hidden[hiddenAt]) {
+                        className += 'hidden-' + hiddenAt + ' ';
+                    }
+                }
+
+                %>
+
+                <div class="<%= className.trim() %>">
+                    <% if (col.rows.length > 0) { %>
+                        <% buildHierarchy(col.rows); %>
+                    <% } else { %>
+                        <% children.forEach(function (child) { %>
+                            <% if (child.containerUid === col.uniqueID) { %>
+                                <%- buildComponent(child) %>
+                            <% } %>
+                        <% });%>
+                    <% } %>
+                </div>
+            <% }); %>
+        </div>
+    <% }); %>
+<% } %>
+
+<% buildHierarchy(rows); %>

@@ -1,0 +1,12 @@
+<check-box 
+    data-title="<%- title %>"
+    data-id="<%- id %>"
+    <% if (model) { %>
+    data-model="_$viewModels.<%- model %>",
+    <% } else { %>
+    data-model="_$viewModels.<%- id %>",
+    <% } %>
+    data-events="<%- id %>.events"
+    data-default-value="<%- defaultValue %>"
+    data-disabled="<%- disabled %>">
+</check-box>
