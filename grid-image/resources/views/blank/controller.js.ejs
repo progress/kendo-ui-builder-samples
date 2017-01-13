@@ -1,0 +1,72 @@
+(function(angular, kendo){
+
+    'use strict';
+
+    <% var hasInitEvent = !!extension && events.initEventHandler %>
+    <% var hasShowEvent = !!extension && events.showEventHandler; %>
+
+    angular.module('views')
+        .controller('<%= controller %>', ['$scope', '$injector'<% if (hasInitEvent) { %>, 'onInit'<% } %>,function ($scope, $injector<% if (hasInitEvent) { %>, onInit<% } %>) {
+            $scope._$ds = {};
+            $scope._$viewModels = {};
+            $scope.factory = $injector.get('<%= extension %>');
+            $scope._$domReady = false;
+
+            $scope._$customSections = {
+                top:  <% if (customSections.top) { %>'extensions/html/<%- customSections.top %>'<% } else { %>''<% } %>
+            };
+
+            $scope.$on('$includeContentLoaded', function() {
+                $scope._$domReady = true;
+            });
+
+            $scope.$on('$includeContentError', function() {
+                $scope._$domReady = true;
+                console.info('Error loading custom section', $scope._$customSections.top);
+            });
+
+            <% dataSources.forEach((ds) => { %>
+                $scope._$ds['<%-ds.name %>'] = new kendo.data.DataSource(<%- ds.dataSource %>);
+                $scope._$ds['<%-ds.name %>'].bind('error', errorHandler);
+            <% }); %>
+
+            function errorHandler(e) {
+                var transport = e.sender.transport;
+                var tableRef = transport.tableRef;
+                var jsdo = transport.jsdo;
+                var table = tableRef ? jsdo[tableRef] : jsdo;
+                var errors = table.getErrors();
+                var message = e.errorThrown.message;
+
+                message += "<ul>";
+
+                for (var i = 0; i < errors.length; i++) {
+                    message += '<li>' + errors[i].error + '</li>';
+                }
+
+                message += "</ul>";
+
+                $scope.$emit('notification', { type: 'error', message: message});
+            }
+
+            <% dataSources.forEach((ds) => { %>
+               $scope._$viewModels['<%-ds.viewModelName %>'] = $injector.get('dsService').createPristineModel($scope._$ds['<%- ds.name %>']);
+            <% }); %>
+
+            <% if (hasShowEvent) { %>
+            $scope.$on('$viewContentLoaded', function(e) {
+                $scope.factory['<%= events.showEventHandler %>'](e.currentScope<% if (hasInitEvent) { %>, onInit<% } %>);
+            });
+            <% } %>
+
+            <% children.forEach((comp) => { %>
+            $scope['<%- comp.id %>'] = <%- comp.options %>;
+            <% }); %>
+
+            $scope.$on('$destroy', function() {
+                <% dataSources.forEach((ds) => { %>
+                $scope._$ds['<%-ds.name %>'].unbind('error', errorHandler);
+                <% }); %>
+            });
+        }]);
+})(angular, kendo);

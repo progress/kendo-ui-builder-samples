@@ -1,0 +1,12 @@
+{
+    events: {
+        onChange: function(e) {
+            <% if (view.extension && events.onChange) { %>
+                 $scope.factory['<%- events.onChange %>'](e);
+            <% } %>
+        }
+    },
+    validation: {
+        required: <%- validation.required %>
+    }
+}
