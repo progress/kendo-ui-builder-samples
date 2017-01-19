@@ -1,0 +1,10 @@
+<input kendo-slider
+  <% if (typeof defaultValue !== "undefined") { %>
+    value="<%- defaultValue %>" 
+  <% } %>
+    k-small-step="<%- step%>"
+    k-show-buttons="<%- showButtons%>"
+    k-orientation="'<%- orientation.toLowerCase() %>'"
+    k-min="<%- min%>"
+    k-max="<%- max%>"
+/>

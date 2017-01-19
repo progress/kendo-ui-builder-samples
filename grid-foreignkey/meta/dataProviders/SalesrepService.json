@@ -1,0 +1,148 @@
+{
+    "type": "data-provider",
+    "schemaVersion": "1.0",
+    "uniqueID": "d084e4ea-321f-49b1-893d-e826d34ea782",
+    "name": "SalesrepService",
+    "authenticationModel": "Anonymous",
+    "providerType": "Progress Data Service",
+    "serviceUri": "http://oemobiledemo.progress.com/DynamicService",
+    "catalogUris": [
+        "http://oemobiledemo.progress.com/DynamicService/web/DynamicService/catalog/Salesrep"
+    ],
+    "verb": "GET",
+    "children": [
+        {
+            "type": "data-source",
+            "schemaVersion": "1.0",
+            "uniqueID": "b324400d-20de-4a4b-a4bc-d2d75d1ea29b",
+            "name": "Salesrep",
+            "serviceName": "DynamicService",
+            "resourceName": "Salesrep",
+            "tableName": "Salesrep",
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "name": "SalesRep",
+                    "label": "Sales Rep",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "RepName",
+                    "label": "Rep Name",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "Region",
+                    "label": "Region",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "MonthQuota_1",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_2",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_3",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_4",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_5",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_6",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_7",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_8",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_9",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_10",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_11",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "MonthQuota_12",
+                    "label": "Month Quota",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ]
+}

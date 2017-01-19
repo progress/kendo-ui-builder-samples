@@ -1,0 +1,72 @@
+{
+    "type": "module",
+    "schemaVersion": "1.0",
+    "uniqueID": "6cc7e867-a4d1-4020-b9f6-42889043c5bc",
+    "name": "Customers",
+    "description": "Sample view with a grid showing data from the Customer and Salesrep tables.",
+    "thumbnail": {
+        "icon": "fa-cogs",
+        "color": "#ffffff",
+        "background": "#00a2e8"
+    },
+    "moduleType": "default",
+    "children": [
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "f2a04734-4c2e-4e85-a070-458b5bba9a5a",
+            "name": "CustomerDG",
+            "viewType": "data-grid",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide",
+                "onRowSelect": "onRowSelect"
+            },
+            "title": "Customers",
+            "extensionFolderName": "Customers-CustomerDG",
+            "dataProvider": "CustomerService",
+            "dataSource": "Customer",
+            "columns": [
+                {
+                    "field": "CustNum",
+                    "title": "CustNum",
+                    "format": "{0}",
+                    "sortable": true,
+                    "filterable": true,
+                    "encoded": true
+                },
+                {
+                    "field": "Name",
+                    "title": "Name",
+                    "format": "{0}",
+                    "sortable": true,
+                    "filterable": true,
+                    "encoded": true
+                },
+                {
+                    "field": "SalesRep",
+                    "title": "SalesRep",
+                    "format": "{0}",
+                    "sortable": true,
+                    "filterable": true,
+                    "encoded": true
+                }
+            ],
+            "pageSize": 10,
+            "rowTemplateFunction": "rowTemplate",
+            "rowTemplateId": "",
+            "filterable": false,
+            "groupable": false,
+            "resizable": false,
+            "reorderable": false,
+            "sortable": false,
+            "customSections": {
+                "top": "topSection.html",
+                "middle": "middleSection.html",
+                "bottom": "bottomSection.html"
+            }
+        }
+    ]
+}

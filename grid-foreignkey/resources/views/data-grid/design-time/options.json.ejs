@@ -1,0 +1,18 @@
+{
+      "title": "<%- title %>",
+      "options": {
+          "pageable": {
+              <% if (pageSize) { %>
+              "pageSize": <%= pageSize %>,
+              <% } %>
+              "refresh": true
+          },
+          "filterable": <%= filterable %>,
+          "groupable": <%= groupable %>,
+          "resizable": <%= resizable %>,
+          "reorderable": <%= reorderable %>,
+          "sortable": <%= sortable %>,
+          "columns": <%- columns %>,
+          "dataSource": <%- dataSource %>
+      }
+}

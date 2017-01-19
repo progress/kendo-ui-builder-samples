@@ -1,0 +1,12 @@
+<input 
+    kendo-numeric-text-box="vm.widget"
+    id="{{vm.id}}"
+    name="{{vm.id}}"
+    ng-required="vm.validation.required"
+    data-required-msg="{{vm.title}} is required"
+    k-options="vm.options"
+    k-ng-model="vm.model"
+    ng-init="vm.options.defaultValue ? vm.model = vm.options.defaultValue : angular.noop"
+    k-on-change="vm.events.onChange(kendoEvent)" />
+<span class="k-invalid-msg" data-for="{{vm.id}}">
+</span>

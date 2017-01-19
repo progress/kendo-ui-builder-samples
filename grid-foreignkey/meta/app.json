@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "280784e8-c4c7-4e70-9e93-c5f33249b76f",
+    "name": "grid-foreignkey",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}
