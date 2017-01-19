@@ -1,0 +1,11 @@
+<calendar
+    data-id="<%- id %>"
+    data-widget="<%- id %>.widget"
+    <% if (model) { %>
+    data-model="_$viewModels.<%- model %>",
+    <% } else { %>
+    data-model="_$viewModels.<%- id %>",
+    <% } %>
+    data-options="<%- id %>.options"
+    data-events="<%- id %>.events">
+</calendar>

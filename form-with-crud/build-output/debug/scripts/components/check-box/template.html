@@ -1,0 +1,13 @@
+<input 
+    type="checkbox"
+    id="{{vm.id}}"
+    ng-init="vm.defaultValue === 'true' ? vm.model = true : angular.noop"
+    class="k-checkbox"
+    ng-model="vm.model"
+    ng-change="vm.onChange()"
+    ng-disabled="{{vm.disabled}}" />
+<label 
+    class="k-checkbox-label" 
+    for="{{vm.id}}"
+    title="{{vm.title}}">
+</label>

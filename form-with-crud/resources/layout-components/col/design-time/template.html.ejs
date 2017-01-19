@@ -1,0 +1,20 @@
+
+<%
+
+var className = '';
+
+for (var breakpoint in breakpoints) {
+    if (typeof breakpoints[breakpoint] === 'number') {
+        className += 'col-' + breakpoint + '-' + breakpoints[breakpoint] + ' ';
+    }
+}
+
+for (var hiddenAt in hidden) {
+    if (hidden[hiddenAt]) {
+        className += 'hidden-' + hiddenAt + ' ';
+    }
+}
+
+%>
+
+<div class="<%= className.trim() %>"></div>

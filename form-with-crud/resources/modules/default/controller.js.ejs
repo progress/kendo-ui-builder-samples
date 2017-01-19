@@ -1,0 +1,13 @@
+(function(angular) {
+    'use strict';
+
+<% if (children.length) { %>
+    var files = [
+        <% children.forEach((view, idx) => { %>'modules/<%= view.module.pathName %>/<%= view.controllerUrl %>'<%= idx !== (children.length - 1) ? ',' : ''; %><% }); %> 
+    ];
+<% } %>
+
+    angular
+        .module('<%= app.name %>'<% if (children.length) { %>, [{ files: files, cache: true }]<% } %>)
+        .controller('<%= controller %>', function () { });
+})(angular);
