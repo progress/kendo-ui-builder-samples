@@ -1,0 +1,28 @@
+(function(angular) {
+    <% var login = app['login']; var hasShowEvent = !!login.extension && login.events.showEventHandler; var hasHideEvent = !!login.extension && login.events.hideEventHandler; %>
+    angular
+        .module('<%= app.name %>')
+        .service('loginModal', ['$injector', '$uibModal' , function ($injector, $uibModal) {
+            return {
+                getInstance: function(resolve) {
+                    var instance = $uibModal.open({
+                        templateUrl: 'modules/system-module/login/index.html',
+                        controller: 'LoginCtrl',
+                        controllerAs: 'loginCtrl',
+                        resolve: resolve
+                    });
+<% if (hasShowEvent) { %>
+                    instance.opened.then(function() {
+                        $injector.get('<%= login.extension %>')['<%= login.events.showEventHandler %>']();
+                    });<% } %>
+<% if (hasHideEvent) { %>
+                    instance.closed.then(function() {
+                        $injector.get('<%= login.extension %>')['<%= login.events.hideEventHandler %>']();
+                    });
+<% } %>
+                    return instance.result;
+                }
+            };
+        }]);
+
+})(angular);

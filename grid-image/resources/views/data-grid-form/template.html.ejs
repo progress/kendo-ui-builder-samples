@@ -1,0 +1,72 @@
+<div class="grid-data-form">
+    <div class="row">
+        <div class="col-lg-12" ng-include="model.customSections.top" >
+        </div>
+    </div>
+    <div class="row grid-data-form-header">
+        <div class="col-xs-8">
+            <h2 ng-if="!updateInProcess && !insertInProcess" ng-bind-html="model.title"></h2>
+            <h2 ng-if="updateInProcess" ng-bind-html="model.editTitle"></h2>
+            <h2 ng-if="insertInProcess" ng-bind-html="model.newTitle"></h2>
+        </div>
+        <div class="col-xs-4 text-right" ng-if="model.editMode === 'Read-Only to Edit'">
+            <a ng-click="insert()" ng-if="!insertInProcess && !updateInProcess" class="k-button k-button-icontext">
+                <span class="k-icon k-i-plus"></span> New
+            </a>
+            <a ng-click="edit()" ng-if="!insertInProcess && !updateInProcess" class="k-button k-button-icontext"
+            ng-class="{'kuib-disabled': !selectedId }">
+                <span class="k-icon k-edit"></span> Edit
+            </a>
+            <a ng-click="save()" ng-if="insertInProcess || updateInProcess" class="k-button k-button-icontext k-primary k-grid-update"
+             ng-class="{'kuib-disabled': !selected.dirty }">
+                <span class="k-icon k-update"></span> Save
+            </a>
+            <a ng-click="cancel()" ng-if="insertInProcess || updateInProcess" class="k-button k-button-icontext k-grid-cancel">
+                <span class="k-icon k-cancel"></span> Cancel
+            </a>
+            <a ng-click="delete()" ng-if="updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                <span class="k-icon k-delete"></span> Delete
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="model.customSections.middle" >
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="overlay ng-scope" ng-if="updateInProcess || insertInProcess"></div>
+            <grid data-options="model.gridOptions" data-model="gridModel" data-widget="grid" data-events="model.events"></grid>
+        </div>
+        <div class="col-md-8">
+            <div class="data-form-wrapper">
+                <data-data-form data-model="model.formOptions" data-validator="validator" data-update-in-process="updateInProcess" data-insert-in-process="insertInProcess" data-selected="selected"></data-data-form>
+
+                <div class="row" ng-if="model.editMode === 'Read-Only to Edit'">
+                    <div class="col-xs-12 data-form-commands">
+                        <hr />
+                        <a ng-click="edit()" ng-if="!updateInProcess && !insertInProcess" class="k-button k-button-icontext"
+                        ng-class="{'kuib-disabled': !selectedId }">
+                            <span class="k-icon k-edit"></span> Edit
+                        </a>
+                        <a ng-click="save()" ng-if="updateInProcess || insertInProcess" class="k-button k-button-icontext k-primary k-grid-update"
+                            ng-class="{'kuib-disabled': !selected.dirty }">
+                            <span class="k-icon k-update"></span> Save
+                        </a>
+                        <a ng-click="cancel()" ng-if="updateInProcess || insertInProcess" class="k-button k-button-icontext k-grid-cancel">
+                            <span class="k-icon k-cancel"></span> Cancel
+                        </a>
+                        <a ng-click="delete()" ng-if="updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                            <span class="k-icon k-delete"></span> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="model.customSections.bottom" >
+        </div>
+    </div>
+</div>

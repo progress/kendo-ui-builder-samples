@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "297b3b29-623f-4321-8e07-a799be94126e",
+    "name": "grid-image",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}

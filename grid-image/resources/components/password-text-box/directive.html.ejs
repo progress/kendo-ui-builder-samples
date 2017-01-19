@@ -1,0 +1,13 @@
+<password-text-box
+    data-id="<%- id %>"
+    data-title="<%- title %>"
+    data-placeholder="<%- placeholder %>"
+    data-debounce="<%- debounce %>"
+    <% if (model) { %>
+    data-model="_$viewModels.<%- model %>",
+    <% } else { %>
+    data-model="_$viewModels.<%- id %>",
+    <% } %>
+    data-events="<%- id %>.events"
+    data-validation="<%- id %>.validation">
+</password-text-box>

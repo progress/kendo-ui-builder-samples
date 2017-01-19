@@ -1,0 +1,18 @@
+{
+    widget: null,
+    options: {
+        format: "<%= format %>",
+        interval: <%= interval %><% if (typeof defaultValue !== "undefined") { %>, 
+        value: new Date("<%= defaultValue %>")<% } %>
+    },
+    events: {
+        onChange: function(e) {
+            <% if (events.onChange) { %>
+                 $scope.factory['<%- events.onChange %>'](e);
+            <% } %>
+        }
+    },
+    validation: {
+        required: <%- validation.required %>
+    }
+}
