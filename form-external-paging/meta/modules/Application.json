@@ -1,0 +1,59 @@
+{
+    "type": "module",
+    "schemaVersion": "1.0",
+    "uniqueID": "6022b71d-976d-43b8-bf52-c826b2caa037",
+    "name": "Application",
+    "description": "This Module contains application level pages including the landing page and authentication page",
+    "thumbnail": {
+        "icon": "fa-group",
+        "color": "#ffffff",
+        "background": "#ff7f27"
+    },
+    "moduleType": "system",
+    "children": [
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "377f3d56-da89-427d-a022-95f2cf260c4f",
+            "name": "login",
+            "viewType": "login",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide",
+                "login": "onLogin"
+            },
+            "title": "<Title>",
+            "extensionFolderName": "Application-login",
+            "logo": "logo_default_login.png",
+            "usernameLabel": "Username",
+            "passwordLabel": "Password",
+            "customSections": {
+                "top": "topSection.html",
+                "middle": "middleSection.html",
+                "bottom": "bottomSection.html"
+            },
+            "readonly": false
+        },
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "9faca017-7cf3-43db-b48d-2306a373a2b9",
+            "name": "landing-page",
+            "viewType": "landing-page",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide"
+            },
+            "extensionFolderName": "Application-landing-page",
+            "customSections": {
+                "top": "topSection.html",
+                "bottom": "bottomSection.html"
+            },
+            "readonly": false
+        }
+    ]
+}

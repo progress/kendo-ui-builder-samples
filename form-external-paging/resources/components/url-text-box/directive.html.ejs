@@ -1,0 +1,12 @@
+<url-text-box
+    data-id="<%- id %>"
+    data-title="<%- title %>"
+    data-options="<%- id %>.options"
+    <% if (model) { %>
+    data-model="_$viewModels.<%- model %>",
+    <% } else { %>
+    data-model="_$viewModels.<%- id %>",
+    <% } %>
+    data-events="<%- id %>.events"
+    data-validation="<%- id %>.validation">
+</url-text-box>
