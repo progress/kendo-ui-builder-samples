@@ -1,0 +1,55 @@
+(function(angular) {
+    'use strict';<% var hasInitEvent = !!extension && events.initEventHandler; var hasLoginEvent = !!extension && events.login %>
+
+
+    angular.module('views')
+        .controller('LoginCtrl', ['$scope', '$injector', 'provider', 'jsdoSessions', function($scope, $injector, provider, jsdoSessions) {
+            var vm = this;
+<% if (hasInitEvent) { %>
+            vm.$onInit = function() {
+                //Pass reference to the current scope.
+                $injector.get('<%= extension %>')['<%= events.initEventHandler %>'](vm);
+            };
+<% } %>
+            vm.provider = provider;
+            vm.message = '';
+            vm.errored = false;
+            vm.loading = false;
+            vm.title = '<%- title %>',
+            vm.customSections = {
+                top:  <% if (customSections.top) { %>'extensions/html/<%- customSections.top %>'<% } else { %>''<% } %>,
+                middle: <% if (customSections.middle) { %>'extensions/html/<%- customSections.middle %>'<% } else { %>''<% } %>,
+                bottom: <% if (customSections.bottom) { %>'extensions/html/<%- customSections.bottom %>'<% } else { %>''<% } %>
+            };
+
+            function onError(err) {
+                vm.form.$setPristine();
+                vm.form.$setUntouched();
+                vm.password = '';
+                vm.errored = true;
+                vm.message = err.message;
+            }
+
+            function onSuccess() {<% if (hasLoginEvent) { %>
+                $injector.get('<%= extension %>')['<%= events.login %>']();<% } %>
+                $scope.$close();
+            }
+
+            function onRequestEnd() {
+                vm.loading = false;
+            }
+
+            vm.onSubmit = function() {
+                vm.loading = true;
+
+                jsdoSessions.login(provider, { username: vm.username, password: vm.password })
+                    .then(onSuccess)
+                    .catch(onError)
+                    .finally(onRequestEnd);
+            };
+
+            vm.onClose = function() {
+                $scope.$dismiss();
+            };
+        }]);
+})(angular);

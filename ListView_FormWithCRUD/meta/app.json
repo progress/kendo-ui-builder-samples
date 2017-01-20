@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "33d96c8b-6763-42b1-b617-f23a036fe3cd",
+    "name": "ListView_FormWithCRUD",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}

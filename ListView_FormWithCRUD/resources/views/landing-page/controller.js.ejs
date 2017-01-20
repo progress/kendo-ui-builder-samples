@@ -1,0 +1,31 @@
+(function(angular) {
+    'use strict';<% var hasShowEvent = !!extension && events.showEventHandler; var hasInitEvent = !!extension && events.initEventHandler %>
+
+    angular.module('views')
+        .controller('LandingPageCtrl', ['$scope', '$injector'<% if (hasInitEvent) { %>, 'onInit'<% } %>,function ($scope, $injector<% if (hasInitEvent) { %>, onInit<% } %>) {
+            <% if (hasShowEvent) { %>
+            $scope.$on('$viewContentLoaded', function(e) {
+                $injector.get('<%= extension %>')['<%= events.showEventHandler %>'](e.currentScope<% if (hasInitEvent) { %>, onInit<% } %>);
+            });
+            <% } %>
+
+            $scope.customSections = {
+                  top:  <% if (customSections.top) { %>'extensions/html/<%- customSections.top %>'<% } else { %>''<% } %>,
+                  bottom: <% if (customSections.bottom) { %>'extensions/html/<%- customSections.bottom %>'<% } else { %>''<% } %>
+            };
+
+            var TOLERANCE = 151; // needed for very edge cases when someone clicks with the speed of light
+
+            var tooltip = angular.element(".modules-list-wrapper").kendoTooltip({
+                filter: "a[title]",
+                position: "bottom",
+                width: 180,
+            }).data("kendoTooltip");
+
+            $scope.onHideTooltip = function() {
+                setTimeout(function() {
+                    tooltip.hide();
+                }, TOLERANCE);
+            };
+        }]);
+})(angular);

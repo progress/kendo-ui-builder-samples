@@ -1,0 +1,156 @@
+{
+    "type": "data-provider",
+    "schemaVersion": "1.0",
+    "uniqueID": "f8064ec5-80ba-4b10-8270-c441edbf4cce",
+    "name": "EmployeeService",
+    "authenticationModel": "Anonymous",
+    "providerType": "Progress Data Service",
+    "serviceUri": "http://oemobiledemo.progress.com/EmployeeSubmit",
+    "catalogUris": [
+        "http://oemobiledemo.progress.com/EmployeeSubmit/static/EmployeeSubmitService.json"
+    ],
+    "verb": "GET",
+    "children": [
+        {
+            "type": "data-source",
+            "schemaVersion": "1.0",
+            "uniqueID": "b81e7c00-5067-4525-8174-f4a6373f9633",
+            "name": "Employees",
+            "serviceName": "EmployeeSubmitService",
+            "resourceName": "Employees",
+            "tableName": "Employees",
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "name": "EmpNum",
+                    "label": "Emp No",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "LastName",
+                    "label": "Last Name",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "FirstName",
+                    "label": "First Name",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "Address",
+                    "label": "Address",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "Address2",
+                    "label": "Address2",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "City",
+                    "label": "City",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "State",
+                    "label": "State",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "PostalCode",
+                    "label": "Postal Code",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "HomePhone",
+                    "label": "Home Phone",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "WorkPhone",
+                    "label": "Work Phone",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "DeptCode",
+                    "label": "Dept Code",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "Position",
+                    "label": "Position",
+                    "editorType": "text-input",
+                    "semanticType": "Text",
+                    "format": "",
+                    "defaultValue": ""
+                },
+                {
+                    "name": "Birthdate",
+                    "label": "Birthdate",
+                    "editorType": "date-input",
+                    "semanticType": "Date",
+                    "format": "",
+                    "defaultValue": "2015-11-24"
+                },
+                {
+                    "name": "StartDate",
+                    "label": "Start Date",
+                    "editorType": "date-input",
+                    "semanticType": "Date",
+                    "format": "",
+                    "defaultValue": "2015-11-24"
+                },
+                {
+                    "name": "VacationDaysLeft",
+                    "label": "Vacation Days Left",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "SickDaysLeft",
+                    "label": "Sick Days Left",
+                    "editorType": "integer-input",
+                    "semanticType": "Integer",
+                    "format": "",
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    title: '<%= title %>',
+    newTitle: '<%= newTitle %>',
+    editTitle: '<%= editTitle %>',
+    editMode: '<%- editMode %>',
+    confirmRemove: <%- confirmRemove %>,
+    formOptions: {
+        fields:  <%- formFields %>,
+        dataSource: $scope._$ds
+    },
+    gridOptions: {
+        pageable: {
+            pageSize: <%= pageSize %>,
+            refresh: true
+        },
+        filterable: <%= filterable %>,
+        groupable: <%= groupable %>,
+        resizable: <%= resizable %>,
+        reorderable: <%= reorderable %>,
+        sortable: <%= sortable %>,
+        selectable: true,
+        columns: <%- columns %>,
+        dataSource: $scope._$ds<% if (rowTemplateId !== "") { %>,
+        rowTemplate: function(dataItem) {
+            return kendo.template(angular.element("#<%- rowTemplateId %>").html())(dataItem);
+        }<% } %><% if (rowTemplateId === "" && rowTemplateFunction !== "" && extension) { %>,
+        rowTemplate: function(dataItem) { 
+            return $scope.factory['<%- rowTemplateFunction %>'](dataItem);
+        } <% } %>
+    },
+    customSections: {
+        top:  <% if (customSections.top) { %>'extensions/html/<%- customSections.top %>'<% } else { %>''<% } %>,
+        middle: <% if (customSections.middle) { %>'extensions/html/<%- customSections.middle %>'<% } else { %>''<% } %>,
+        bottom: <% if (customSections.bottom) { %>'extensions/html/<%- customSections.bottom %>'<% } else { %>''<% } %>
+    },
+    events: {
+        onRowSelect: function(e) {
+            <% if (extension && events.onRowSelect) { %>
+                if (e.fromView) {
+                    $scope.factory['<%- events.onRowSelect %>'](e);
+                }
+            <% } %>
+        }
+    }
+}

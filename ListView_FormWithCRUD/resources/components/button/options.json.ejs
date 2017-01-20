@@ -1,0 +1,14 @@
+{
+    widget: null,
+    options: {
+        content: "<%- content %>",
+        primary: <%- primary %>
+    }, 
+    events: {
+        onClick: function(e) {
+        <% if (events.onClick) { %>
+                $scope.factory['<%- events.onClick %>'](e);
+        <% } %>
+        }
+    }
+}
