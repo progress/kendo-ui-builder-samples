@@ -15,6 +15,19 @@ Existing projects can be imported into Kendo UI Builder using the following step
 >     "uniqueID": "<uniqueID>"
 > }
 
+*Example: workspaces.json*
+>[
+>    {
+>        "name": "grid-image",
+>        "dir": "C:\\KUIBWork\\grid-image",
+>        "uniqueID": "297b3b29-623f-4321-8e07-a799be94126e"
+>    },
+>    {
+>        "name": "form-with-crud",
+>        "dir": "C:\\KUIBWork\\form-with-crud",
+>        "uniqueID": "ff869a5c-6d0a-40a0-b190-d591a10a2d30"
+>    }
+>]
 
 
 ## grid-image
@@ -47,6 +60,10 @@ Note:
 ## grid-foreignkey 
   
 This example shows a grid component. One of the columns display data found in a related table.
+
+ListView_FormWithCRUD
+
+This example uses a list view and a form to provide CRUD operations.
  
 ## hierarchical-grid
 
