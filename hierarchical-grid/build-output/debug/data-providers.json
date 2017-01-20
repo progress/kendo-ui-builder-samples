@@ -1,0 +1,16 @@
+{
+  "CustOrderService": {
+    "type": "data-provider",
+    "schemaVersion": "1.0",
+    "uniqueID": "87a2c0cd-df1a-4640-9c10-d38ccff11d23",
+    "name": "CustOrderService",
+    "authenticationModel": "Anonymous",
+    "providerType": "Progress Data Service",
+    "catalogUris": [
+      "http://oemobiledemo.progress.com/CustOrderService/static/mobile/CustOrderService.json"
+    ],
+    "generateChildTables": true,
+    "verb": "GET",
+    "serviceURI": "http://oemobiledemo.progress.com/CustOrderService"
+  }
+}

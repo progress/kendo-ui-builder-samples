@@ -1,0 +1,14 @@
+{
+    title: '<%- title %>',
+    editTitle: '<%- editTitle %>',
+    newTitle: '<%- newTitle %>',
+    editMode: '<%- editMode %>',
+    fields: <%- formFields %>,
+    dataSource: $scope._$ds['<%- dataSourceName %>'],
+    confirmRemove: <%- confirmRemove %>,
+    customSections: {
+        top:  <% if (customSections.top) { %>'extensions/html/<%- customSections.top %>'<% } else { %>''<% } %>,
+        middle: <% if (customSections.middle) { %>'extensions/html/<%- customSections.middle %>'<% } else { %>''<% } %>,
+        bottom: <% if (customSections.bottom) { %>'extensions/html/<%- customSections.bottom %>'<% } else { %>''<% } %>
+    }
+}
