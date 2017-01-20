@@ -1,0 +1,15 @@
+'use strict';
+
+angular.module('components')
+    .directive('kbLabel', function () {
+        return {
+            templateUrl: '<%= templateUrl %>',
+            controller: function(){},
+            controllerAs: 'vm',
+            scope: {},
+            bindToController: {
+                forAttribute: '@',
+                text: '@'
+            }
+        };
+    });

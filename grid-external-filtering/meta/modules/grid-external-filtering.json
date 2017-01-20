@@ -1,0 +1,261 @@
+{
+    "type": "module",
+    "schemaVersion": "1.0",
+    "uniqueID": "63a3fa3e-3326-4e2f-b0f6-f23bf76ea8f1",
+    "name": "grid-external-filtering",
+    "description": "",
+    "thumbnail": {
+        "icon": "fa-area-chart",
+        "color": "#ffffff",
+        "background": "#00a2e8"
+    },
+    "moduleType": "default",
+    "children": [
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "34229004-d067-469c-8429-fe414546da64",
+            "name": "grid-external-filtering",
+            "viewType": "blank",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide"
+            },
+            "dataSources": [
+                {
+                    "name": "customerDs",
+                    "dataProviderName": "CustomerService",
+                    "dataSourceName": "Customer",
+                    "pageSize": 20,
+                    "uniqueID": "097ea134-0c4a-4505-a12f-940d29dd8119"
+                }
+            ],
+            "rows": [
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "dff409d4-062c-4540-90be-5c709f327d90",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "2308c627-b6e3-4f5e-bab1-774ce1e95258",
+                            "breakpoints": {
+                                "sm": 6,
+                                "xs": null
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "4f3da521-8481-4562-839b-6b1db8cb0c83",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "085e7062-4e95-4ebf-b077-c581b6b7bb91",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": null,
+                                                "xs": 3,
+                                                "md": null
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "6516bb89-7853-4b0f-b4c8-1f79f3fce3e8",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": null,
+                                                "xs": 9,
+                                                "md": null
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "5fbf63ce-70c5-40c3-81e2-96ec26d71489",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "901f6e5a-b3ee-4cf3-90e2-dca7dab614a3",
+                            "breakpoints": {
+                                "lg": null,
+                                "sm": null,
+                                "xs": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        }
+                    ]
+                }
+            ],
+            "children": [
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "b8f1e210-20e1-4154-abf2-bc4212a6623c",
+                    "id": "label0",
+                    "forAttribute": "searchTb",
+                    "text": "Search",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier",
+                            "value": "1b0fdd8e-9e48-4bda-b0c5-7d9b09a547b7.label0"
+                        }
+                    },
+                    "containerUid": "085e7062-4e95-4ebf-b077-c581b6b7bb91"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "1b0fdd8e-9e48-4bda-b0c5-7d9b09a547b7",
+                    "id": "searchTb",
+                    "defaultValue": "",
+                    "placeholder": "",
+                    "title": "",
+                    "debounce": 400,
+                    "model": "",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": "changeHandler"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "6516bb89-7853-4b0f-b4c8-1f79f3fce3e8"
+                },
+                {
+                    "type": "grid",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "403c1edf-1cbe-4f96-9575-07e0117fc855",
+                    "id": "grid0",
+                    "dataSourceName": "customerDs",
+                    "editable": "None",
+                    "columns": [
+                        {
+                            "field": "Name",
+                            "title": "Name",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "Address",
+                            "title": "Address",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "Phone",
+                            "title": "Phone",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "SalesRep",
+                            "title": "SalesRep",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "State",
+                            "title": "State",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "Country",
+                            "title": "Country",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        }
+                    ],
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "filterable": false,
+                    "groupable": false,
+                    "resizable": false,
+                    "reorderable": false,
+                    "sortable": false,
+                    "selectable": "None",
+                    "model": "",
+                    "events": {
+                        "onRowSelect": "",
+                        "onDataBound": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "097ea134-0c4a-4505-a12f-940d29dd8119.customerDs"
+                        }
+                    },
+                    "containerUid": "901f6e5a-b3ee-4cf3-90e2-dca7dab614a3"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "extensionFolderName": "grid-external-filtering-grid-external-filtering"
+        }
+    ]
+}
