@@ -10,9 +10,9 @@ Existing projects can be imported into Kendo UI Builder using the following step
 - Add an entry to the JSON array in workspaces.json with the following properties *name*, *dir*, and *uniqueID*
 
 > {
->     "name": "<name>",
->     "dir": "<path-to-project>",
->     "uniqueID": "<uniqueID>"
+>     "name": "&lt;name&gt;",
+>     "dir": "&lt;path-to-project&gt;",
+>     "uniqueID": "&lt;uniqueID&gt;"
 > }
 
 *Example: workspaces.json*
