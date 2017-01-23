@@ -1,0 +1,831 @@
+{
+    "type": "module",
+    "schemaVersion": "1.0",
+    "uniqueID": "0ae2945f-940b-442c-9f4d-fc68f040c65f",
+    "name": "Module1",
+    "description": "Customer Grid and a form with CRUD capabilities.\nThe JSON Filter Pattern (JFP) is used to access the OpenEdge data with remote paging, filtering and sorting.",
+    "thumbnail": {
+        "icon": "fa-globe",
+        "color": "#ffffff",
+        "background": "#22b14c"
+    },
+    "moduleType": "default",
+    "children": [
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "153ab308-4135-425e-a573-46710eae0668",
+            "name": "CustomerView",
+            "viewType": "blank",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide"
+            },
+            "dataSources": [
+                {
+                    "name": "CustomerDS",
+                    "dataProviderName": "CustomerService",
+                    "dataSourceName": "Customer",
+                    "pageSize": 10,
+                    "uniqueID": "ee42dc0e-a048-488e-9a11-091ce8a796f4"
+                },
+                {
+                    "name": "SalesrepDS",
+                    "dataProviderName": "SalesrepService",
+                    "dataSourceName": "Salesrep",
+                    "pageSize": 20,
+                    "uniqueID": "77244bdb-0aa1-479f-b5d9-6c90d65df033"
+                }
+            ],
+            "rows": [
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "ce0354fb-f996-4fb2-ad6f-b0c7b5abbb3d",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "7c259282-0d8d-411d-bd05-8d4e576f01f8",
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        },
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "8968741a-498e-488e-944d-c312af0c2c8f",
+                            "breakpoints": {
+                                "sm": 6,
+                                "lg": 4
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "0f7969b3-cc98-4312-8fe2-6785b4e93061",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "a1f3cea0-190b-4549-b68a-7dab17432561",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "a7c8520f-6f91-4ab9-bd4d-f14a7f065475",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "2d6ccd1e-93fd-46e1-b1b8-0633ba854e05",
+                                            "breakpoints": {
+                                                "sm": 6,
+                                                "lg": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "02cef644-bfea-4733-885a-2f19cdc365f6",
+                                            "breakpoints": {
+                                                "sm": 6,
+                                                "lg": null
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "bf968e0e-523b-4ac3-973c-71a664b0ab16",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "627a58a9-22b2-4df7-9617-0fdd98ffb978",
+                                            "breakpoints": {
+                                                "sm": 6,
+                                                "lg": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "9b9240ca-fa0a-4d85-9157-fa0869c580ca",
+                                            "breakpoints": {
+                                                "sm": 6,
+                                                "lg": null
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "9870424a-1afd-450d-8aa6-2fbfbe7f1af2",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "db971ec1-e435-49a8-8d1a-6bc1c7ef5801",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "aa960a46-037f-4063-98b0-62904413ccfb",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "d0e25ce1-e2c6-47c9-833a-68e436423e2b",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "fc2be80b-319a-4b45-b81f-ce552d0e761b",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "47780135-8b83-4430-b50f-5d45e7abf535",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "4f347b49-9d82-4e18-9429-0654a1f783ba",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "017e68e0-a88d-4217-86d0-cce85ee0cecf",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "7b6a20a7-2b57-425d-a061-047e5d11275e",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "dfa88be3-a423-4089-84f6-e625d11fed10",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "9e3aad9b-c8ac-4b07-b2fd-3d3776a546b0",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "abfdae33-ad44-4f6d-af69-582f5b2c05a5",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "c0b8f6fa-376d-4127-a0bb-914524ff7844",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "5ab4e28f-a56e-4f43-947e-5a900450ce0e",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "ecffd9bf-2d1e-4e97-8c4e-a68718e040e5",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "898226d2-3621-46e1-ab77-0956b8ab6dce",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "c93cb6e0-2adb-4d37-a804-c1fa6f58f11d",
+                                            "breakpoints": {
+                                                "lg": 2,
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "68a23590-f692-4b60-8495-86daea626f7a",
+                                            "breakpoints": {
+                                                "sm": 6
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "children": [
+                {
+                    "type": "grid",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "c1ad3534-10e3-4ba2-ac2a-d975b2caba71",
+                    "id": "grid0",
+                    "dataSourceName": "CustomerDS",
+                    "editable": "None",
+                    "columns": [
+                        {
+                            "field": "CustNum",
+                            "title": "CustNum",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "Name",
+                            "title": "Name",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        },
+                        {
+                            "field": "SalesRep",
+                            "title": "SalesRep",
+                            "format": "{0}",
+                            "sortable": true,
+                            "filterable": true,
+                            "encoded": true
+                        }
+                    ],
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "filterable": true,
+                    "groupable": false,
+                    "resizable": false,
+                    "reorderable": false,
+                    "sortable": true,
+                    "selectable": "Single",
+                    "model": "CustomerDSModel",
+                    "events": {
+                        "onRowSelect": "onRowSelect",
+                        "onDataBound": "onDataBound"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "ee42dc0e-a048-488e-9a11-091ce8a796f4.CustomerDS"
+                        }
+                    },
+                    "containerUid": "7c259282-0d8d-411d-bd05-8d4e576f01f8",
+                    "undefined": "CustomerDSModel"
+                },
+                {
+                    "type": "toolbar",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "cfcb67cc-0926-4020-b3dd-3ff51e34843f",
+                    "id": "toolbar0",
+                    "items": [
+                        {
+                            "id": "btnNew",
+                            "type": "Button",
+                            "text": "New",
+                            "togglable": false,
+                            "templateId": "",
+                            "templateFunction": "",
+                            "itemType": "Button"
+                        },
+                        {
+                            "id": "btnSave",
+                            "type": "Button",
+                            "text": "Save",
+                            "togglable": false,
+                            "templateId": "",
+                            "templateFunction": "",
+                            "itemType": "Button"
+                        },
+                        {
+                            "id": "btnDelete",
+                            "type": "Button",
+                            "text": "Delete",
+                            "togglable": false,
+                            "templateId": "",
+                            "templateFunction": "",
+                            "itemType": "Button"
+                        }
+                    ],
+                    "resizable": true,
+                    "events": {
+                        "onClick": "onClickToolbar",
+                        "onToggle": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "a1f3cea0-190b-4549-b68a-7dab17432561"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "75a0c432-a5d2-48d0-903b-e92705fbc686",
+                    "id": "label0",
+                    "forAttribute": "",
+                    "text": "CustNum",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "2d6ccd1e-93fd-46e1-b1b8-0633ba854e05"
+                },
+                {
+                    "type": "integer-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "aec8c9b9-45f7-4c75-85d0-821cfa0ed565",
+                    "id": "integertextbox0",
+                    "downArrowText": "",
+                    "placeholder": "",
+                    "step": 1,
+                    "title": "",
+                    "upArrowText": "",
+                    "model": "CustomerDSModel.CustNum",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "02cef644-bfea-4733-885a-2f19cdc365f6"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "bab17e2b-524c-4f35-8ea1-0a1a6da3b9ee",
+                    "id": "label1",
+                    "forAttribute": "",
+                    "text": "Name",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "627a58a9-22b2-4df7-9617-0fdd98ffb978"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "a7d12a79-75c7-4e47-bcaa-994ad3c5c2a7",
+                    "id": "textbox0",
+                    "defaultValue": "",
+                    "placeholder": "",
+                    "title": "",
+                    "debounce": 0,
+                    "model": "CustomerDSModel.Name",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "9b9240ca-fa0a-4d85-9157-fa0869c580ca"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "5e95296f-1150-4b44-ad67-0682287b91cd",
+                    "id": "label2",
+                    "forAttribute": "",
+                    "text": "SalesRep",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "db971ec1-e435-49a8-8d1a-6bc1c7ef5801"
+                },
+                {
+                    "type": "combo-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "26ffdfce-6b46-48d4-a009-02dee5c0d8b2",
+                    "id": "salesreps",
+                    "dataSourceName": "SalesrepDS",
+                    "model": "SalesrepDSModel",
+                    "textField": "RepName",
+                    "valueField": "SalesRep",
+                    "title": "",
+                    "valuePrimitive": false,
+                    "filter": "None",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": "",
+                        "onSelect": "",
+                        "onFilter": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "77244bdb-0aa1-479f-b5d9-6c90d65df033.SalesrepDS"
+                        }
+                    },
+                    "undefined": "SalesrepDSModel",
+                    "containerUid": "aa960a46-037f-4063-98b0-62904413ccfb"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "63090843-76b0-4476-ac61-321f669c7c5e",
+                    "id": "label4",
+                    "forAttribute": "",
+                    "text": "Phone",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "fc2be80b-319a-4b45-b81f-ce552d0e761b"
+                },
+                {
+                    "type": "phone-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "442fa816-0e2f-4809-a702-ebed5e6516c5",
+                    "id": "phonetextbox0",
+                    "mask": "(999) 000-0000",
+                    "defaultValue": "",
+                    "title": "",
+                    "model": "CustomerDSModel.Phone",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "47780135-8b83-4430-b50f-5d45e7abf535"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "9d87abbb-84f5-4889-b877-b6cdf7736e7a",
+                    "id": "label6",
+                    "forAttribute": "",
+                    "text": "Balance",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "017e68e0-a88d-4217-86d0-cce85ee0cecf"
+                },
+                {
+                    "type": "currency-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "2e2d274e-4788-4342-b7b8-0d92a61d2717",
+                    "id": "currencytextbox0",
+                    "downArrowText": "",
+                    "model": "CustomerDSModel.Balance",
+                    "placeholder": "",
+                    "title": "",
+                    "upArrowText": "",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "7b6a20a7-2b57-425d-a061-047e5d11275e",
+                    "step": 500
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "6714e8ab-1e17-4f02-a725-d371cde81928",
+                    "id": "label9",
+                    "forAttribute": "",
+                    "text": "Address",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "9e3aad9b-c8ac-4b07-b2fd-3d3776a546b0"
+                },
+                {
+                    "type": "text-area",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "7fc0a886-9d2a-4b2c-b8ee-64ad1641a409",
+                    "id": "textarea0",
+                    "defaultValue": "",
+                    "placeholder": "",
+                    "title": "",
+                    "model": "CustomerDSModel.Address",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "abfdae33-ad44-4f6d-af69-582f5b2c05a5"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "f983c45d-e573-4bbb-8cc5-0b1cc8373b27",
+                    "id": "label3",
+                    "forAttribute": "",
+                    "text": "State",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "5ab4e28f-a56e-4f43-947e-5a900450ce0e"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "fa8cc019-bca9-44de-96e8-164c965ef200",
+                    "id": "textbox1",
+                    "defaultValue": "",
+                    "placeholder": "",
+                    "title": "",
+                    "debounce": 0,
+                    "model": "CustomerDSModel.State",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "ecffd9bf-2d1e-4e97-8c4e-a68718e040e5"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "863d21e9-e919-4815-a304-03eb0e8d7feb",
+                    "id": "label7",
+                    "forAttribute": "",
+                    "text": "Country",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "c93cb6e0-2adb-4d37-a804-c1fa6f58f11d"
+                },
+                {
+                    "type": "custom-html",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "522a206c-3822-4465-956e-0183d4345486",
+                    "id": "customhtml0",
+                    "html": "<div></div>",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "68a23590-f692-4b60-8495-86daea626f7a"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "extensionFolderName": "Module1-CustomerView"
+        }
+    ]
+}

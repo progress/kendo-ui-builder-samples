@@ -1,0 +1,22 @@
+{
+    "options": {
+        "pageable": {
+            "refresh": true
+        },
+        <% if (typeof toolbar !== "undefined") { %>
+            "toolbar": <%- toolbar %>,
+        <% } %>
+        "editable": "<%= editable.toLowerCase(); %>",
+        <% if (selectable !== "None") { %>
+        <%  var selectionType = { Single: 'row', Multiple: 'multiple, row' }; %>
+        "selectable": "<%= selectionType[selectable] %>",
+        <% } %>
+        "filterable": <%= filterable %>,
+        "groupable": <%= groupable %>,
+        "resizable": <%= resizable %>,
+        "reorderable": <%= reorderable %>,
+        "sortable": <%= sortable %>,
+        "columns": <%- columns %>,
+        "dataSource": <%- dataSource %>
+    }
+}
