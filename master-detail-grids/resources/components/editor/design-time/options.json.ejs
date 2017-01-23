@@ -1,0 +1,11 @@
+{
+    "options": {
+        <% if (typeof resizable !== "undefined") { %>
+            "resizable": <%- resizable %>,
+        <% } %>
+        <% if (typeof tools !== "undefined") { %>
+            "tools": <%- JSON.stringify(tools) %>,
+        <% } %>
+        "encoded": <%- encoded %>
+    }
+}

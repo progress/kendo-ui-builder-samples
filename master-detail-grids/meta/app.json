@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "770a8e27-8c55-455d-aebd-17e1959c5ee6",
+    "name": "master-detail-grids",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}
