@@ -1,0 +1,10 @@
+{
+    "type": "app",
+    "schemaVersion": "1.0",
+    "uniqueID": "051ece08-a9df-49f0-800b-049595abceb5",
+    "name": "list-view-crud-with-validation",
+    "description": "",
+    "logo": "logo_default.png",
+    "layout": {},
+    "children": []
+}

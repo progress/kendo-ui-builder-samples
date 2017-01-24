@@ -1,0 +1,20 @@
+'use strict';
+
+angular.module('components')
+    .directive('urlTextBox', function () {
+        return {
+            restrict: 'E',
+            templateUrl: '<%= templateUrl %>',
+            controller: function(){},
+            controllerAs: 'vm',
+            scope: {},
+            bindToController: {
+                id: '@',
+                title: '@',
+                model: '=',
+                options: '=',
+                events: '=',
+                validation: '='
+            }
+        };
+    });

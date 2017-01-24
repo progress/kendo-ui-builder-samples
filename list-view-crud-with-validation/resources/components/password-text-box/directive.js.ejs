@@ -1,0 +1,26 @@
+'use strict';
+
+angular.module('components')
+    .directive('passwordTextBox', function () {
+        return {
+            restrict: 'E',
+            scope: true,
+            bindToController: {
+                id: '@',
+                title: '@',
+                debounce: '@',
+                placeholder: '@',
+                model: '=',
+                events: '=',
+                validation: '='
+            },
+            controller: function() {
+                var vm = this;
+                vm.modelOptions = {
+                    debounce: vm.debounce ? parseInt(vm.debounce) : 0
+                };
+            },
+            controllerAs: 'vm',
+            templateUrl: '<%= templateUrl %>'
+        };
+    });

@@ -1,0 +1,8 @@
+<div 
+    kendo-calendar="vm.widget"
+    id="{{vm.id}}"
+    k-ng-model="vm.model"
+    k-options="vm.options"
+    ng-init="vm.options.value ? vm.model = vm.options.value : angular.noop"
+    k-on-change="vm.events.onChange(kendoEvent)">
+</div>

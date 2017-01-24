@@ -1,0 +1,11 @@
+{
+    "name": "resources-star-nova",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "js-object-pretty-print": "^0.2.0"
+    },
+    "engines": {
+        "node": ">=4.1.0"
+    }
+}

@@ -1,0 +1,17 @@
+<textarea 
+    type="text"
+    id="{{vm.id}}"
+    ng-model="vm.model"
+    ng-required="vm.validation.required"
+    data-required-msg="{{vm.title}} is required"
+    ng-init="vm.defaultValue ? vm.model = vm.defaultValue : angular.noop"
+    ng-change="vm.events.onChange($event)"
+    ng-model-options="vm.modelOptions"
+    ng-change="vm.events.onChange($event)"
+    placeholder="{{vm.placeholder}}"
+    title="{{vm.title}}"
+    rows="{{vm.rows}}"
+    cols="{{vm.cols}}"
+    name="{{vm.id}}">
+</textarea>
+<span class="k-invalid-msg" data-for="{{vm.id}}"></span>

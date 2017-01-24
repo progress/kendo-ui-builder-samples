@@ -1,0 +1,13 @@
+<time-picker
+    data-id="<%- id %>"
+    data-widget="<%- id %>.widget"
+    data-title="<%- title %>"
+    <% if (model) { %>
+    data-model="_$viewModels.<%- model %>",
+    <% } else { %>
+    data-model="_$viewModels.<%- id %>",
+    <% } %>
+    data-options="<%- id %>.options"
+    data-events="<%- id %>.events"
+    data-validation="<%- id %>.validation">
+</date-picker>

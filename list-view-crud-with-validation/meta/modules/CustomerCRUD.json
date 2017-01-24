@@ -1,0 +1,967 @@
+{
+    "type": "module",
+    "schemaVersion": "1.0",
+    "uniqueID": "33abc15b-18a4-4245-bad1-e6231d28effb",
+    "name": "CustomerCRUD",
+    "description": "Module which demonstrates CRUD operations on the Customer resource.",
+    "thumbnail": {
+        "icon": "fa-area-chart",
+        "color": "#ffffff",
+        "background": "#00a2e8"
+    },
+    "moduleType": "default",
+    "children": [
+        {
+            "type": "view",
+            "schemaVersion": "1.0",
+            "uniqueID": "739fd002-9ad5-44ac-85bb-3df06a84c5f6",
+            "name": "list-view-external-form",
+            "viewType": "blank",
+            "extension": "view-factory.js",
+            "events": {
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow",
+                "hideEventHandler": "onHide"
+            },
+            "dataSources": [
+                {
+                    "name": "CustomerDs",
+                    "dataProviderName": "Customers",
+                    "dataSourceName": "Customer",
+                    "pageSize": 5,
+                    "uniqueID": "c2b7aded-971c-4c6a-a43f-29eeb0c98f31"
+                }
+            ],
+            "rows": [
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "60342ed0-e2f1-45f0-bfb3-efd5676707d3",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "67c1a918-747c-4f33-b0f4-c93d2029ba17",
+                            "breakpoints": {
+                                "sm": null,
+                                "lg": null,
+                                "xs": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        }
+                    ]
+                },
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "1bcfa17a-ba92-4805-9846-f0a90fd10538",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "298b22b1-8d61-4268-bb2d-b8ad40a09adf",
+                            "breakpoints": {
+                                "sm": null,
+                                "xs": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        }
+                    ]
+                },
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "fa62fd96-6dff-49fa-882b-3d7157af00ba",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "ef844f7e-ae3d-4888-a493-3b70f73ab1db",
+                            "breakpoints": {
+                                "lg": null,
+                                "sm": 1,
+                                "xs": 2
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        },
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "64b5c072-0afd-4592-ab81-08c78b5d6712",
+                            "breakpoints": {
+                                "lg": null,
+                                "sm": 1,
+                                "xs": 2
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        },
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "c8f117ec-b801-40be-a926-8a44dff31354",
+                            "breakpoints": {
+                                "lg": null,
+                                "sm": 1,
+                                "xs": 2
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        },
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "4dafd0f7-1a06-4e9a-aaff-89fc78131e34",
+                            "breakpoints": {
+                                "lg": null,
+                                "sm": 1,
+                                "xs": 2
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        }
+                    ]
+                },
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "3a10d2d8-0749-4e93-b4e7-b04ff8ff829c",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "93357c3a-15ab-4ea6-b463-386b6b7d3eaa",
+                            "breakpoints": {
+                                "sm": null,
+                                "xs": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": []
+                        }
+                    ]
+                },
+                {
+                    "type": "row",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "b37ccecd-5020-4569-bda2-84d0ef3a42a7",
+                    "cols": [
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "008bb007-5573-42a4-8af0-cb853f8c97f5",
+                            "breakpoints": {
+                                "lg": 6,
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "e8a46b36-0e4d-4205-99c0-897dd431aadd",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "2e3aa3f9-d9aa-47bb-aab2-8c0420311267",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "c50cb768-c8f8-44bb-8ff4-e6b365142693",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "7f42769a-e16a-4b21-9260-908dea0569b0",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "43a769e9-c677-45dc-b965-87538182fd85",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "00f6cad4-c193-484c-a0e0-370b8fcc01a8",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "b48e6877-843f-40f3-abd1-fa11d2749823",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "b40042e4-5074-4a35-87a4-c31579ddea9f",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "fb4ddb7f-4128-479f-ac95-cd86ed1996af",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "f51d6162-9884-40b3-9ba9-fa65e9d94721",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "b9e39ca7-000f-475b-a1e5-d4f0559943fe",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "1df406ae-81da-4427-b169-1f384d2b4d41",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "col",
+                            "schemaVersion": "1.0",
+                            "uniqueID": "4933bc94-913a-400e-8076-7105f22d1041",
+                            "breakpoints": {
+                                "lg": 6,
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "559a728b-5f92-4d0d-9496-4d3846a8fe1e",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "ad5c0cd9-3e72-4e11-b00d-90e30425e433",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "511003ee-14f0-4598-9f63-164892fec02d",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "ec7fc44f-462a-4bcf-8723-05a654d6de8d",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "58368802-e59b-4c74-9f71-13c2e541c94a",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "cdadbb6a-487a-43cd-bfe9-61d0d7dc45b1",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "ae643e97-25d5-442f-b92b-719242e96a95",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "0f60d287-cecb-4287-9990-f8e490db4e4d",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "cd7d7a3b-cb72-4f23-847b-18edc2e89f96",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "schemaVersion": "1.0",
+                                    "uniqueID": "466fd0a3-3e1e-4665-b480-4ceeecd8dfa3",
+                                    "cols": [
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "660cf247-e00a-43ad-82c1-9c4c523c8aae",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 2
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        },
+                                        {
+                                            "type": "col",
+                                            "schemaVersion": "1.0",
+                                            "uniqueID": "a7396541-62c4-4c42-977e-59b2fe112a5e",
+                                            "breakpoints": {
+                                                "lg": null,
+                                                "sm": 10
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "children": [
+                {
+                    "type": "list-view",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "02fc9aef-0769-4ae8-95cf-c4841f37e798",
+                    "id": "listview",
+                    "dataSourceName": "CustomerDs",
+                    "templateFunction": "",
+                    "templateId": "customerTemplate",
+                    "editTemplateFunction": "",
+                    "editTemplateId": "",
+                    "selectable": "Single",
+                    "model": "CustomerDsModel",
+                    "events": {
+                        "onChange": "",
+                        "onCancel": "",
+                        "onDataBound": "dataBoundHandler",
+                        "onEdit": "",
+                        "onRemove": "",
+                        "onSave": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "c2b7aded-971c-4c6a-a43f-29eeb0c98f31.CustomerDs"
+                        }
+                    },
+                    "undefined": "CustomerDsModel",
+                    "containerUid": "67c1a918-747c-4f33-b0f4-c93d2029ba17"
+                },
+                {
+                    "type": "custom-html",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "d601b213-84ce-4260-b974-f2cfd93357cf",
+                    "id": "customhtml1",
+                    "html": "<hr>",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "298b22b1-8d61-4268-bb2d-b8ad40a09adf"
+                },
+                {
+                    "type": "button",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "819b8448-b135-42ce-b7e1-d40d24ed761b",
+                    "id": "newButton",
+                    "content": "New",
+                    "primary": false,
+                    "events": {
+                        "onClick": "newHandler"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "ef844f7e-ae3d-4888-a493-3b70f73ab1db"
+                },
+                {
+                    "type": "button",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "8b59131a-6b3a-494b-93de-4940bdc010ca",
+                    "id": "save",
+                    "content": "Save",
+                    "primary": false,
+                    "events": {
+                        "onClick": "saveHandler"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "64b5c072-0afd-4592-ab81-08c78b5d6712"
+                },
+                {
+                    "type": "button",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "57b3a53f-e674-44a6-b0d5-60cd57bd76ec",
+                    "id": "delete",
+                    "content": "Delete",
+                    "primary": false,
+                    "events": {
+                        "onClick": "deleteHandler"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "c8f117ec-b801-40be-a926-8a44dff31354"
+                },
+                {
+                    "type": "button",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "31022ece-575d-4022-8a28-4d42745c1b1e",
+                    "id": "cancel",
+                    "content": "Cancel",
+                    "primary": false,
+                    "events": {
+                        "onClick": "cancelHandler"
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "4dafd0f7-1a06-4e9a-aaff-89fc78131e34"
+                },
+                {
+                    "type": "custom-html",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "1c14e69d-d5fd-47b4-8c48-cb670d4d69d9",
+                    "id": "customhtml0",
+                    "html": "<hr>",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "93357c3a-15ab-4ea6-b463-386b6b7d3eaa"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "6ea25616-8933-429a-9d25-10669bd5aa10",
+                    "id": "label0",
+                    "forAttribute": "",
+                    "text": "Cust Num",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "2e3aa3f9-d9aa-47bb-aab2-8c0420311267"
+                },
+                {
+                    "type": "integer-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "cc8130f2-3b4c-4ee7-b362-5b0fa2d47e45",
+                    "id": "custNum",
+                    "downArrowText": "",
+                    "placeholder": "Enter Cust Num",
+                    "step": 1,
+                    "title": "Cust Num",
+                    "upArrowText": "",
+                    "model": "CustomerDsModel.CustNum",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "c50cb768-c8f8-44bb-8ff4-e6b365142693"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "a7cf2dac-ef45-49af-8989-d3019c345572",
+                    "id": "label1",
+                    "forAttribute": "",
+                    "text": "Name",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "43a769e9-c677-45dc-b965-87538182fd85"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "1ef1a892-f157-45d6-8bc2-df6b3bf6e4e3",
+                    "id": "name",
+                    "defaultValue": "",
+                    "placeholder": "Enter Name",
+                    "title": "Name",
+                    "debounce": 0,
+                    "model": "CustomerDsModel.Name",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "00f6cad4-c193-484c-a0e0-370b8fcc01a8"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "108170d6-4a31-4b2f-923b-d25bb67cdd6e",
+                    "id": "label2",
+                    "forAttribute": "",
+                    "text": "Address",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "b40042e4-5074-4a35-87a4-c31579ddea9f"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "03d0e53f-072f-492c-9331-eff9913ce938",
+                    "id": "address",
+                    "defaultValue": "",
+                    "placeholder": "Enter Address",
+                    "title": "Address",
+                    "debounce": 0,
+                    "model": "CustomerDsModel.Address",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "fb4ddb7f-4128-479f-ac95-cd86ed1996af"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "5b40f043-0f76-44dc-b7a1-5fa1a296bb84",
+                    "id": "label3",
+                    "forAttribute": "",
+                    "text": "Phone",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "b9e39ca7-000f-475b-a1e5-d4f0559943fe"
+                },
+                {
+                    "type": "phone-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "5dfd35e9-8ad3-4734-9853-77a0b06f7203",
+                    "id": "phone",
+                    "mask": "(999) 000-0000",
+                    "defaultValue": "",
+                    "title": "Phone",
+                    "model": "CustomerDsModel.Phone",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "1df406ae-81da-4427-b169-1f384d2b4d41"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "c7807a63-196f-4a4b-be57-13435ea5658a",
+                    "id": "label4",
+                    "forAttribute": "",
+                    "text": "Sales Rep",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "ad5c0cd9-3e72-4e11-b00d-90e30425e433"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "89db60dc-5bc5-4dfa-9570-b8bf42ce0471",
+                    "id": "salesRep",
+                    "defaultValue": "",
+                    "placeholder": "Enter Sales Rep",
+                    "title": "Sales Rep",
+                    "debounce": 0,
+                    "model": "CustomerDsModel.SalesRep",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "511003ee-14f0-4598-9f63-164892fec02d"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "7f20615b-b2a3-4b06-a75f-edf5af3fa310",
+                    "id": "label5",
+                    "forAttribute": "",
+                    "text": "Balance",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "58368802-e59b-4c74-9f71-13c2e541c94a"
+                },
+                {
+                    "type": "numeric-text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "1fb5ba02-8b59-4b57-a937-b30d41a1194f",
+                    "id": "balance",
+                    "downArrowText": "",
+                    "placeholder": "Enter Balance",
+                    "step": 1,
+                    "title": "Balance",
+                    "upArrowText": "",
+                    "model": "CustomerDsModel.Balance",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "cdadbb6a-487a-43cd-bfe9-61d0d7dc45b1"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "628f6484-1940-4efc-ae55-4f4c8026eb01",
+                    "id": "label6",
+                    "forAttribute": "",
+                    "text": "State",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "0f60d287-cecb-4287-9990-f8e490db4e4d"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "079d03c4-8844-40b8-b605-670e445813fd",
+                    "id": "state",
+                    "defaultValue": "",
+                    "placeholder": "Enter State",
+                    "title": "State",
+                    "debounce": 0,
+                    "model": "CustomerDsModel.State",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "cd7d7a3b-cb72-4f23-847b-18edc2e89f96"
+                },
+                {
+                    "type": "label",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "8e09f31e-b6d5-48f7-a893-64bb62cbc703",
+                    "id": "label7",
+                    "forAttribute": "",
+                    "text": "Country",
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "containerUid": "660cf247-e00a-43ad-82c1-9c4c523c8aae"
+                },
+                {
+                    "type": "text-box",
+                    "schemaVersion": "1.0",
+                    "uniqueID": "4cfd8dfe-f32c-4308-b8f0-9ac92cbcc657",
+                    "id": "country",
+                    "defaultValue": "",
+                    "placeholder": "Enter Country",
+                    "title": "Country",
+                    "debounce": 0,
+                    "model": "CustomerDsModel.Country",
+                    "validation": {
+                        "required": false
+                    },
+                    "events": {
+                        "onChange": ""
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "a7396541-62c4-4c42-977e-59b2fe112a5e"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "extensionFolderName": "CustomerCRUD-list-view-external-form"
+        }
+    ]
+}
