@@ -189,10 +189,12 @@
                             that.appMode = that.NONE;
                             applicantDS.cancelChanges();
                             
-                            errors = applicantDS.transport.jsdo.getErrors();
-                            for (i = 0; i < errors.length; i += 1) {
-                                alert("Delete Error: " + errors[i].error);
-                            }
+                            // Display errors
+                            // Default error handling already shows errors in an error notification                            
+//                            errors = applicantDS.transport.jsdo.getErrors();
+//                            for (i = 0; i < errors.length; i += 1) {
+//                                alert("Delete Error: " + errors[i].error);
+//                            }
                         }); // end promise.fail
                     }
                     
@@ -253,14 +255,17 @@
                                 i;
                             
                             that.enableButtons(false, true);
-                            errors = applicantDS.transport.jsdo.getErrors();
-                            for (i = 0; i < errors.length; i += 1) {
-                                if (i === 0) {
-                                    alert(errors[i].error);
-                                } else {
-                                    console.log(errors[i].error);
-                                }
-                            }
+                            
+                            // Display errors
+                            // Default error handling already shows errors in an error notification
+//                            errors = applicantDS.transport.jsdo.getErrors();
+//                            for (i = 0; i < errors.length; i += 1) {
+//                                if (i === 0) {
+//                                    alert(errors[i].error);
+//                                } else {
+//                                    console.log(errors[i].error);
+//                                }
+//                            }
                             
                             applicantDS.cancelChanges();
                         }); // end promise.fail
