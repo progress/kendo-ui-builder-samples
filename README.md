@@ -29,6 +29,13 @@ Existing projects can be imported into Kendo UI Builder using the following step
 >    }
 >]
 
+# Running the sample apps
+
+Kendo UI Builder apps can be run in several ways:
+- Using the Preview and Build option in Kendo UI Builder
+- Using the &lt;project&gt;/start-web-apps.bat script to run the grunt
+- Deploying the build-output/debug folder tto a web server and accessing index.html
+
 # Projects
 
 ## form-external-paging
