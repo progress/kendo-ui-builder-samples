@@ -122,7 +122,9 @@
                     var applicantModel = this.scope._$viewModels.ApplicantDSModel,
                         ageComboBox = angular.element("#AgeCB").data("kendoComboBox");
                     
-                    ageComboBox.value(applicantModel.Age);
+                    if (ageComboBox) {
+                        ageComboBox.value(applicantModel.Age);
+                    }
                 },
                 
                 /* "customData" is the data return by the viewInitHandler handler*/
@@ -254,8 +256,12 @@
                                 errors,
                                 i;
                             
+                            if (that.appMode === that.CREATE) {
+                                that.curRowIndex = that.savedCurRowIndex;
+                                that.appMode = that.NONE;
+                            }
                             that.enableButtons(false, true);
-                            
+
                             // Display errors
                             // Default error handling already shows errors in an error notification
 //                            errors = applicantDS.transport.jsdo.getErrors();
