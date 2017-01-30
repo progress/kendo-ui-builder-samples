@@ -29,12 +29,17 @@ Existing projects can be imported into Kendo UI Builder using the following step
 >    }
 >]
 
-# Running the sample apps
+## Running the sample apps
 
 Kendo UI Builder apps can be run in several ways:
 - Using the Preview and Build option in Kendo UI Builder
 - Using the &lt;project&gt;/start-web-apps.bat script to run the grunt
 - Deploying the build-output/debug folder tto a web server and accessing index.html
+
+## Changing the Data Source
+
+The Data Provider information in Kendo UI Builder is read-only. However, if you want to change the Data Provider used by a sample app to use your own OpenEdge backend, you could manually modify the corresponding JSON file in the meta/dataProviders folder in the project.
+(Change serviceUri and catalogUris to change the location.)
 
 # Projects
 
