@@ -29,7 +29,7 @@
                 $scope._$ds['customer'] = new kendo.data.DataSource({
             "type": "jsdo",
             "transport": {
-                        "jsdo": "CustOrder",
+                        "jsdo": "CustOrderNSub",
                         "tableRef": "eCustomer"
             },
             "pageSize": 30
@@ -40,7 +40,7 @@
                 $scope._$ds['order'] = new kendo.data.DataSource({
             "type": "jsdo",
             "transport": {
-                        "jsdo": "CustOrder",
+                        "jsdo": "CustOrderNSub",
                         "tableRef": "eOrder"
             },
             "pageSize": 10

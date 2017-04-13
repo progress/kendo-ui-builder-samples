@@ -27,14 +27,14 @@
                 {
                     "name": "customer",
                     "dataProviderName": "CustOrderService",
-                    "dataSourceName": "CustOrder.eCustomer",
+                    "dataSourceName": "CustOrderNSub.eCustomer",
                     "pageSize": 30,
                     "uniqueID": "e8bc2de8-7b5d-4723-8b47-601fb04e264d"
                 },
                 {
                     "name": "order",
                     "dataProviderName": "CustOrderService",
-                    "dataSourceName": "CustOrder.eOrder",
+                    "dataSourceName": "CustOrderNSub.eOrder",
                     "pageSize": 10,
                     "uniqueID": "3fcd3326-961f-47b4-9534-52177b92d5df"
                 }
