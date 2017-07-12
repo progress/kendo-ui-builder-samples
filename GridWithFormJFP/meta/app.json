@@ -1,10 +1,12 @@
 {
     "type": "app",
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.4.2",
     "uniqueID": "d2f18173-8f2a-4628-8d50-2f64f2d2b12a",
     "name": "GridWithFormJFP",
     "description": "",
     "logo": "logo_default.png",
     "layout": {},
-    "children": []
+    "children": [],
+    "theme": "metro",
+    "targetFramework": "AngularJS"
 }

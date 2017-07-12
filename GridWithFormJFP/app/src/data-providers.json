@@ -1,0 +1,28 @@
+{
+    "CustomerService": {
+        "type": "data-provider",
+        "schemaVersion": "1.0",
+        "uniqueID": "a26cde04-002a-4901-8296-d7485fbc78b3",
+        "name": "CustomerService",
+        "authenticationModel": "Anonymous",
+        "providerType": "Progress Data Service",
+        "serviceUri": "http://oemobiledemo.progress.com/CustomerService",
+        "catalogUris": [
+            "http://oemobiledemo.progress.com/CustomerService/static/CustomerService.json"
+        ],
+        "verb": "GET"
+    },
+    "SalesrepService": {
+        "type": "data-provider",
+        "schemaVersion": "1.0",
+        "uniqueID": "6f293af4-1e13-45ca-8e21-0f5958a5b9a1",
+        "name": "SalesrepService",
+        "authenticationModel": "Anonymous",
+        "providerType": "Progress Data Service",
+        "serviceUri": "http://oemobiledemo.progress.com/DynamicService",
+        "catalogUris": [
+            "http://oemobiledemo.progress.com/DynamicService/web/DynamicService/catalog/Salesrep"
+        ],
+        "verb": "GET"
+    }
+}
