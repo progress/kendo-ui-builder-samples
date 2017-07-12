@@ -25,7 +25,7 @@
                 "login": "onLogin"
             },
             "title": "<Title>",
-            "extensionFolderName": "Application-login",
+            "extensionFolderName": "login",
             "logo": "logo_default_login.png",
             "usernameLabel": "Username",
             "passwordLabel": "Password",
@@ -48,12 +48,13 @@
                 "showEventHandler": "onShow",
                 "hideEventHandler": "onHide"
             },
-            "extensionFolderName": "Application-landing-page",
+            "extensionFolderName": "landing-page",
             "customSections": {
                 "top": "topSection.html",
                 "bottom": "bottomSection.html"
             },
             "readonly": false
         }
-    ]
+    ],
+    "order": 0
 }

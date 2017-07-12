@@ -22,10 +22,13 @@
                 "initEventHandler": "onInit",
                 "showEventHandler": "onShow",
                 "hideEventHandler": "onHide",
-                "onRowSelect": "onRowSelect"
+                "onRowSelect": "onRowSelect",
+                "onRowCreate": "",
+                "onRowUpdate": "",
+                "onRowDelete": ""
             },
             "title": "Items",
-            "extensionFolderName": "Items-ItemDG",
+            "extensionFolderName": "Items/ItemDG",
             "dataProvider": "ItemService",
             "dataSource": "Item",
             "columns": [
@@ -81,7 +84,28 @@
                 "top": "topSection.html",
                 "middle": "middleSection.html",
                 "bottom": "bottomSection.html"
+            },
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "editable": "ReadOnly",
+            "editOptions": {
+                "allowInsert": true,
+                "allowEdit": true,
+                "allowDelete": true,
+                "toolbarButtonLabels": {
+                    "cancel": "Cancel changes",
+                    "create": "New",
+                    "save": "Save changes"
+                },
+                "rowButtonLabels": {
+                    "canceledit": "Cancel",
+                    "destroy": "Delete",
+                    "edit": "Edit",
+                    "update": "Update"
+                },
+                "batch": false
             }
         }
-    ]
+    ],
+    "order": 1
 }
