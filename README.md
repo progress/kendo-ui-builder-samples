@@ -59,7 +59,8 @@ Access to the data is done using the dsService helper class.
 
 ## grid-foreignkey 
   
-This example shows a grid component. One of the columns display data found in a related table.
+This example shows a view with grid component. One of the columns on the display data found in a related table.
+Another view shows a grid component where one of the columns uses a DropDownList to input values from a related table.
 
 ## grid-image
 
