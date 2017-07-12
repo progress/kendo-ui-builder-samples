@@ -29,7 +29,8 @@
                     "dataProviderName": "CustomerService",
                     "dataSourceName": "Customer",
                     "pageSize": 20,
-                    "uniqueID": "097ea134-0c4a-4505-a12f-940d29dd8119"
+                    "uniqueID": "097ea134-0c4a-4505-a12f-940d29dd8119",
+                    "batch": false
                 }
             ],
             "rows": [
@@ -171,7 +172,7 @@
                     "uniqueID": "403c1edf-1cbe-4f96-9575-07e0117fc855",
                     "id": "grid0",
                     "dataSourceName": "customerDs",
-                    "editable": "None",
+                    "editable": "ReadOnly",
                     "columns": [
                         {
                             "field": "Name",
@@ -233,7 +234,10 @@
                     "model": "",
                     "events": {
                         "onRowSelect": "",
-                        "onDataBound": ""
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowUpdate": "",
+                        "onRowDelete": ""
                     },
                     "annotations": {
                         "id": "componentIdentifier"
@@ -244,7 +248,26 @@
                             "value": "097ea134-0c4a-4505-a12f-940d29dd8119.customerDs"
                         }
                     },
-                    "containerUid": "901f6e5a-b3ee-4cf3-90e2-dca7dab614a3"
+                    "containerUid": "901f6e5a-b3ee-4cf3-90e2-dca7dab614a3",
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "editOptions": {
+                        "allowInsert": true,
+                        "allowEdit": true,
+                        "allowDelete": true,
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        },
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "batch": false
+                    }
                 }
             ],
             "customSections": {
@@ -257,5 +280,6 @@
             },
             "extensionFolderName": "grid-external-filtering-grid-external-filtering"
         }
-    ]
+    ],
+    "order": 1
 }
