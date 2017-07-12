@@ -2,39 +2,24 @@
 
 Collection of sample projects using Kendo UI Builder for OpenEdge.
 
-## Importing an existing project into Kendo UI Builder
+## Importing an existing project into Kendo UI Builder 2.0
 
-Existing projects can be imported into Kendo UI Builder using the following steps:
-- Open the meta/app.json file in the project folder of the app.
-- Open the workspaces.json file in the Kendo UI Builder install folder.
-- Add an entry to the JSON array in workspaces.json with the following properties *name*, *dir*, and *uniqueID*
-
-> {
->     "name": "&lt;name&gt;",
->     "dir": "&lt;path-to-project&gt;",
->     "uniqueID": "&lt;uniqueID&gt;"
-> }
-
-*Example: workspaces.json*
->[
->    {
->        "name": "grid-image",
->        "dir": "C:\\KUIBWork\\grid-image",
->        "uniqueID": "297b3b29-623f-4321-8e07-a799be94126e"
->    },
->    {
->        "name": "form-with-crud",
->        "dir": "C:\\KUIBWork\\form-with-crud",
->        "uniqueID": "ff869a5c-6d0a-40a0-b190-d591a10a2d30"
->    }
->]
+Existing projects can be imported into Kendo UI Builder using the Import App option in Kendo UI Builder.
+Once the application is imported use the migrate option to update the metadata.
+Custom code should be migrated manually.
 
 ## Running the sample apps
 
 Kendo UI Builder apps can be run in several ways:
-- Using the Preview and Build option in Kendo UI Builder
-- Using the &lt;project&gt;/start-web-apps.bat script to run the grunt
-- Deploying the build-output/debug folder tto a web server and accessing index.html
+- Using the Preview option in Kendo UI Builder
+- Using "npm start" from the app/ folder and accessing the app at http://localhost:4200
+- Using Publish in Kendo UI Builder to create the build-output/debug or build-output/release folder, copy the folder to a web server and accessing index.html
+
+Notes:
+* This repository does not include the app/node_modules folder nor the build-output folder (optional in Kendo UI Builder 2.0).
+    - Use Generate or Preview in Kendo UI Builder to create the app/node_modules folder.
+    - Use Publish to create the build-output folder for get a static version of the app with a debug or a release version.
+    - Alternatively, you can use "npm install" from the app/ folder to download the modules needed during development.
 
 ## Changing the Data Source
 
@@ -69,7 +54,7 @@ Note:
 This example shows how to filter a grid by multiple fields using a single search text-box.
 	
 This is done by specifying a function in the "Change Event Function" property of the search text-box in the Component Properties pane.
-The function itself is specified in the src/scripts/<view-name>/view-factory.js.
+The function itself is specified in the app/src/modules/<module-name>/<view-name>/controller.public.js.
 
 Access to the data is done using the dsService helper class.
 
@@ -79,9 +64,9 @@ This example shows a grid component. One of the columns display data found in a 
 
 ## grid-image
 
-This example shows how to display a static image on a grid using a row template function defined in src/scripts/<view-name>/view-factory.js. The "Row Template Function" is specified via the Properties pane in the designer.
+This example shows how to display a static image on a grid using a row template function defined in app/src/modules/<module-name>/<view-name>/controller.public.js. The "Row Template Function" is specified via the Properties pane in the designer.
 
-The static images are located in src/assets/images.
+The static images are located in app/src/images.
 
 ## GridWithFormJFP
 
@@ -90,12 +75,6 @@ The JSON Filter Pattern (JFP) is used to provide server paging, filtering and so
 	
 This example showcases a Salesrep Drop Down List using data from data source specified for the view.
 The view also shows a Country Drop Down List using local data from a data source created programmatically.
-  
-## hierarchical-grid
-
-This example shows a parent / child relationship using a nested grid (hierarchical).
-	
-The parent grid is defined via the designer, whereas the child grid is defined programmatically.
 
 ## ListView_FormWithCRUD
 
@@ -105,20 +84,12 @@ This example uses a list view and a form to provide CRUD operations.
 
 This example shows how to provide a more complex template for items in a list view.
 	
-This is done by specifying an HTML-based template in the src/html/<view-name>/topSection.html and then specifying the id of the template in "Template Id" property in the list view's Component Properties pane.
+This is done by specifying an HTML-based template in the app/src/modules/<module-name>/<view-name>/topSection.html and then specifying the id of the template in "Template Id" property in the list view's Component Properties pane.
 	
 This example also showcases validation on form fields.
 
-The validation is implemented with code in src/scripts/<view-name>/view-factory.js. See the code for more details.
+The validation is implemented with code in app/src/modules/<module-name>/<view-name>/controller.public.js. See the code for more details.
 	
 Access to the data is done using the dsService helper class.
 
-## master-detail-grids
 
-This example shows a parent / child record relation in a master grid followed by a detail grid.
-
-Filtering is implemented by using an Angular watch on the model of the parent.
-When a row is selected, the model for the parent is set automatically, and the watch handler sets the filter for the detail grid.
-See code in src/scripts/<view-name>/view-factory.js.
-	
-The OrderDate's "Format" property is set in the Grid Columns Properties for display purposes.
