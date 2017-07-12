@@ -1,0 +1,15 @@
+{
+    "EmployeeService": {
+        "type": "data-provider",
+        "schemaVersion": "1.0",
+        "uniqueID": "f8064ec5-80ba-4b10-8270-c441edbf4cce",
+        "name": "EmployeeService",
+        "authenticationModel": "Anonymous",
+        "providerType": "Progress Data Service",
+        "serviceUri": "http://oemobiledemo.progress.com/EmployeeSubmit",
+        "catalogUris": [
+            "http://oemobiledemo.progress.com/EmployeeSubmit/static/EmployeeSubmitService.json"
+        ],
+        "verb": "GET"
+    }
+}
