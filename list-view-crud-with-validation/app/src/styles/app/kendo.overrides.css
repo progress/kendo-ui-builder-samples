@@ -1,3 +1,8 @@
+/*
+* Auto-generated
+* Do not edit!!!
+*/
+
 .k-panelbar {
     font-size: 16px;
 }
@@ -6,33 +11,22 @@
     overflow: hidden;
 }
 
-.k-panelbar .k-item > .k-link {
+.k-panelbar .k-item>.k-link {
     white-space: nowrap;
 }
 
 html .k-widget.k-tooltip {
-    background: #fff;
-    border-color: #fff;
-    color: #2d3e50;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-}
-
-html .k-widget.k-tooltip .k-callout-s {
-    border-top-color: #fff;
-}
-
-html .k-widget.k-tooltip .k-callout-n {
-    border-bottom-color: #fff;
-}
-
-.k-tooltip {
-    margin-left: 15px;
 }
 
 .k-tooltip .k-callout {
     top: -12px !important;
     left: 50% !important;
+}
+
+.k-tooltip-content {
+    word-break: break-word;
 }
 
 .k-block.k-info-colored {
@@ -50,7 +44,32 @@ html .k-widget.k-tooltip .k-callout-n {
     font-size: 14px;
 }
 
+
 /* Bootstrap breaks the appearance of kendo radio button */
+
 .k-radio-label:before {
     box-sizing: content-box;
+}
+
+
+/* Notification */
+
+.k-notification .k-notification-wrap {
+    white-space: normal;
+    overflow-wrap: break-word;
+    display: flex;
+}
+
+.k-widget.k-notification .k-icon {
+    margin: 2px 10px 0 0;
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+.login-form .k-notification-wrap {
+    padding: 15px;
+}
+
+.login-form .k-widget.k-notification .k-icon {
+    margin-top: 0;
 }

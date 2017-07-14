@@ -1,3 +1,4 @@
-/*
-Add your custom css rules here
-*/
+/* Validation */
+.k-invalid-msg {
+    color: #ff0000;
+}
