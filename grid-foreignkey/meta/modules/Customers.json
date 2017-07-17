@@ -22,10 +22,13 @@
                 "initEventHandler": "onInit",
                 "showEventHandler": "onShow",
                 "hideEventHandler": "onHide",
-                "onRowSelect": "onRowSelect"
+                "onRowSelect": "onRowSelect",
+                "onRowCreate": "",
+                "onRowUpdate": "",
+                "onRowDelete": ""
             },
             "title": "Customers",
-            "extensionFolderName": "Customers-CustomerDG",
+            "extensionFolderName": "Customers/CustomerDG",
             "dataProvider": "CustomerService",
             "dataSource": "Customer",
             "columns": [
@@ -66,7 +69,198 @@
                 "top": "topSection.html",
                 "middle": "middleSection.html",
                 "bottom": "bottomSection.html"
+            },
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "editable": "ReadOnly",
+            "editOptions": {
+                "allowInsert": true,
+                "allowEdit": true,
+                "allowDelete": true,
+                "toolbarButtonLabels": {
+                    "cancel": "Cancel changes",
+                    "create": "New",
+                    "save": "Save changes"
+                },
+                "rowButtonLabels": {
+                    "canceledit": "Cancel",
+                    "destroy": "Delete",
+                    "edit": "Edit",
+                    "update": "Update"
+                },
+                "batch": false
             }
+        },
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "686a8892-7c6d-4d8c-9a62-468424bb4581.CustomerDS"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "encoded": true,
+                            "field": "CustNum",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "CustNum"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "Name",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Name"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "State",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "State"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "SalesRep",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "SalesRep",
+                            "width": 200
+                        }
+                    ],
+                    "containerUid": "0f121768-416a-4007-931c-278ee77cfa0e",
+                    "dataSourceName": "CustomerDS",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "Incell",
+                    "events": {
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": false,
+                    "groupable": false,
+                    "id": "grid0",
+                    "model": "",
+                    "reorderable": false,
+                    "resizable": false,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "None",
+                    "sortable": false,
+                    "type": "grid",
+                    "uniqueID": "ef1a011c-cb64-41c6-94e4-c80207097269"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "CustomerService",
+                    "dataSourceName": "Customer",
+                    "name": "CustomerDS",
+                    "pageSize": 15,
+                    "uniqueID": "686a8892-7c6d-4d8c-9a62-468424bb4581"
+                },
+                {
+                    "batch": true,
+                    "dataProviderName": "SalesrepService",
+                    "dataSourceName": "Salesrep",
+                    "name": "SalesrepDS",
+                    "pageSize": 20,
+                    "uniqueID": "7bb4a699-55dd-452b-9b11-3664e852b68a"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Customers\\CustomerView",
+            "hidden": false,
+            "label": "Customers",
+            "name": "CustomerView",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "0f121768-416a-4007-931c-278ee77cfa0e"
+                        },
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "4d25ddca-4eed-4955-a4c9-5daa79b1f292"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "6173e4f3-6532-465d-b2a3-cc151b67630a"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "d30e3672-f4d4-4d37-8d3f-cf1654a45dc2",
+            "viewType": "blank"
         }
-    ]
+    ],
+    "order": 1
 }

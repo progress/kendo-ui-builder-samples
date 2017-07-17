@@ -1,0 +1,699 @@
+/*
+* Auto-generated
+* Do not edit!!!
+*/
+
+
+/* NORMALIZE */
+
+html,
+body,
+body>.angular-ui-view,
+.angular-ui-view>[class^="container"] {
+    height: 100%;
+}
+
+.kuib-home-content {
+    height: 100%;
+    overflow: auto;
+}
+
+
+/* Reset everything to the default box model */
+
+*,
+ :before,
+ :after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+/* Set a border-box model only to elements that need it */
+
+.form-control,
+
+/* if this class is applied to a Kendo UI widget, its layout may change */
+
+.container,
+.container-fluid,
+.row,
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin: 0;
+}
+
+label {
+    font-weight: normal;
+}
+
+
+/* Common */
+
+.error-box {
+    overflow-wrap: break-word;
+}
+
+.overlay {
+    position: absolute;
+    left: 15px;
+    right: 13px;
+    width: auto;
+    opacity: .3;
+}
+
+.k-block.k-info-colored {
+    margin-top: 200px;
+}
+
+.kuib-pointer-events-none {
+    pointer-events: none;
+}
+
+
+/* Container */
+
+[class^="container"] {
+    display: flex;
+    flex-flow: column;
+}
+
+.kuib-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .6;
+}
+
+
+/* Header */
+
+.header>div {
+    display: flex;
+    height: 50px;
+    z-index: 1000;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .7);
+}
+
+.header>div .brand {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+/* Login */
+
+
+/* Login : Form */
+
+.login-form {
+    padding: 20px;
+}
+
+.login-form.k-widget,
+.login-form.k-widget * {
+    box-sizing: border-box;
+}
+
+.modal {
+    z-index: 10200 !important;
+}
+
+.login-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.provider-name {
+    margin: 20px 0 20px;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 400px;
+    }
+}
+
+.modal-dialog .modal-content {
+    border-radius: 0;
+}
+
+
+/* Login : Header */
+
+.login-header {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.login-header img {
+    margin-right: 15px;
+}
+
+
+/* Login : Inputs */
+
+.login-form .k-button {
+    width: 100%;
+}
+
+.login-form .k-button.k-state-disabled {
+    cursor: not-allowed !important;
+}
+
+.login-form .k-textbox {
+    width: 100%;
+}
+
+.login-form input {
+    margin-bottom: 20px;
+}
+
+
+/* Login : Validation */
+
+.login-form .k-notification {
+    margin-top: 20px;
+}
+
+.login-form input.ng-invalid.ng-dirty {
+    border-color: #f62b00;
+    margin-bottom: 5px;
+}
+
+.login-form .help-block {
+    margin: 0 0 20px;
+    color: #f62b00;
+}
+
+.login-form .fa-warning {
+    margin-right: 15px;
+    font-size: 26px;
+}
+
+
+/* Login : menu */
+
+.login {
+    position: relative;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: -15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.login .k-i-user {
+    font-size: 32px;
+    text-align: center;
+    width: 1.25em;
+    line-height: 1.25;
+    border-radius: 100%;
+}
+
+.login .k-i-arrow-chevron-down {
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.login-tooltip {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 150px;
+    box-shadow: 0px 5px 14px 1px rgba(0, 0, 0, .1);
+}
+
+.tooltip-arrow {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    margin-top: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 10px 8px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.logout {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logout {
+    line-height: 2.5;
+    padding: 0 15px;
+}
+
+.logout .k-i-logout {
+    margin-right: 15px;
+}
+
+
+/* Main Wrapper*/
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.main-content>section {
+    flex: 1;
+}
+
+
+/* Main Content*/
+
+.main-content {
+    width: calc(100% - 200px);
+    display: flex;
+    padding-top: 15px;
+    overflow: auto;
+    flex-flow: column;
+}
+
+
+/* Side Nav */
+
+.side-navigation {
+    display: flex;
+    width: 200px;
+    padding: 0;
+    transition: width 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+.side-navigation .nav-item .k-link {
+    padding-left: 42px;
+}
+
+.side-navigation .k-panelbar {
+    background-image: none;
+}
+
+.k-panelbar {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    width: calc(200px - 1px);
+    overflow: auto;
+    border-left: 0;
+    border-bottom: 0;
+    transition: width 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+.k-panelbar .k-header i.fa {
+    width: 20px;
+    margin-right: 7px;
+}
+
+.k-panelbar .k-header>span:not(.k-icon) {
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.k-panelbar .k-item>a>span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kuib-main-content-overlay {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .side-navigation {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+    .main-content {
+        margin-left: 61px;
+    }
+    .kuib-main-content-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.3;
+        z-index: 10;
+        margin-left: -15px;
+    }
+    .mobile-navigation {
+        width: 61px;
+    }
+    .mobile-navigation .k-panelbar {
+        position: static;
+        width: 60px;
+    }
+    .mobile-navigation .k-panelbar .k-header>span {
+        display: none;
+    }
+    .mobile-navigation .k-panelbar .k-header i.fa {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .main-content {
+        width: calc(100% - 61px);
+    }
+}
+
+
+/* TEMPLATES */
+
+.data-grid h2,
+.data-form h2,
+.data-grid-form-header h2,
+.data-form-fieldset {
+    margin: 0;
+}
+
+
+/* DataForm */
+
+.data-form-wrapper,
+.data-form-fieldset {
+    padding: 20px;
+}
+
+.data-form-wrapper.k-widget,
+.data-form-wrapper.k-widget [class^="col-"] {
+    box-sizing: border-box;
+}
+
+.data-form [class^="col-"] {
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+}
+
+.data-form [class^="col-"]>.k-widget,
+.data-form [class^="col-"]>.k-textbox,
+.data-form [class^="col-"]>.k-input {
+    width: 100%;
+}
+
+.data-form .data-form-pager {
+    margin-top: 10px;
+}
+
+.data-form .data-form-pager .k-input {
+    width: 33px;
+}
+
+.data-form .componentsContainer .row {
+    min-height: 45px;
+}
+
+.data-form .row {
+    margin-bottom: 5px
+}
+
+.data-form hr,
+.data-grid-form hr {
+    margin-bottom: 20px;
+}
+
+.data-form-commands .k-button .k-icon {
+    margin: 0;
+}
+
+
+/* Grid + DataForm */
+
+.data-grid-form-header {
+    display: flex;
+}
+
+.data-grid-form-header div+div {
+    align-self: flex-end;
+    padding-bottom: 10px;
+    min-width: 300px;
+}
+
+
+/* Landing page */
+
+.custom-section {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.modules-list-wrapper {
+    display: flex;
+    max-width: 754px;
+    margin: 20px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.module-thumbnail {
+    display: inline-block;
+    margin: 20px 30px;
+    text-align: center;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none !important;
+}
+
+.module-thumbnail:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.module-thumbnail span {
+    font-size: 20px;
+    max-width: 128px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 128px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.module-thumbnail:hover .fa {
+    font-size: 70px;
+}
+
+.module-thumbnail:hover i:before {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+}
+
+.module-thumbnail .fa {
+    width: 128px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    border-radius: 2px;
+}
+
+
+/* Dialog and Notification */
+
+.dialog .k-button {
+    min-width: 55px;
+}
+
+.confirm-delete .k-primary,
+.confirm-delete .k-primary:active:hover {
+    background-color: #f62b00;
+    border-color: #f62b00;
+}
+
+.confirm-delete .k-primary:hover {
+    background-color: #ff3a10;
+    border-color: #ff3a10;
+}
+
+.k-widget.k-slider-horizontal {
+    margin-bottom: 20px;
+}
+
+
+/* Layout grid */
+
+text-box {
+    display: block;
+}
+
+[class^="col-"] [kendo-masked-text-box],
+[class^="col-"] .k-input,
+[class^="col-"] text-area textarea,
+[class^="col-"] .k-widget:not(.k-slider-vertical):not(.k-grid-pager):not(textarea) {
+    width: 100%;
+}
+
+textarea[cols] {
+    width: auto !important;
+}
+
+
+/* Tabstrip */
+
+.k-tabstrip>.k-content {
+    padding: 15px;
+}
+
+
+/* Radio Button List */
+
+.kuib-radio-button-list {
+    min-height: 24px;
+    overflow: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.kuib-radio-button-list.-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.kuib-radio-button-list.-horizontal li {
+    white-space: nowrap;
+}
+
+.kuib-radio-button-list.-horizontal li+li {
+    margin-left: 10px;
+}
+
+
+/* Expander */
+
+.kuib-expander {}
+
+.kuib-expander__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.kuib-expander__header .k-icon {
+    font-size: inherit;
+    color: inherit;
+}
+
+.kuib-expander__header .k-icon:hover {
+    color: inherit;
+    /* fixes bug with kendo hover: icon disappears */
+}
+
+.kuib-expander__container {
+    max-height: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 500ms cubic-bezier(0.5, 0, 0, 1) -0.4s;
+}
+
+.kuib-expander__checkbox:checked~.kuib-expander__container {
+    visibility: visible;
+    max-height: 9999px;
+    height: auto;
+    transition: all 500ms cubic-bezier(0.5, 0, 0, 1);
+}
+
+.kuib-expander__checkbox {
+    display: none;
+}
+
+.kuib-expander__checkbox~.kuib-expander__header .k-icon:before {
+    content: '\e014';
+}
+
+.kuib-expander__checkbox:checked~.kuib-expander__header .k-icon:before {
+    content: '\e015';
+}
+
+
+/*firefox hack*/
+
+[class^="col-"] .k-calendar {
+    display: block;
+}

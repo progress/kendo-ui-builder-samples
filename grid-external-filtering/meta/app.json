@@ -1,10 +1,12 @@
 {
     "type": "app",
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.4.2",
     "uniqueID": "e2961398-da60-4934-9f85-7303419f21fc",
     "name": "grid-external-filtering",
     "description": "",
     "logo": "logo_default.png",
     "layout": {},
-    "children": []
+    "children": [],
+    "theme": "metro",
+    "targetFramework": "AngularJS"
 }

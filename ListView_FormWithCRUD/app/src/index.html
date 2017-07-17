@@ -1,0 +1,54 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ListView_FormWithCRUD</title>
+</head>
+
+<body ng-app="app.list-view-form-with-crud" ng-strict-di>
+    <notification></notification>
+    <dialog></dialog>
+    <script type="text/x-kendo-template" id="confirm-window-template">
+        <p>#= hint #</p>
+        <button class="k-button" id="yes-button">Yes</button>
+        <button class="k-button" id="no-button">No</button>
+    </script>
+
+    <script type="text/ng-template" id="module-template">
+        <div class="container-fluid" id="layout">
+            <div class="row header">
+                <div class="col-xs-12 k-header" ui-view="header"></div>
+            </div>
+            <div class="row main-wrapper">
+                <div class="col-xs-2 side-navigation mobile-navigation" ui-view="side-navigation"></div>
+                <div class="col-xs-10 main-content k-content">
+                    <div ui-view="content"></div>
+                    <div class="kuib-main-content-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="home-template">
+        <div class="container-fluid" id="layout">
+            <div class="row header">
+                <div ui-view="header" class="col-xs-12 k-header">
+                </div>
+            </div>
+            <div class="row main-wrapper">
+                <div ui-view="content" class="col-xs-12 k-content kuib-home-content">
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <div ui-view class="angular-ui-view"></div>
+</body>
+
+</html>

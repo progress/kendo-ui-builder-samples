@@ -1,0 +1,25 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="data-form" kendo-validator="vm.validator" k-options="vm.validatorOptions">
+    <div class="data-form-fieldset">
+        <div class="componentsContainer">
+            <ng-transclude></ng-transclude>
+        </div>
+    </div>
+    <div class="row data-form-pager" ng-if="vm.allowPaging">
+        <div class="col-xs-8">
+            <a ng-click="vm.prev()" class="k-button k-button-icontext k-grid-cancel" ng-class="{'kuib-disabled': vm.insertInProcess || vm.updateInProcess }">
+                <span class="k-icon k-i-arrow-w"></span> Prev
+            </a>
+            <a ng-click="vm.next()" class="k-button k-button-icontext k-grid-delete" ng-class="{'kuib-disabled': vm.insertInProcess || vm.updateInProcess }">
+                Next <span class="k-icon k-i-arrow-e"></span>
+            </a>
+        </div>
+        <div class="col-xs-4 text-right">
+            <span>Go to </span>
+            <input type="text" class="k-input k-textbox" ng-change="vm.pageTo()" ng-model="vm.selectedPage" ng-class="{'kuib-disabled': vm.insertInProcess || vm.updateInProcess }" />
+        </div>
+    </div>
+</div>

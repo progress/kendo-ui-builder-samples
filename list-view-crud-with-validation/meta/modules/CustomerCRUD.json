@@ -29,7 +29,8 @@
                     "dataProviderName": "Customers",
                     "dataSourceName": "Customer",
                     "pageSize": 5,
-                    "uniqueID": "c2b7aded-971c-4c6a-a43f-29eeb0c98f31"
+                    "uniqueID": "c2b7aded-971c-4c6a-a43f-29eeb0c98f31",
+                    "batch": false
                 }
             ],
             "rows": [
@@ -684,7 +685,8 @@
                     "annotations": {
                         "id": "componentIdentifier"
                     },
-                    "containerUid": "c50cb768-c8f8-44bb-8ff4-e6b365142693"
+                    "containerUid": "c50cb768-c8f8-44bb-8ff4-e6b365142693",
+                    "spinners": false
                 },
                 {
                     "type": "label",
@@ -874,7 +876,8 @@
                     "annotations": {
                         "id": "componentIdentifier"
                     },
-                    "containerUid": "cdadbb6a-487a-43cd-bfe9-61d0d7dc45b1"
+                    "containerUid": "cdadbb6a-487a-43cd-bfe9-61d0d7dc45b1",
+                    "spinners": false
                 },
                 {
                     "type": "label",
@@ -963,5 +966,6 @@
             },
             "extensionFolderName": "CustomerCRUD-list-view-external-form"
         }
-    ]
+    ],
+    "order": 1
 }
