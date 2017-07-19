@@ -1,3 +1,9 @@
+REM Create build-output/debug for all the projects
+
+cd charts/app
+call npm run build:dev
+cd ../..
+
 cd form-external-paging/app
 call npm run build:dev
 cd ../..

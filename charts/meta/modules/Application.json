@@ -1,0 +1,60 @@
+{
+    "children": [
+        {
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "login": "onLogin",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Application\\login",
+            "logo": "logo_default_login.png",
+            "name": "login",
+            "passwordLabel": "Password",
+            "readonly": false,
+            "schemaVersion": "1.0",
+            "title": "<Title>",
+            "type": "view",
+            "uniqueID": "44358d29-83e9-42bd-b450-95425e8b454a",
+            "usernameLabel": "Username",
+            "viewType": "login"
+        },
+        {
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "top": "topSection.html"
+            },
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Application\\landing-page",
+            "name": "landing-page",
+            "readonly": false,
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "e438f73c-09bb-4ec3-8195-3f57d2530d4d",
+            "viewType": "landing-page"
+        }
+    ],
+    "description": "This Module contains application level pages including the landing page and authentication page",
+    "moduleType": "system",
+    "name": "Application",
+    "order": 0,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#b2b2b2",
+        "color": "#ffffff",
+        "icon": "fa-group"
+    },
+    "type": "module",
+    "uniqueID": "c07f6366-39a5-465c-8e13-b621798dd141"
+}

@@ -1,0 +1,12 @@
+{
+    "children": [],
+    "description": "",
+    "layout": {},
+    "logo": "logo_default.png",
+    "name": "charts",
+    "schemaVersion": "1.4.2",
+    "targetFramework": "AngularJS",
+    "theme": "blueopal",
+    "type": "app",
+    "uniqueID": "56b3597b-0bf9-4cf3-a6e1-0725a4424c9d"
+}

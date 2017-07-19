@@ -1,0 +1,391 @@
+{
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "142a857b-e63a-42f9-9c83-982012c8bf19",
+                    "events": {
+                        "onSelect": "",
+                        "onShow": ""
+                    },
+                    "id": "tabstrip0",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "45eb14c5-c88a-4bca-86d9-b799bc42bea1.SalesrepDS"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "SalesRep",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "33fa0cf2-100f-47ac-baa1-0cb0a307def8",
+                                    "dataSourceName": "SalesrepDS",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barcharts0",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": true
+                                    },
+                                    "model": "SalesrepDSModel",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_1",
+                                            "name": "item1"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": true
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "3672bceb-40ef-426f-b46f-af2f3184addf",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 10000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "33fa0cf2-100f-47ac-baa1-0cb0a307def8"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "c08e15c8-0182-4f79-9241-a1a9c4dccaf3"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Monthly Quotas",
+                            "type": "tab",
+                            "uniqueID": "6a402584-dcba-4ea0-b96f-66ac6d706c8d"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "45eb14c5-c88a-4bca-86d9-b799bc42bea1.SalesrepDS"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "containerUid": "1cd1e794-9fe6-46f4-8902-b302b32235cd",
+                                    "dataSourceName": "SalesrepDS",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "piecharts0",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "categoryField": "SalesRep",
+                                            "field": "MonthQuota_1",
+                                            "startAngle": 90
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "background": "white",
+                                            "templateFunction": "pieChartLabelTemplate",
+                                            "templateId": "",
+                                            "visible": true
+                                        },
+                                        "typeChart": "Pie"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": true
+                                    },
+                                    "type": "pie-charts",
+                                    "uniqueID": "14c9a8ff-aa4f-41e6-8510-78b413180bd9"
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "1cd1e794-9fe6-46f4-8902-b302b32235cd"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "b397cc94-7c46-4082-a4e4-3e396022e8d4"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Quota Per Person",
+                            "type": "tab",
+                            "uniqueID": "264f1a6a-ce00-4ece-985f-6358fa99f9ba"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "tabPosition": "top",
+                    "type": "tab-strip",
+                    "uniqueID": "599d0016-5217-4055-b28d-e3af9fc3aa0b"
+                },
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "45eb14c5-c88a-4bca-86d9-b799bc42bea1.SalesrepDS"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "encoded": true,
+                            "field": "SalesRep",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Sales Rep"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "RepName",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Rep Name"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "Region",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Region"
+                        }
+                    ],
+                    "containerUid": "235b70fb-32ea-4cb6-87ca-63bcde349e4f",
+                    "dataSourceName": "SalesrepDS",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "ReadOnly",
+                    "events": {
+                        "onDataBound": "onDataBound",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "onRowSelect",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": false,
+                    "groupable": false,
+                    "id": "grid0",
+                    "model": "SalesrepDSModel",
+                    "reorderable": false,
+                    "resizable": false,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "Single",
+                    "sortable": false,
+                    "type": "grid",
+                    "uniqueID": "9cd5268b-d0d2-4d8b-a01e-eead585ba542"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "SalesrepService",
+                    "dataSourceName": "Salesrep",
+                    "name": "SalesrepDS",
+                    "pageSize": 10,
+                    "uniqueID": "45eb14c5-c88a-4bca-86d9-b799bc42bea1"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Charts\\ChartsDemo",
+            "hidden": false,
+            "name": "ChartsDemo",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 10
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "142a857b-e63a-42f9-9c83-982012c8bf19"
+                        },
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "ee98e088-5f5b-448c-ada2-c68984640d05"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "20b23cc9-33cf-4122-9ce2-956d4e2f07c3"
+                },
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 10
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "235b70fb-32ea-4cb6-87ca-63bcde349e4f"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "f79a7908-1369-4f7b-8081-7c4598e1f8e0"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "79e7519d-de0c-469f-aa3d-25354afef6f5",
+            "viewType": "blank"
+        }
+    ],
+    "description": "",
+    "moduleType": "default",
+    "name": "Charts",
+    "order": 0,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#00a2e8",
+        "color": "#ffffff",
+        "icon": "fa-area-chart"
+    },
+    "type": "module",
+    "uniqueID": "12f496d6-019f-48ec-9999-3cca504cfec0"
+}
