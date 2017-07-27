@@ -376,7 +376,7 @@
             "viewType": "blank"
         }
     ],
-    "description": "",
+    "description": "This example shows a view created using the Blank option.\nIt demos a Grid for the Salesrep table and data displayed in charts.",
     "moduleType": "default",
     "name": "Charts",
     "order": 0,

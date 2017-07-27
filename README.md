@@ -27,6 +27,16 @@ The Data Provider information in Kendo UI Builder is read-only. However, if you 
 
 # Projects
 
+## charts
+
+This example shows a view created using the Blank option.
+It demos a Grid for the Salesrep table, and a corresponding BarChart for the selected row.
+Additionally, it displays a PieChart showing data for all the rows.
+
+Both charts are placed into a TabStrip control.
+
+It creates local data sources to transform the Salerep data into required data models for the corresponding charts.
+
 ## form-external-paging
 
 This example shows a form with navigation, CRUD capabilities, and also implements server paging. It is an extension of the form-with-crud app, but specifies server paging for its DataSource

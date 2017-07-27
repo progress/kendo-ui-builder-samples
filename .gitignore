@@ -8,6 +8,7 @@
 /GridWithFormJFP/app/node_modules/*
 /list-view-crud-with-validation/app/node_modules/*
 /ListView_FormWithCRUD/app/node_modules/*
+/pug-2017/app/node_modules/*
 #
 /charts/build-output/*
 /form-external-paging/build-output/*
@@ -18,4 +19,5 @@
 /GridWithFormJFP/build-output/*
 /list-view-crud-with-validation/build-output/*
 /ListView_FormWithCRUD/build-output/*
+/pug-2017/build-output/*
 #
