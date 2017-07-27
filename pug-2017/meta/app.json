@@ -1,0 +1,12 @@
+{
+    "children": [],
+    "description": "This application demostrates the features of KUIB 2.0",
+    "layout": {},
+    "logo": "logo_alternate.png",
+    "name": "pug-2017",
+    "schemaVersion": "1.4.2",
+    "targetFramework": "AngularJS",
+    "theme": "flat",
+    "type": "app",
+    "uniqueID": "ad8b6bd7-88ee-4bfa-af79-f0640e092522"
+}

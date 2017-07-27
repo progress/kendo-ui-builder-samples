@@ -1,0 +1,60 @@
+{
+    "description": "This Module contains application level pages including the landing page and authentication page",
+    "moduleType": "system",
+    "name": "Application",
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#ffffff",
+        "color": "#c3c3c3",
+        "icon": "fa-info"
+    },
+    "type": "module",
+    "uniqueID": "5b87df20-5e72-42c8-a67f-a36e3406ea72",
+    "children": [
+        {
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "login": "onLogin",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "login",
+            "logo": "logo_plain.png",
+            "name": "login",
+            "passwordLabel": "Password",
+            "readonly": false,
+            "schemaVersion": "1.0",
+            "title": "Welcome to Cloud Apps",
+            "type": "view",
+            "uniqueID": "b7accbaf-d262-43f4-8ae8-2383096953bd",
+            "usernameLabel": "Username",
+            "viewType": "login"
+        },
+        {
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "top": "topSection.html"
+            },
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "landing-page",
+            "name": "landing-page",
+            "readonly": false,
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "b3db14cd-b3f1-4c5d-ab79-043702811010",
+            "viewType": "landing-page"
+        }
+    ],
+    "order": 0
+}

@@ -1,0 +1,1407 @@
+{
+    "description": "Main",
+    "moduleType": "default",
+    "name": "Main",
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#000000",
+        "color": "#b5e61d",
+        "icon": "fa-home"
+    },
+    "type": "module",
+    "uniqueID": "dc9e1797-e7ea-4b38-b72e-b49fd598b8a5",
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "d7604e3a-df14-4801-b6f6-c80dd5862f60",
+                    "events": {
+                        "onSelect": "",
+                        "onShow": ""
+                    },
+                    "id": "tabstrip0",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "b9c56aa2-1eaa-4235-8024-4e391c3469dc",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsJanuary",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "SaleRepsModel",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_1",
+                                            "name": "January"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": "Sales By Month"
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "97dde999-1128-409b-b003-12937cac1cfd",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "b9c56aa2-1eaa-4235-8024-4e391c3469dc"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "57ac41dd-a35e-4833-b1f3-547571d7765f"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Jan",
+                            "type": "tab",
+                            "uniqueID": "3fe6c523-0adf-434a-bffb-a950b4a4b3de"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "fcdb9a13-1c7f-490c-b237-768051cca4f7",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsFebruary",
+                                    "legend": {
+                                        "background": "#ffffff",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "SaleRepsModel",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_2",
+                                            "name": "February"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": "Sales By Month"
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "362b533c-aa71-479f-8215-c784ea5ba241",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "fcdb9a13-1c7f-490c-b237-768051cca4f7"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "06e16d64-f3f2-4913-8c38-d9cd66f3f796"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Feb",
+                            "type": "tab",
+                            "uniqueID": "15f37d63-6e36-4114-a94f-01268f4d597c"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "fedf2628-9f27-4f10-aa6e-3194f36ee962",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsMarch",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "SaleRepsModel",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_3",
+                                            "name": "March"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": "Sales By Month"
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "c56a4fd9-be43-43f8-bef0-a72890010bca",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "fedf2628-9f27-4f10-aa6e-3194f36ee962"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "cb7fe4b9-c5a7-4eb6-a824-44fdeaabaa5f"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Mar",
+                            "type": "tab",
+                            "uniqueID": "91a7ffe0-4dae-4c8a-8d5b-29f138d6265d"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "bc238825-be0c-4fd9-8401-20d1388ba96e",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsApril",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_4",
+                                            "name": "April"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "88c1dd01-2616-4e4e-8f9c-296e4d9e4a5f",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "bc238825-be0c-4fd9-8401-20d1388ba96e"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "167dcdca-16e3-4566-993f-c49a6ed96f5e"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "April",
+                            "type": "tab",
+                            "uniqueID": "db3885a9-9a55-40e3-9c06-61dcad99d11f"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "ce1eb7a7-3a38-4bcb-829a-07fc4799137b",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsMay",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_5",
+                                            "name": "May"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "b2c8254b-b5ad-4163-a450-0e181aa16fd0",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "ce1eb7a7-3a38-4bcb-829a-07fc4799137b"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "2744d330-8ddc-4a80-a83d-5288623539d9"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "May",
+                            "type": "tab",
+                            "uniqueID": "5386eba2-26bc-4191-9842-1a31f259718d"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "f28e3f58-0005-4ca2-b07e-60b1ab2d2424",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsJune",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_6",
+                                            "name": "June"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "1b27a608-d6ad-4ca3-b497-2c6ea96da4cd",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "f28e3f58-0005-4ca2-b07e-60b1ab2d2424"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "09b7cb2b-d213-4380-9dfb-2895b0ddec4f"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "June",
+                            "type": "tab",
+                            "uniqueID": "d573baad-df44-4906-95e6-7688db8b6be7"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "bcced08d-5236-4454-8c78-a9294bfc8973",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsJuly",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_7",
+                                            "name": "July"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Bar"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "bbf6b0b8-e96a-49a8-8444-a87d2ec9611a",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "bcced08d-5236-4454-8c78-a9294bfc8973"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "b71a54b1-e4c1-45d9-a681-a64b506ed891"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "July",
+                            "type": "tab",
+                            "uniqueID": "d451de5b-c5fc-4561-9c0e-f65aa9d7ee71"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "f8220c49-8927-44f0-b754-cbdaa50955a5",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsAugust",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_8",
+                                            "name": "August"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "b8d37aef-380c-44ba-b2ae-07d9c3e600fe",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "f8220c49-8927-44f0-b754-cbdaa50955a5"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "fd65d18f-67aa-4193-8285-cfe3691568d0"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Aug",
+                            "type": "tab",
+                            "uniqueID": "e5786f6b-cb15-4496-8cbb-609979ecee96"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "93a7a94c-bdd1-4785-beba-d3ba8fc3314f",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsSeptember",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_9",
+                                            "name": "September"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "8fbe34a7-5e93-4e08-a6e8-0b016be8c089",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "93a7a94c-bdd1-4785-beba-d3ba8fc3314f"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "01a9bfa7-cff4-4cd0-8527-50a9698a5d27"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Sept",
+                            "type": "tab",
+                            "uniqueID": "1eaf2d55-160a-440b-beac-ae69d13e130d"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "fe241379-5444-42c6-a6e4-e05f5cadc95a",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsOctober",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_10",
+                                            "name": "October"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "bd9c063a-775a-48cc-838a-dcd2e2df1221",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "fe241379-5444-42c6-a6e4-e05f5cadc95a"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "6f2b2f2b-5743-4959-b8f9-327186150b3a"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Oct",
+                            "type": "tab",
+                            "uniqueID": "6ba35311-443a-48f3-aead-18c0e0171917"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "07bedb72-06a1-44ac-90f7-377cb050b8ec",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsNovember",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_11",
+                                            "name": "November"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "69a5dfd5-cb27-4ac2-aa5c-e33ddc2b5344",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "07bedb72-06a1-44ac-90f7-377cb050b8ec"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "9c8959f3-ec0d-43ff-89f4-380ed6114de7"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Nov",
+                            "type": "tab",
+                            "uniqueID": "c524d3a4-90ec-4708-bccd-8b092e1f3974"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "annotationRefs": {
+                                        "dataSourceName": {
+                                            "kind": "dataSourceName",
+                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "id": "componentIdentifier"
+                                    },
+                                    "categoryAxis": {
+                                        "field": "RepName",
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 90
+                                            }
+                                        }
+                                    },
+                                    "containerUid": "008920c0-0906-4b2b-b46c-555d7245d15f",
+                                    "dataSourceName": "SaleReps",
+                                    "events": {
+                                        "onDataBound": "",
+                                        "onSeriesClick": ""
+                                    },
+                                    "id": "barchartsDecember",
+                                    "legend": {
+                                        "background": "white",
+                                        "position": "Top",
+                                        "visible": false
+                                    },
+                                    "model": "",
+                                    "schemaVersion": "1.0",
+                                    "series": [
+                                        {
+                                            "field": "MonthQuota_12",
+                                            "name": "December"
+                                        }
+                                    ],
+                                    "seriesDefaults": {
+                                        "labels": {
+                                            "visible": false
+                                        },
+                                        "typeChart": "Column"
+                                    },
+                                    "title": {
+                                        "text": ""
+                                    },
+                                    "tooltip": {
+                                        "templateFunction": "",
+                                        "templateId": "",
+                                        "visible": false
+                                    },
+                                    "type": "bar-charts",
+                                    "uniqueID": "23674784-b821-4716-b7c9-3b5905c2bc9e",
+                                    "valueAxis": {
+                                        "labels": {
+                                            "format": "{0}",
+                                            "rotation": {
+                                                "angle": 0
+                                            }
+                                        },
+                                        "line": {
+                                            "visible": true
+                                        },
+                                        "max": 5000,
+                                        "min": 0
+                                    }
+                                }
+                            ],
+                            "rows": [
+                                {
+                                    "cols": [
+                                        {
+                                            "breakpoints": {
+                                                "sm": 12
+                                            },
+                                            "hidden": {
+                                                "lg": false,
+                                                "md": false,
+                                                "sm": false,
+                                                "xs": false
+                                            },
+                                            "rows": [],
+                                            "schemaVersion": "1.0",
+                                            "type": "col",
+                                            "uniqueID": "008920c0-0906-4b2b-b46c-555d7245d15f"
+                                        }
+                                    ],
+                                    "schemaVersion": "1.0",
+                                    "type": "row",
+                                    "uniqueID": "b3dbb786-70d8-4e21-9793-444b8c56750c"
+                                }
+                            ],
+                            "schemaVersion": "1.0",
+                            "text": "Dec",
+                            "type": "tab",
+                            "uniqueID": "f4a608b1-7282-48dc-b4e3-a58d39dc563b"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "tabPosition": "top",
+                    "type": "tab-strip",
+                    "uniqueID": "c9291adf-ad92-427c-b0b7-22ee398a2b25"
+                },
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "bd40264e-b82a-4ab3-b525-e39df15c7e1f",
+                    "dataSourceName": "SaleReps",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": ""
+                    },
+                    "id": "donutcharts0",
+                    "legend": {
+                        "background": "white",
+                        "position": "Top",
+                        "visible": false
+                    },
+                    "model": "SaleRepsModel",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "categoryField": "SalesRep",
+                            "field": "YearQuota",
+                            "startAngle": 90
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "background": "white",
+                            "position": "above",
+                            "templateFunction": "",
+                            "templateId": "",
+                            "visible": true
+                        },
+                        "typeChart": "Donut"
+                    },
+                    "title": {
+                        "text": "Sales by Rep"
+                    },
+                    "tooltip": {
+                        "templateFunction": "salesPersonNameFn",
+                        "templateId": "",
+                        "visible": true
+                    },
+                    "type": "donut-charts",
+                    "uniqueID": "d90fa17a-b8e2-4a4f-ab13-706aff2030ed"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "Salesrep",
+                    "name": "SaleReps",
+                    "pageSize": 10,
+                    "uniqueID": "64d38083-22d9-4860-8efd-6dc8c022ff4a"
+                },
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "CustOrderNSub.eOrder",
+                    "name": "Orders",
+                    "pageSize": 10,
+                    "uniqueID": "df7aa068-3cc7-4ac5-9db0-9d434d176d87"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Main/Dashboard",
+            "hidden": false,
+            "name": "Dashboard",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "d7604e3a-df14-4801-b6f6-c80dd5862f60"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "da46f8fb-b391-4854-849b-e38182109696"
+                },
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "bd40264e-b82a-4ab3-b525-e39df15c7e1f"
+                        },
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "0ee6a0f9-08fa-4825-a96c-1a82b76626b3"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "f6bfe8db-52cc-47c6-b172-63f3c2df226c"
+                },
+                {
+                    "cols": [],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "2c4a0ca9-a858-41b4-aae8-a4247a29f6ba"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "e5e28027-bb08-4b2b-8b17-f455e08e03f7",
+            "viewType": "blank"
+        }
+    ],
+    "order": 1
+}

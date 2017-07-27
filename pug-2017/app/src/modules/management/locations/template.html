@@ -1,0 +1,228 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="data-grid-form">
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.top">
+        </div>
+    </div>
+    <div class="row data-grid-form-header">
+        <div class="col-xs-8">
+            <h2 ng-if="!vm.$updateInProcess && !vm.$insertInProcess" ng-bind-html="vm.$model.title"></h2>
+            <h2 ng-if="vm.$updateInProcess" ng-bind-html="vm.$model.editTitle"></h2>
+            <h2 ng-if="vm.$insertInProcess" ng-bind-html="vm.$model.newTitle"></h2>
+        </div>
+        <div class="col-xs-4 text-right" ng-if="vm.$model.editMode === 'Read-Only to Edit'">
+            <a ng-click="vm._$insert()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess" class="k-button k-button-icontext">
+                <span class="k-icon k-i-plus"></span> New
+            </a>
+            <a ng-click="vm._$edit()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess" class="k-button k-button-icontext" ng-class="{'kuib-disabled': !vm.$selectedId }">
+                <span class="k-icon k-i-edit"></span> Edit
+            </a>
+            <a ng-click="vm._$save()" ng-if="vm.$insertInProcess || vm.$updateInProcess" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                <span class="k-icon k-i-save"></span> Save
+            </a>
+            <a ng-click="vm._$cancel()" ng-if="vm.$insertInProcess || vm.$updateInProcess" class="k-button k-button-icontext k-grid-cancel">
+                <span class="k-icon k-i-cancel"></span> Cancel
+            </a>
+            <a ng-click="vm._$delete()" ng-if="vm.$updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                <span class="k-icon k-i-delete"></span> Delete
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.middle">
+        </div>
+    </div>
+    <hr class="k-separator">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="overlay k-overlay ng-scope" ng-if="vm.$updateInProcess || vm.$insertInProcess"></div>
+            <grid data-options="vm.$model.gridOptions" data-model="vm.$gridModel" data-widget="vm.$grid" data-events="vm.$model.events"></grid>
+        </div>
+        <div class="col-md-8">
+            <div class="data-form-wrapper k-widget">
+                <data-data-form data-model="vm.$model.formOptions" data-validator="vm.$validator" data-update-in-process="vm.$updateInProcess" data-insert-in-process="vm.$insertInProcess" data-selected="vm.$viewModels.formModel">
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Warehouse Num </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.WarehouseNum | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl0">Warehouse Num</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl1" data-widget="vm.$components.ctl1.widget" data-title="Warehouse Num" data-options="vm.$components.ctl1.options" data-model="vm.$viewModels.formModel.WarehouseNum" data-events="vm.$components.ctl1.events" data-validation="vm.$components.ctl1.validation">
+                                    </integer-text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Name </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.WarehouseName | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl2">Name</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl3" data-title="Name" data-model="vm.$viewModels.formModel.WarehouseName" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl3.events" data-validation="vm.$components.ctl3.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Country </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Country | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl4">Country</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl5" data-title="Country" data-model="vm.$viewModels.formModel.Country" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl5.events" data-validation="vm.$components.ctl5.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Address </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Address | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl6">Address</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl7" data-title="Address" data-model="vm.$viewModels.formModel.Address" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl7.events" data-validation="vm.$components.ctl7.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Address2 </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Address2 | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl8">Address2</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl9" data-title="Address2" data-model="vm.$viewModels.formModel.Address2" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl9.events" data-validation="vm.$components.ctl9.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> City </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.City | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl10"> City</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl11" data-title="City" data-model="vm.$viewModels.formModel.City" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl11.events" data-validation="vm.$components.ctl11.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> State </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.State | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl12"> State</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl13" data-title="State" data-model="vm.$viewModels.formModel.State" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl13.events" data-validation="vm.$components.ctl13.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Postal Code </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.PostalCode | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl14"> Postal Code</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl15" data-title="Postal Code" data-model="vm.$viewModels.formModel.PostalCode" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl15.events" data-validation="vm.$components.ctl15.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Phone </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Phone | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl16"> Phone</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl17" data-title="Phone" data-model="vm.$viewModels.formModel.Phone" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl17.events" data-validation="vm.$components.ctl17.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </data-data-form>
+
+                <div class="row" ng-if="vm.$model.editMode === 'Read-Only to Edit'">
+                    <div class="col-xs-12 data-form-commands">
+                        <hr class="k-separator">
+                        <a ng-click="vm._$edit()" ng-if="!vm.$updateInProcess && !vm.$insertInProcess" class="k-button k-button-icontext" ng-class="{'kuib-disabled': !vm.$selectedId }">
+                            <span class="k-icon k-i-edit"></span> Edit
+                        </a>
+                        <a ng-click="vm._$save()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                            <span class="k-icon k-i-save"></span> Save
+                        </a>
+                        <a ng-click="vm._$cancel()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-grid-cancel">
+                            <span class="k-icon k-i-cancel"></span> Cancel
+                        </a>
+                        <a ng-click="vm._$delete()" ng-if="vm.$updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                            <span class="k-icon k-i-delete"></span> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.bottom">
+        </div>
+    </div>
+</div>

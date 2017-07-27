@@ -1,0 +1,595 @@
+{
+    "children": [
+        {
+            "childDataSource": "CustOrderNSub.eOrder",
+            "childGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "encoded": true,
+                        "field": "OrderNum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "OrderNum"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "OrderStatus",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "OrderStatus"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "OrderDate",
+                        "filterable": true,
+                        "format": "{0:d}",
+                        "sortable": true,
+                        "title": "OrderDate"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Carrier",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Carrier"
+                    }
+                ],
+                "editOptions": {
+                    "allowDelete": true,
+                    "allowEdit": true,
+                    "allowInsert": true,
+                    "batch": true,
+                    "rowButtonLabels": {
+                        "canceledit": "Cancel",
+                        "destroy": "Delete",
+                        "edit": "Edit",
+                        "update": "Update"
+                    },
+                    "toolbarButtonLabels": {
+                        "cancel": "Cancel changes",
+                        "create": "New",
+                        "save": "Save changes"
+                    }
+                },
+                "editable": "Inline",
+                "events": {
+                    "onDataBound": "",
+                    "onRowCreate": "",
+                    "onRowDelete": "",
+                    "onRowSelect": "onChildRowSelect",
+                    "onRowUpdate": ""
+                },
+                "filterable": false,
+                "groupable": false,
+                "pageSize": 6,
+                "reorderable": false,
+                "resizable": false,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "selectable": "Single",
+                "sortable": false,
+                "title": "Orders"
+            },
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html",
+                "topChild": "topChildSection.html",
+                "topParent": "topParentSection.html"
+            },
+            "dataProvider": "OrderMgtDataService",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Sales/CustOrders",
+            "hidden": false,
+            "label": "Customer Orders",
+            "name": "CustOrders",
+            "parentDataSource": "CustOrderNSub.eCustomer",
+            "parentGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "encoded": true,
+                        "field": "CustNum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "CustNum"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Name",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Name"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Balance",
+                        "filterable": true,
+                        "format": "{0:c}",
+                        "sortable": true,
+                        "title": "Balance"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "SalesRep",
+                        "filterable": true,
+                        "sortable": true,
+                        "title": "Sales Rep"
+                    }
+                ],
+                "events": {
+                    "onDataBound": "",
+                    "onRowSelect": "onParentRowSelect"
+                },
+                "filterable": false,
+                "groupable": true,
+                "pageSize": 6,
+                "reorderable": false,
+                "resizable": false,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "sortable": true,
+                "title": "Customers"
+            },
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "792d09c5-21ec-4d71-9fa9-60d700ecfab6",
+            "viewType": "stacked-data-grids"
+        },
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "70f15c30-2e37-4f31-9388-7ed4cb0fa994.ViewDataSource1"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "628de8ef-425d-4545-b16c-d7c5e4bb0698",
+                    "dataSourceName": "Items",
+                    "editTemplateFunction": "",
+                    "editTemplateId": "",
+                    "events": {
+                        "onCancel": "",
+                        "onChange": "",
+                        "onDataBound": "",
+                        "onEdit": "",
+                        "onRemove": "",
+                        "onSave": ""
+                    },
+                    "id": "itemListview",
+                    "model": "ItemsModel",
+                    "schemaVersion": "1.0",
+                    "selectable": "Single",
+                    "templateFunction": "",
+                    "templateId": "itemTemplate",
+                    "type": "list-view",
+                    "uniqueID": "9bf4d282-90a6-43c9-800a-a17e009797f4"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "Item",
+                    "name": "Items",
+                    "pageSize": 45,
+                    "uniqueID": "70f15c30-2e37-4f31-9388-7ed4cb0fa994"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Sales/Inventory",
+            "hidden": false,
+            "label": "Inventory",
+            "name": "Inventory",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "628de8ef-425d-4545-b16c-d7c5e4bb0698"
+                        },
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "09637a36-6570-4134-9f99-edcc00984945"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "d9d5b647-6bb5-42d9-84fc-e3f5ff71c538"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "6bffd27a-4e84-413d-a102-dae0f09ba018",
+            "viewType": "blank"
+        },
+        {
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "columns": [
+                {
+                    "encoded": true,
+                    "field": "CustNum",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "template": "<div class='customer-name'>#: CustNum #</div><img src='images/#if (CustNum < 12) {##: CustNum##} else { #unknown#}#.jpg' alt='#: CustNum #'/></img>",
+                    "title": "CustNum",
+                    "width": 100
+                },
+                {
+                    "encoded": true,
+                    "field": "Name",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Name"
+                },
+                {
+                    "encoded": true,
+                    "field": "Address",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Address"
+                },
+                {
+                    "encoded": true,
+                    "field": "State",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "State"
+                },
+                {
+                    "encoded": true,
+                    "field": "Phone",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Phone"
+                },
+                {
+                    "encoded": true,
+                    "field": "SalesRep",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Salesrep"
+                },
+                {
+                    "encoded": true,
+                    "field": "Balance",
+                    "filterable": true,
+                    "format": "{0:c}",
+                    "sortable": true,
+                    "title": "Balance"
+                }
+            ],
+            "confirmRemove": true,
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "dataProvider": "OrderMgtDataService",
+            "dataSource": "CustOrderNSub.eCustomer",
+            "editMode": "Edit",
+            "editTitle": "Edit",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "onDataBound": "",
+                "onRowSelect": "onRowSelect",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Sales\\CustomerList",
+            "filterable": true,
+            "groupable": true,
+            "groups": [
+                {
+                    "fields": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl37",
+                                "model": "formModel.CustNum",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "CustNum",
+                                "type": "integer-text-box",
+                                "uniqueID": "d94bad3c-8d30-4d16-84cf-45a99077bb0e",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl36",
+                            "itemType": "field",
+                            "label": "CustNum",
+                            "name": "CustNum"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl39",
+                                "model": "formModel.Name",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Name",
+                                "type": "text-box",
+                                "uniqueID": "4ab3fd05-dafe-419f-bbb7-8271c8432bba",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl38",
+                            "itemType": "field",
+                            "label": "Name",
+                            "name": "Name"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl41",
+                                "model": "formModel.Address",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Address",
+                                "type": "text-box",
+                                "uniqueID": "8c444e49-4e2e-4a84-b9ab-ba418ac460f3",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl40",
+                            "itemType": "field",
+                            "label": "Address",
+                            "name": "Address"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotationRefs": {
+                                    "dataSourceName": {
+                                        "kind": "dataSourceName"
+                                    }
+                                },
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "dataSourceName": "ttStateFK1DS",
+                                "events": {
+                                    "onChange": "",
+                                    "onFilter": "",
+                                    "onSelect": ""
+                                },
+                                "filter": "None",
+                                "format": "",
+                                "id": "ctl53",
+                                "model": "fkeyModels['ttStateFK1DSModel']",
+                                "schemaVersion": "1.0",
+                                "textField": "State",
+                                "title": "ttStateFK1",
+                                "type": "combo-box",
+                                "uniqueID": "7bf61d65-999b-4775-b2c2-169f5a1f3b60",
+                                "validation": {
+                                    "required": false
+                                },
+                                "valueField": "State",
+                                "valuePrimitive": false
+                            },
+                            "format": "",
+                            "id": "ctl52",
+                            "itemType": "field",
+                            "label": "ttStateFK1",
+                            "name": "ttStateFK1"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl43",
+                                "mask": "(999) 000-0000",
+                                "model": "formModel.Phone",
+                                "schemaVersion": "1.0",
+                                "title": "Phone",
+                                "type": "phone-text-box",
+                                "uniqueID": "05319616-fff9-41cc-ba74-542fbae6daac",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl42",
+                            "itemType": "field",
+                            "label": "Phone",
+                            "name": "Phone"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl47",
+                                "model": "formModel.Balance",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "Balance",
+                                "type": "currency-text-box",
+                                "uniqueID": "79051bb1-ed63-4b02-9d7e-c6aa0e421fad",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl46",
+                            "itemType": "field",
+                            "label": "Balance",
+                            "name": "Balance"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotationRefs": {
+                                    "dataSourceName": {
+                                        "kind": "dataSourceName"
+                                    }
+                                },
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "dataSourceName": "ttSalesrepFK1DS",
+                                "events": {
+                                    "onChange": "",
+                                    "onFilter": "",
+                                    "onSelect": ""
+                                },
+                                "filter": "None",
+                                "format": "",
+                                "id": "ctl51",
+                                "model": "fkeyModels['ttSalesrepFK1DSModel']",
+                                "schemaVersion": "1.0",
+                                "textField": "SalesRep",
+                                "title": "ttSalesrepFK1",
+                                "type": "combo-box",
+                                "uniqueID": "9098523a-3556-4938-81f8-eb384a2b80a1",
+                                "validation": {
+                                    "required": false
+                                },
+                                "valueField": "SalesRep",
+                                "valuePrimitive": false
+                            },
+                            "format": "",
+                            "id": "ctl50",
+                            "itemType": "field",
+                            "label": "ttSalesrepFK1",
+                            "name": "ttSalesrepFK1"
+                        }
+                    ],
+                    "id": "ef67f0ed-f2ca-4104-bb56-8a4fd48f724e",
+                    "name": "New Group"
+                }
+            ],
+            "hidden": false,
+            "label": "Customers",
+            "name": "CustomerList",
+            "newTitle": "New",
+            "pageSize": 10,
+            "reorderable": false,
+            "resizable": false,
+            "rowTemplateFunction": "",
+            "rowTemplateId": "",
+            "schemaVersion": "1.0",
+            "sortable": true,
+            "title": "customers",
+            "type": "view",
+            "uniqueID": "3ca517a0-fa54-4d70-aa01-c3cf20b8eb4e",
+            "viewType": "data-grid-separate-form"
+        }
+    ],
+    "description": "Sales",
+    "moduleType": "default",
+    "name": "Sales",
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#000000",
+        "color": "#b5e61d",
+        "icon": "fa-edit"
+    },
+    "type": "module",
+    "uniqueID": "dc9e1797-e7ea-4b38-b72e-b49fd598b8a5",
+    "order": 4
+}

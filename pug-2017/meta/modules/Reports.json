@@ -1,0 +1,432 @@
+{
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "ba09d9db-6e27-4ca9-8bb4-03ebbdbeb2c5.ViewDataSource1"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "categoryAxis": {
+                        "field": "RepName",
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 0
+                            }
+                        }
+                    },
+                    "containerUid": "2118cc3a-20a2-40a7-94a0-71bf45ad4c14",
+                    "dataSourceName": "ViewDataSource1",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": ""
+                    },
+                    "id": "linecharts0",
+                    "legend": {
+                        "background": "white",
+                        "position": "Top",
+                        "visible": true
+                    },
+                    "model": "",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "field": "YearQuota",
+                            "name": "Year",
+                            "style": "normal"
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "visible": false
+                        },
+                        "typeChart": "Line"
+                    },
+                    "title": {
+                        "text": "Sales by Salesrep"
+                    },
+                    "tooltip": {
+                        "templateFunction": "",
+                        "templateId": "",
+                        "visible": false
+                    },
+                    "type": "line-charts",
+                    "uniqueID": "20460f3a-b3a6-4d20-a49f-b77ce9a36f40",
+                    "valueAxis": {
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 0
+                            }
+                        },
+                        "line": {
+                            "visible": true
+                        },
+                        "max": 60000,
+                        "min": 0
+                    }
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "Salesrep",
+                    "name": "ViewDataSource1",
+                    "pageSize": 20,
+                    "uniqueID": "ba09d9db-6e27-4ca9-8bb4-03ebbdbeb2c5"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Reports/SalesByRep",
+            "hidden": false,
+            "label": "Sales by Rep",
+            "name": "SalesByRep",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "2118cc3a-20a2-40a7-94a0-71bf45ad4c14"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "b89599d3-e290-4625-b118-1114ffc97692"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "a000b715-9942-4bbb-ab42-67e9ef9e06e5",
+            "viewType": "blank"
+        },
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "a984f113-4ed2-4abb-9c8b-79630786cf17.ViewDataSource1"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "categoryAxis": {
+                        "field": "Name",
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 45
+                            }
+                        }
+                    },
+                    "containerUid": "1e6a02bb-308f-4fa1-96c0-b6af5da7409b",
+                    "dataSourceName": "ViewDataSource1",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": "onSeriesClick"
+                    },
+                    "id": "barcharts0",
+                    "legend": {
+                        "background": "white",
+                        "position": "Top",
+                        "visible": true
+                    },
+                    "model": "",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "field": "Balance",
+                            "name": "Balance"
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "visible": false
+                        },
+                        "typeChart": "Column"
+                    },
+                    "title": {
+                        "text": ""
+                    },
+                    "tooltip": {
+                        "templateFunction": "",
+                        "templateId": "",
+                        "visible": true
+                    },
+                    "type": "bar-charts",
+                    "uniqueID": "5ef689cb-28b5-493f-a9dc-10c114088333",
+                    "valueAxis": {
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 0
+                            }
+                        },
+                        "line": {
+                            "visible": true
+                        },
+                        "max": 15000,
+                        "min": 0
+                    }
+                },
+                {
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "bf2fe418-0017-46b6-85a7-abe4e26793b9",
+                    "html": "<h1>Orders for customer: <span id=\"cust\">All customers</span>\n</h1>\n<p>\nClicking on chart column will filter the grid with orders for the clicked customer\n</p>",
+                    "id": "customhtml0",
+                    "schemaVersion": "1.0",
+                    "type": "custom-html",
+                    "uniqueID": "2152cad4-306d-4dee-9e77-4360a6884acb"
+                },
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "ea35d053-96b8-4935-9119-6104dec261ee.custOrders"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "encoded": true,
+                            "field": "OrderNum",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "OrderNum"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "OrderDate",
+                            "filterable": true,
+                            "format": "{0:d}",
+                            "sortable": true,
+                            "title": "OrderDate"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "Carrier",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Carrier"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "SalesRep",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Salesrep"
+                        },
+                        {
+                            "encoded": true,
+                            "field": "OrderStatus",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "OrderStatus"
+                        }
+                    ],
+                    "containerUid": "9af143d0-2cf6-4f75-beec-d2989d542eff",
+                    "dataSourceName": "custOrders",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "ReadOnly",
+                    "events": {
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": true,
+                    "groupable": false,
+                    "id": "grid0",
+                    "model": "",
+                    "reorderable": false,
+                    "resizable": true,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "None",
+                    "sortable": true,
+                    "type": "grid",
+                    "uniqueID": "82dba7dd-1020-4be3-8094-18a229203028"
+                }
+            ],
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "CustOrderNSub.eCustomer",
+                    "name": "ViewDataSource1",
+                    "pageSize": 20,
+                    "uniqueID": "a984f113-4ed2-4abb-9c8b-79630786cf17"
+                },
+                {
+                    "batch": true,
+                    "dataProviderName": "OrderMgtDataService",
+                    "dataSourceName": "CustOrderNSub.eOrder",
+                    "name": "custOrders",
+                    "pageSize": 10,
+                    "uniqueID": "ea35d053-96b8-4935-9119-6104dec261ee"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Reports\\CustomersBalance",
+            "hidden": false,
+            "label": "Customers Balance",
+            "name": "CustomersBalance",
+            "rows": [
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "1e6a02bb-308f-4fa1-96c0-b6af5da7409b"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "46ba8961-c9ca-4611-be68-3cd918954e8c"
+                },
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "bf2fe418-0017-46b6-85a7-abe4e26793b9"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "739947d0-9272-4241-9362-7b9c7eb15455"
+                },
+                {
+                    "cols": [
+                        {
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "9af143d0-2cf6-4f75-beec-d2989d542eff"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "39e81f17-d6de-4db2-ba85-19d351200499"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "2b534eea-c0e0-44cc-8fab-88db0a390c35",
+            "viewType": "blank"
+        }
+    ],
+    "description": "Reports",
+    "moduleType": "default",
+    "name": "Reports",
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#000000",
+        "color": "#b5e61d",
+        "icon": "fa-area-chart"
+    },
+    "type": "module",
+    "uniqueID": "e1c50008-6697-4bdc-9dc5-e4c0e561c025",
+    "order": 3
+}

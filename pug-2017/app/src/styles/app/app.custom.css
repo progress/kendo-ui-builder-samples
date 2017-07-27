@@ -1,0 +1,23 @@
+/*
+'kuib-home-content' class will scope the
+rules to the home/landing page only
+*
+
+
+/* Make modules thumnails round*/
+.kuib-home-content .module-thumbnail .fa {
+	border-radius: 100%;
+}
+
+/* Make flippy effect */
+.kuib-home-content .module-thumbnail .fa {
+    transform: rotateY(0deg);
+    transition: all .35s ease;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+}
+
+.kuib-home-content .module-thumbnail:hover .fa {
+    font-size: 40px;
+    transform: rotateY(180deg);
+	filter: hue-rotate(-25deg);
+}

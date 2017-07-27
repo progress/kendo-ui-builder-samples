@@ -1,0 +1,198 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="data-grid-form">
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.top">
+        </div>
+    </div>
+    <div class="row data-grid-form-header">
+        <div class="col-xs-8">
+            <h2 ng-if="!vm.$updateInProcess && !vm.$insertInProcess" ng-bind-html="vm.$model.title"></h2>
+            <h2 ng-if="vm.$updateInProcess" ng-bind-html="vm.$model.editTitle"></h2>
+            <h2 ng-if="vm.$insertInProcess" ng-bind-html="vm.$model.newTitle"></h2>
+        </div>
+        <div class="col-xs-4 text-right">
+            <a ng-click="vm._$back()" ng-if="vm.$model.editMode !== 'Edit' && vm.$showForm && !vm.$insertInProcess && !vm.$updateInProcess" class="k-button k-button-icontext">
+                <span class="k-icon k-i-undo"></span> Back
+            </a>
+            <a ng-click="vm._$insert()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess && vm.$model.editMode !== 'Read-Only' && !vm.$showForm" class="k-button k-button-icontext">
+                <span class="k-icon k-i-plus"></span> New
+            </a>
+            <a ng-click="vm._$edit()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess && vm.$showForm && vm.$model.editMode === 'Read-Only to Edit'" class="k-button k-button-icontext">
+                <span class="k-icon k-i-edit"></span> Edit
+            </a>
+            <a ng-click="vm._$save()" ng-if="vm.$insertInProcess || vm.$updateInProcess && vm.$showForm" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                <span class="k-icon k-i-save"></span> Save
+            </a>
+            <a ng-click="vm._$cancel()" ng-if="vm.$insertInProcess || vm.$updateInProcess && vm.$showForm" class="k-button k-button-icontext k-grid-cancel">
+                <span class="k-icon k-i-cancel"></span> Cancel
+            </a>
+            <a ng-click="vm._$delete()" ng-if="!vm.$insertInProcess && vm.$updateInProcess && vm.$showForm" class="k-button k-button-icontext k-grid-delete">
+                <span class="k-icon k-i-delete"></span> Delete
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.middle">
+        </div>
+    </div>
+    <hr class="k-separator">
+    <div class="row">
+        <div class="col-md-12">
+            <div ng-hide="vm.$showForm">
+                <grid data-options="vm.$model.gridOptions" data-model="vm.$gridModel" data-widget="vm.$grid" data-events="vm.$model.events"></grid>
+            </div>
+            <div ng-show="vm.$showForm" class="data-form-wrapper k-widget">
+                <data-data-form data-model="vm.$model.formOptions" data-validator="vm.$validator" data-update-in-process="vm.$updateInProcess" data-insert-in-process="vm.$insertInProcess" data-selected="vm.$viewModels.formModel">
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> CustNum </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.CustNum | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl36">CustNum</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl37" data-widget="vm.$components.ctl37.widget" data-title="CustNum" data-options="vm.$components.ctl37.options" data-model="vm.$viewModels.formModel.CustNum" data-events="vm.$components.ctl37.events" data-validation="vm.$components.ctl37.validation">
+                                    </integer-text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Name </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Name | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl38">Name</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl39" data-title="Name" data-model="vm.$viewModels.formModel.Name" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl39.events" data-validation="vm.$components.ctl39.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Address </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Address | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl40">Address</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl41" data-title="Address" data-model="vm.$viewModels.formModel.Address" data-placeholder="" data-debounce="0" data-default-value="" data-events="vm.$components.ctl41.events" data-validation="vm.$components.ctl41.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> ttStateFK1 </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.fkeyModels['ttStateFK1DSModel'].State | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl52">ttStateFK1</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <combo-box data-id="ctl53" data-widget="vm.$components.ctl53.widget" data-title="ttStateFK1" data-model="vm.$viewModels.fkeyModels['ttStateFK1DSModel']" data-options="vm.$components.ctl53.options" data-events="vm.$components.ctl53.events" data-validation="vm.$components.ctl53.validation">
+                                    </combo-box>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Phone </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Phone | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl42"> Phone</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <phone-text-box data-id="ctl43" data-widget="vm.$components.ctl43.widget" data-title="Phone" data-model="vm.$viewModels.formModel.Phone" data-options="vm.$components.ctl43.options" data-events="vm.$components.ctl43.events" data-validation="vm.$components.ctl43.validation">
+                                    </phone-text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> Balance </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.formModel.Balance | formatValue: '{0:c}' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl46"> Balance</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <currency-text-box data-id="ctl47" data-title="Balance" data-widget="vm.$components.ctl47.widget" data-options="vm.$components.ctl47.options" data-model="vm.$viewModels.formModel.Balance" data-events="vm.$components.ctl47.events" data-validation="vm.$components.ctl47.validation">
+                                    </currency-text-box>
+                                </div>
+                            </div>
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> ttSalesrepFK1 </div>
+
+                                <div class="col-md-7"> {{vm.$viewModels.fkeyModels['ttSalesrepFK1DSModel'].SalesRep | formatValue: '' }}</div>
+
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl50"> ttSalesrepFK1</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <combo-box data-id="ctl51" data-widget="vm.$components.ctl51.widget" data-title="ttSalesrepFK1" data-model="vm.$viewModels.fkeyModels['ttSalesrepFK1DSModel']" data-options="vm.$components.ctl51.options" data-events="vm.$components.ctl51.events" data-validation="vm.$components.ctl51.validation">
+                                    </combo-box>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </data-data-form>
+            </div>
+            <div class="row" ng-if="vm.$model.editMode != 'Read-Only' && vm.$showForm">
+                <div class="col-xs-12 data-form-commands">
+                    <hr class="k-separator">
+                    <a ng-click="vm._$edit()" ng-if="vm.$model.editMode === 'Read-Only to Edit' && !vm.$updateInProcess && !vm.$insertInProcess" class="k-button k-button-icontext">
+                        <span class="k-icon k-i-edit"></span> Edit
+                    </a>
+                    <a ng-click="vm._$save()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                        <span class="k-icon k-i-save"></span> Save
+                    </a>
+                    <a ng-click="vm._$cancel()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-grid-cancel">
+                        <span class="k-icon k-i-cancel"></span> Cancel
+                    </a>
+                    <a ng-click="vm._$delete()" ng-if="vm.$updateInProcess && !vm.$insertInProcess" class="k-button k-button-icontext k-grid-delete">
+                        <span class="k-icon k-i-delete"></span> Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12" ng-include="vm.$model.customSections.bottom">
+    </div>
+</div>
+</div>

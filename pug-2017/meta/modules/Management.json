@@ -1,0 +1,876 @@
+{
+    "children": [
+        {
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "columns": [
+                {
+                    "encoded": true,
+                    "field": "WarehouseName",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Name"
+                },
+                {
+                    "encoded": true,
+                    "field": "City",
+                    "filterable": true,
+                    "sortable": true,
+                    "title": "City"
+                },
+                {
+                    "encoded": true,
+                    "field": "State",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "State"
+                }
+            ],
+            "confirmRemove": true,
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "dataProvider": "OrderMgtDataService",
+            "dataSource": "Warehouse",
+            "editMode": "Read-Only to Edit",
+            "editTitle": "Edit",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "onDataBound": "",
+                "onRowSelect": "onRowSelect",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Management/Locations",
+            "filterable": false,
+            "groupable": false,
+            "groups": [
+                {
+                    "fields": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl1",
+                                "model": "formModel.WarehouseNum",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "Warehouse Num",
+                                "type": "integer-text-box",
+                                "uniqueID": "ba26a766-927d-4603-a89e-e72b856ea9e4",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl0",
+                            "itemType": "field",
+                            "label": "Warehouse Num",
+                            "name": "WarehouseNum"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl3",
+                                "model": "formModel.WarehouseName",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Name",
+                                "type": "text-box",
+                                "uniqueID": "3de3c895-4366-4875-8d89-1c6833648035",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl2",
+                            "itemType": "field",
+                            "label": "Name",
+                            "name": "WarehouseName"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl5",
+                                "model": "formModel.Country",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Country",
+                                "type": "text-box",
+                                "uniqueID": "ea79b630-b308-4b5b-99bd-e681540f7455",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl4",
+                            "itemType": "field",
+                            "label": "Country",
+                            "name": "Country"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl7",
+                                "model": "formModel.Address",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Address",
+                                "type": "text-box",
+                                "uniqueID": "f22ca4ad-c4d0-406c-b0ff-eebf9dfdba94",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl6",
+                            "itemType": "field",
+                            "label": "Address",
+                            "name": "Address"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl9",
+                                "model": "formModel.Address2",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Address2",
+                                "type": "text-box",
+                                "uniqueID": "f9204b5b-08df-464f-805f-2b881dd32f0c",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl8",
+                            "itemType": "field",
+                            "label": "Address2",
+                            "name": "Address2"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl11",
+                                "model": "formModel.City",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "City",
+                                "type": "text-box",
+                                "uniqueID": "b828526f-f9b1-4b1f-9764-5008153ff92c",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl10",
+                            "itemType": "field",
+                            "label": "City",
+                            "name": "City"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl13",
+                                "model": "formModel.State",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "State",
+                                "type": "text-box",
+                                "uniqueID": "b38a16e2-12cf-48a6-ac6e-05b97b24760a",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl12",
+                            "itemType": "field",
+                            "label": "State",
+                            "name": "State"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl15",
+                                "model": "formModel.PostalCode",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Postal Code",
+                                "type": "text-box",
+                                "uniqueID": "c8855fe2-7d5c-4e62-a2fe-35a52d26feab",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl14",
+                            "itemType": "field",
+                            "label": "Postal Code",
+                            "name": "PostalCode"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl17",
+                                "model": "formModel.Phone",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Phone",
+                                "type": "text-box",
+                                "uniqueID": "b8068032-ca73-49a1-8291-5e10f8688572",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl16",
+                            "itemType": "field",
+                            "label": "Phone",
+                            "name": "Phone"
+                        }
+                    ],
+                    "id": "3d67f358-46aa-4b2e-8d7a-ad572e2037a4",
+                    "name": "New Group"
+                }
+            ],
+            "hidden": false,
+            "name": "Locations",
+            "newTitle": "New",
+            "pageSize": 20,
+            "reorderable": false,
+            "resizable": false,
+            "rowTemplateFunction": "",
+            "rowTemplateId": "",
+            "schemaVersion": "1.0",
+            "sortable": false,
+            "title": "Locations",
+            "type": "view",
+            "uniqueID": "0f1dd713-2d4a-4410-9f30-a3a0422e3f94",
+            "viewType": "data-grid-form"
+        },
+        {
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "columns": [
+                {
+                    "encoded": true,
+                    "field": "RepName",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Rep Name"
+                },
+                {
+                    "encoded": true,
+                    "field": "Region",
+                    "filterable": true,
+                    "sortable": true,
+                    "title": "Region"
+                }
+            ],
+            "confirmRemove": true,
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "dataProvider": "OrderMgtDataService",
+            "dataSource": "Salesrep",
+            "editMode": "Read-Only to Edit",
+            "editTitle": "Edit",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "onDataBound": "",
+                "onRowSelect": "onRowSelect",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "Management\\Reps",
+            "filterable": false,
+            "groupable": false,
+            "groups": [
+                {
+                    "fields": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl91",
+                                "model": "formModel.SalesRep",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Sales Rep",
+                                "type": "text-box",
+                                "uniqueID": "1c4972e1-787d-43db-b275-8278149f2fa7",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl90",
+                            "itemType": "field",
+                            "label": "Sales Rep",
+                            "name": "SalesRep"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl93",
+                                "model": "formModel.RepName",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Rep Name",
+                                "type": "text-box",
+                                "uniqueID": "24079261-8271-4a72-86f0-a488ad8b91a7",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl92",
+                            "itemType": "field",
+                            "label": "Rep Name",
+                            "name": "RepName"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl95",
+                                "model": "formModel.Region",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Region",
+                                "type": "text-box",
+                                "uniqueID": "7d62a86a-6cc9-4e12-95fe-1328ebdadc64",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "",
+                            "id": "ctl94",
+                            "itemType": "field",
+                            "label": "Region",
+                            "name": "Region"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "",
+                                "id": "ctl121",
+                                "model": "formModel.YearQuota",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "YearQuota",
+                                "type": "integer-text-box",
+                                "uniqueID": "bd0c10a3-93bc-43be-aa83-1c094aca579f",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl120",
+                            "itemType": "field",
+                            "label": "YearQuota",
+                            "name": "YearQuota"
+                        }
+                    ],
+                    "id": "87b87691-eb93-41c6-ac47-05993bed03b3",
+                    "name": "Details"
+                },
+                {
+                    "fields": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl97",
+                                "model": "formModel.MonthQuota_1",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_1",
+                                "type": "currency-text-box",
+                                "uniqueID": "17026758-eab4-43a7-997a-83f8bc0c60be",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl96",
+                            "itemType": "field",
+                            "label": "January",
+                            "name": "MonthQuota_1"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl99",
+                                "model": "formModel.MonthQuota_2",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_2",
+                                "type": "currency-text-box",
+                                "uniqueID": "d1151220-0362-4e3b-8f97-c1057b54fdf3",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl98",
+                            "itemType": "field",
+                            "label": "February",
+                            "name": "MonthQuota_2"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl101",
+                                "model": "formModel.MonthQuota_3",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_3",
+                                "type": "currency-text-box",
+                                "uniqueID": "8e7a0b05-40f4-4360-80f1-2ff81255cbd1",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl100",
+                            "itemType": "field",
+                            "label": "March",
+                            "name": "MonthQuota_3"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl103",
+                                "model": "formModel.MonthQuota_4",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_4",
+                                "type": "currency-text-box",
+                                "uniqueID": "1ec220a2-fea5-4fe9-9968-508add27416a",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl102",
+                            "itemType": "field",
+                            "label": "April",
+                            "name": "MonthQuota_4"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl105",
+                                "model": "formModel.MonthQuota_5",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_5",
+                                "type": "currency-text-box",
+                                "uniqueID": "70e0c52b-3737-495c-83d5-f545f4c9672b",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl104",
+                            "itemType": "field",
+                            "label": "May",
+                            "name": "MonthQuota_5"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl107",
+                                "model": "formModel.MonthQuota_6",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_6",
+                                "type": "currency-text-box",
+                                "uniqueID": "42c1b71a-1be9-4243-bffd-25ec9276f891",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl106",
+                            "itemType": "field",
+                            "label": "June",
+                            "name": "MonthQuota_6"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl109",
+                                "model": "formModel.MonthQuota_7",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_7",
+                                "type": "currency-text-box",
+                                "uniqueID": "ded1ff2e-593f-4d3e-bd2b-f6a1edef670f",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl108",
+                            "itemType": "field",
+                            "label": "July",
+                            "name": "MonthQuota_7"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl111",
+                                "model": "formModel.MonthQuota_8",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_8",
+                                "type": "currency-text-box",
+                                "uniqueID": "f15d5ca0-2b97-4642-bde4-789eb698542e",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl110",
+                            "itemType": "field",
+                            "label": "August",
+                            "name": "MonthQuota_8"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl113",
+                                "model": "formModel.MonthQuota_9",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_9",
+                                "type": "currency-text-box",
+                                "uniqueID": "5516b1d0-0d98-47a2-a88a-686d9270cbf5",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl112",
+                            "itemType": "field",
+                            "label": "September",
+                            "name": "MonthQuota_9"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl115",
+                                "model": "formModel.MonthQuota_10",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_10",
+                                "type": "currency-text-box",
+                                "uniqueID": "a7df198d-9dfb-4319-9bcb-2979011c5611",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl114",
+                            "itemType": "field",
+                            "label": "October",
+                            "name": "MonthQuota_10"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl117",
+                                "model": "formModel.MonthQuota_11",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_11",
+                                "type": "currency-text-box",
+                                "uniqueID": "9071f463-b830-475d-98e4-6f5ee3d3a9fb",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl116",
+                            "itemType": "field",
+                            "label": "November",
+                            "name": "MonthQuota_11"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "format": "{0:c}",
+                                "id": "ctl119",
+                                "model": "formModel.MonthQuota_12",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "title": "MonthQuota_12",
+                                "type": "currency-text-box",
+                                "uniqueID": "9b5071e5-76fe-4918-9038-9a69a4e3c724",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "format": "{0:c}",
+                            "id": "ctl118",
+                            "itemType": "field",
+                            "label": "December",
+                            "name": "MonthQuota_12"
+                        }
+                    ],
+                    "id": "ctl154",
+                    "itemType": "group",
+                    "name": "Sales"
+                }
+            ],
+            "hidden": false,
+            "label": "Sales Reps",
+            "name": "Reps",
+            "newTitle": "New",
+            "pageSize": 12,
+            "reorderable": false,
+            "resizable": false,
+            "rowTemplateFunction": "",
+            "rowTemplateId": "",
+            "schemaVersion": "1.0",
+            "sortable": false,
+            "title": "Sales Rep",
+            "type": "view",
+            "uniqueID": "87d6abf7-22a9-4e1d-be9c-4cd8e454b3d4",
+            "viewType": "data-grid-form"
+        }
+    ],
+    "description": "Management",
+    "moduleType": "default",
+    "name": "Management",
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#000000",
+        "color": "#b5e61d",
+        "icon": "fa-bank"
+    },
+    "type": "module",
+    "uniqueID": "dc9e1797-e7ea-4b38-b72e-b49fd598b8a5",
+    "order": 2
+}
