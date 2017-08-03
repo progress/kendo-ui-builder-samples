@@ -6,9 +6,9 @@
         "name": "SemanticTypes",
         "authenticationModel": "Anonymous",
         "providerType": "Progress Data Service",
-        "serviceUri": "http://oemobiledemo.progress.com/SemanticTypes",
+        "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
         "catalogUris": [
-            "http://oemobiledemo.progress.com/SemanticTypes/static/SemanticTypesService.json"
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/SemanticTypesService.json"
         ],
         "verb": "GET"
     }
