@@ -6,9 +6,9 @@
         "name": "CustomerService",
         "authenticationModel": "Anonymous",
         "providerType": "Progress Data Service",
-        "serviceUri": "http://oemobiledemo.progress.com/CustomerService",
+        "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
         "catalogUris": [
-            "http://oemobiledemo.progress.com/CustomerService/static/CustomerService.json"
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/CustomerSrvwithCount.json"
         ],
         "verb": "GET"
     },
@@ -19,9 +19,9 @@
         "name": "SalesrepService",
         "authenticationModel": "Anonymous",
         "providerType": "Progress Data Service",
-        "serviceUri": "http://oemobiledemo.progress.com/DynamicService",
+        "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
         "catalogUris": [
-            "http://oemobiledemo.progress.com/DynamicService/web/DynamicService/catalog/Salesrep"
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/web/OEMobileDemoServices/catalog/Salesrep"
         ],
         "verb": "GET"
     }
