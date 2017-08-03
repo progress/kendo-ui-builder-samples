@@ -5,9 +5,9 @@
     "name": "EmployeeService",
     "authenticationModel": "Anonymous",
     "providerType": "Progress Data Service",
-    "serviceUri": "http://oemobiledemo.progress.com/EmployeeSubmit",
+    "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
     "catalogUris": [
-        "http://oemobiledemo.progress.com/EmployeeSubmit/static/EmployeeSubmitService.json"
+        "http://oemobiledemo.progress.com/OEMobileDemoServices/static/EmployeeSubmit.json"
     ],
     "verb": "GET",
     "children": [
