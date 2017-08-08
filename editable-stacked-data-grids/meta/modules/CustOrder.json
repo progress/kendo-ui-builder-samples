@@ -1,0 +1,205 @@
+{
+    "children": [
+        {
+            "childDataSource": "CustOrderNSub.eOrder",
+            "childGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "encoded": true,
+                        "field": "OrderNum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "OrderNum"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "CustNum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "CustNum"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "OrderDate",
+                        "filterable": true,
+                        "format": "{0:d}",
+                        "sortable": true,
+                        "title": "OrderDate"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Carrier",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Carrier"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "SalesRep",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "SalesRep"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "OrderStatus",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "OrderStatus"
+                    }
+                ],
+                "editOptions": {
+                    "allowDelete": true,
+                    "allowEdit": true,
+                    "allowInsert": true,
+                    "batch": true,
+                    "rowButtonLabels": {
+                        "canceledit": "Cancel",
+                        "destroy": "Delete",
+                        "edit": "Edit",
+                        "update": "Update"
+                    },
+                    "toolbarButtonLabels": {
+                        "cancel": "Cancel changes",
+                        "create": "New",
+                        "save": "Save changes"
+                    }
+                },
+                "editable": "Incell",
+                "events": {
+                    "onDataBound": "",
+                    "onRowCreate": "",
+                    "onRowDelete": "",
+                    "onRowSelect": "onChildRowSelect",
+                    "onRowUpdate": ""
+                },
+                "filterable": false,
+                "groupable": false,
+                "pageSize": 10,
+                "reorderable": false,
+                "resizable": false,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "selectable": "Single",
+                "sortable": false,
+                "title": "Orders"
+            },
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html",
+                "topChild": "topChildSection.html",
+                "topParent": "topParentSection.html"
+            },
+            "dataProvider": "DemoService",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "extension": "view-factory.js",
+            "extensionFolderName": "CustOrder\\CustOrderSDG",
+            "hidden": false,
+            "name": "CustOrderSDG",
+            "parentDataSource": "CustOrderNSub.eCustomer",
+            "parentGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "encoded": true,
+                        "field": "CustNum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "CustNum"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Name",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Name"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Address",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Address"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Phone",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Phone"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "SalesRep",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "SalesRep"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "Balance",
+                        "filterable": true,
+                        "format": "{0:c}",
+                        "sortable": true,
+                        "title": "Balance"
+                    },
+                    {
+                        "encoded": true,
+                        "field": "State",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "State"
+                    }
+                ],
+                "events": {
+                    "onDataBound": "",
+                    "onRowSelect": "onParentRowSelect"
+                },
+                "filterable": false,
+                "groupable": false,
+                "pageSize": 5,
+                "reorderable": false,
+                "resizable": false,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "sortable": false,
+                "title": "Customers"
+            },
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "20c0455c-d717-45e6-9c4b-28de3e2283aa",
+            "viewType": "stacked-data-grids"
+        }
+    ],
+    "description": "",
+    "moduleType": "default",
+    "name": "CustOrder",
+    "order": 1,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#00a2e8",
+        "color": "#ffffff",
+        "icon": "fa-area-chart"
+    },
+    "type": "module",
+    "uniqueID": "f9f5246f-2225-41ff-a0e1-e0c0a4ec3fe7"
+}

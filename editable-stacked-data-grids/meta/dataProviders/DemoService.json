@@ -1,0 +1,561 @@
+{
+    "authenticationModel": "Anonymous",
+    "catalogUris": [
+        "http://oemobiledemo.progress.com/OEMobileDemoServices/static/CustOrderSubService.json"
+    ],
+    "children": [
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "CustNum",
+                    "name": "CustNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Name",
+                    "name": "Name",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Address",
+                    "name": "Address",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Phone",
+                    "name": "Phone",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "foreignKey",
+                    "format": "",
+                    "label": "SalesRep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "currency-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Balance",
+                    "name": "Balance",
+                    "semanticType": "Currency"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "foreignKey",
+                    "format": "",
+                    "label": "State",
+                    "name": "State",
+                    "semanticType": "Text"
+                },
+                {
+                    "editorType": "combo-box",
+                    "fieldType": "foreignKeyPlaceholder",
+                    "foreignKeyOptions": {
+                        "dataSource": "State",
+                        "displayField": "StateName",
+                        "fields": "State",
+                        "parentFields": "State",
+                        "parentTable": "State.ttState",
+                        "parentValueField": "State",
+                        "valueField": "State"
+                    },
+                    "format": "",
+                    "label": "StateFK",
+                    "name": "StateFK",
+                    "semanticType": "Lookup"
+                },
+                {
+                    "editorType": "combo-box",
+                    "fieldType": "foreignKeyPlaceholder",
+                    "foreignKeyOptions": {
+                        "dataSource": "Salesrep",
+                        "displayField": "RepName",
+                        "fields": "SalesRep",
+                        "parentFields": "SaleRep",
+                        "parentTable": "Salesrep.ttSalesrep",
+                        "parentValueField": "SaleRep",
+                        "valueField": "SalesRep"
+                    },
+                    "format": "",
+                    "label": "SalerepFK",
+                    "name": "SalerepFK",
+                    "semanticType": "Lookup"
+                }
+            ],
+            "name": "CustOrderNSub.eCustomer",
+            "relations": [
+                {
+                    "childName": "eOrder",
+                    "parentName": "eCustomer",
+                    "relationFields": [
+                        {
+                            "childFieldName": "CustNum",
+                            "parentFieldName": "CustNum"
+                        }
+                    ],
+                    "relationName": "AllOrder"
+                }
+            ],
+            "resourceName": "CustOrderNSub",
+            "schemaVersion": "1.0",
+            "serviceName": "CustOrderSubService",
+            "tableName": "CustOrderNSub.eCustomer",
+            "type": "progress-data-source",
+            "uniqueID": "427ba0c4-4cff-4c65-ba87-282f8035dd5d"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "OrderNum",
+                    "name": "OrderNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "foreignKey",
+                    "format": "",
+                    "label": "CustNum",
+                    "name": "CustNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "OrderDate",
+                    "name": "OrderDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Carrier",
+                    "name": "Carrier",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "SalesRep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "OrderStatus",
+                    "name": "OrderStatus",
+                    "semanticType": "Text"
+                },
+                {
+                    "editorType": "combo-box",
+                    "fieldType": "foreignKeyPlaceholder",
+                    "foreignKeyOptions": {
+                        "dataSource": "CustOrderNSub.eCustomer",
+                        "displayField": "CustNum",
+                        "fields": "CustNum",
+                        "parentFields": "CustNum",
+                        "parentTable": "CustOrderNSub.eCustomer",
+                        "parentValueField": "CustNum",
+                        "valueField": "CustNum"
+                    },
+                    "format": "",
+                    "label": "FK1",
+                    "name": "FK1",
+                    "semanticType": "Lookup"
+                }
+            ],
+            "name": "CustOrderNSub.eOrder",
+            "relations": [
+                {
+                    "childName": "eOrder",
+                    "parentName": "eCustomer",
+                    "relationFields": [
+                        {
+                            "childFieldName": "CustNum",
+                            "parentFieldName": "CustNum"
+                        }
+                    ],
+                    "relationName": "AllOrder"
+                }
+            ],
+            "resourceName": "CustOrderNSub",
+            "schemaVersion": "1.0",
+            "serviceName": "CustOrderSubService",
+            "tableName": "CustOrderNSub.eOrder",
+            "type": "progress-data-source",
+            "uniqueID": "427ba0c4-4cff-4c65-ba87-282f8035dd5d"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "State",
+                    "name": "State",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "State Name",
+                    "name": "StateName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Region",
+                    "name": "Region",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "State",
+            "resourceName": "State",
+            "schemaVersion": "1.0",
+            "serviceName": "CustOrderSubService",
+            "tableName": "State",
+            "type": "progress-data-source",
+            "uniqueID": "427ba0c4-4cff-4c65-ba87-282f8035dd5d"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Num",
+                    "name": "Itemnum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Name",
+                    "name": "ItemName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Price",
+                    "name": "Price",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "On Hand",
+                    "name": "Onhand",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Allocated",
+                    "name": "Allocated",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Re Order",
+                    "name": "ReOrder",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "On Order",
+                    "name": "OnOrder",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cat Page",
+                    "name": "CatPage",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cat-Description",
+                    "name": "CatDescription",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Category1",
+                    "name": "Category1",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Category2",
+                    "name": "Category2",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Special",
+                    "name": "Special",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Weight",
+                    "name": "Weight",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Min Qty",
+                    "name": "Minqty",
+                    "semanticType": "Integer"
+                }
+            ],
+            "name": "Item",
+            "resourceName": "Item",
+            "schemaVersion": "1.0",
+            "serviceName": "CustOrderSubService",
+            "tableName": "Item",
+            "type": "progress-data-source",
+            "uniqueID": "427ba0c4-4cff-4c65-ba87-282f8035dd5d"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Sales Rep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Rep Name",
+                    "name": "RepName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Region",
+                    "name": "Region",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_1",
+                    "name": "MonthQuota_1",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_2",
+                    "name": "MonthQuota_2",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_3",
+                    "name": "MonthQuota_3",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_4",
+                    "name": "MonthQuota_4",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_5",
+                    "name": "MonthQuota_5",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_6",
+                    "name": "MonthQuota_6",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_7",
+                    "name": "MonthQuota_7",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_8",
+                    "name": "MonthQuota_8",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_9",
+                    "name": "MonthQuota_9",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_10",
+                    "name": "MonthQuota_10",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_11",
+                    "name": "MonthQuota_11",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "MonthQuota_12",
+                    "name": "MonthQuota_12",
+                    "semanticType": "Integer"
+                }
+            ],
+            "name": "Salesrep",
+            "resourceName": "Salesrep",
+            "schemaVersion": "1.0",
+            "serviceName": "CustOrderSubService",
+            "tableName": "Salesrep",
+            "type": "progress-data-source",
+            "uniqueID": "427ba0c4-4cff-4c65-ba87-282f8035dd5d"
+        }
+    ],
+    "generateChildTables": true,
+    "name": "DemoService",
+    "schemaVersion": "1.0",
+    "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
+    "type": "progress-data-provider",
+    "uniqueID": "564ae5e4-9be1-4708-b2ca-5b71e0026d25"
+}

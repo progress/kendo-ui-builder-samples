@@ -1,0 +1,14 @@
+{
+    "DemoService": {
+        "authenticationModel": "Anonymous",
+        "catalogUris": [
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/CustOrderSubService.json"
+        ],
+        "generateChildTables": true,
+        "name": "DemoService",
+        "schemaVersion": "1.0",
+        "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
+        "type": "progress-data-provider",
+        "uniqueID": "564ae5e4-9be1-4708-b2ca-5b71e0026d25"
+    }
+}

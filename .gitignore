@@ -1,5 +1,6 @@
 #
 /charts/app/node_modules/*
+/editable-stacked-data-grids/app/node_modules/*
 /form-external-paging/app/node_modules/*
 /form-with-crud/app/node_modules/*
 /grid-external-filtering/app/node_modules/*
@@ -11,6 +12,7 @@
 /pug-2017/app/node_modules/*
 #
 /charts/build-output/*
+/editable-stacked-data-grids/build-output/*
 /form-external-paging/build-output/*
 /form-with-crud/build-output/*
 /grid-external-filtering/build-output/*

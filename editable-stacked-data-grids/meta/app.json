@@ -1,0 +1,12 @@
+{
+    "children": [],
+    "description": "Sample app that contains a view with parent and child data grids where both are editable.",
+    "layout": {},
+    "logo": "logo_default.png",
+    "name": "editable-stacked-data-grids",
+    "schemaVersion": "1.4.2",
+    "targetFramework": "AngularJS",
+    "theme": "metro",
+    "type": "app",
+    "uniqueID": "ddd6d00b-2616-4056-b02d-73889116dcf5"
+}
