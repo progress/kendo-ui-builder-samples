@@ -8,7 +8,7 @@
         "providerType": "Progress Data Service",
         "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
         "catalogUris": [
-            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/EmployeeSubmit.json"
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/w_Sports_with_SubmitService.json""
         ],
         "verb": "GET"
     }
