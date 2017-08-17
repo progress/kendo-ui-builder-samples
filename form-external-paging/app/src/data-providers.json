@@ -8,7 +8,7 @@
         "providerType": "Progress Data Service",
         "serviceUri": "http://oemobiledemo.progress.com/OEMobileDemoServices",
         "catalogUris": [
-            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/SemanticTypesService.json"
+            "http://oemobiledemo.progress.com/OEMobileDemoServices/static/r_SemanticTypesService.json"
         ],
         "verb": "GET"
     }
