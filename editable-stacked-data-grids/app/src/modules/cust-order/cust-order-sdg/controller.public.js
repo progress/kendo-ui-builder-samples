@@ -36,7 +36,6 @@ class CustOrderCustOrderSDGCtrl extends BaseController {
                     }
                     
                     promise = that.$parentDs.sync();
-                    var that2 = that;
                     promise.done( function() {   
                         console.log("Save Changes was successful");  
                     });
