@@ -22,9 +22,9 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eCustomer"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttCustomer"
             }),
 
             type: "jsdo",
@@ -38,9 +38,9 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eOrder"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttOrder"
             }),
 
             type: "jsdo",
@@ -72,26 +72,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '15000',
+
+                    min: 0,
+
+                    max: 15000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'Name',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '45'
+                            angle: 45
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -101,8 +106,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "Balance",
-                        "name": "Balance"
+                        field: "Balance",
+                        name: "Balance"
                     }
 
                 ],
@@ -174,7 +179,7 @@ class BaseController {
                         "filterable": true,
                         "format": "",
                         "sortable": true,
-                        "title": "Salesrep"
+                        "title": "SalesRep"
                     },
                     {
                         "encoded": true,

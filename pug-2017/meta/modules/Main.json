@@ -35,7 +35,7 @@
                                     "annotationRefs": {
                                         "dataSourceName": {
                                             "kind": "dataSourceName",
-                                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                                            "value": "16da78af-5dbb-450f-b322-a3341e8cdb4c.SaleReps"
                                         }
                                     },
                                     "annotations": {
@@ -51,6 +51,7 @@
                                         }
                                     },
                                     "containerUid": "b9c56aa2-1eaa-4235-8024-4e391c3469dc",
+                                    "createSeries": [],
                                     "dataSourceName": "SaleReps",
                                     "events": {
                                         "onDataBound": "",
@@ -152,7 +153,7 @@
                                         }
                                     },
                                     "containerUid": "fcdb9a13-1c7f-490c-b237-768051cca4f7",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -163,7 +164,7 @@
                                         "position": "Top",
                                         "visible": false
                                     },
-                                    "model": "SaleRepsModel",
+                                    "model": "",
                                     "schemaVersion": "1.0",
                                     "series": [
                                         {
@@ -253,7 +254,7 @@
                                         }
                                     },
                                     "containerUid": "fedf2628-9f27-4f10-aa6e-3194f36ee962",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -264,7 +265,7 @@
                                         "position": "Top",
                                         "visible": false
                                     },
-                                    "model": "SaleRepsModel",
+                                    "model": "",
                                     "schemaVersion": "1.0",
                                     "series": [
                                         {
@@ -354,7 +355,7 @@
                                         }
                                     },
                                     "containerUid": "bc238825-be0c-4fd9-8401-20d1388ba96e",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -455,7 +456,7 @@
                                         }
                                     },
                                     "containerUid": "ce1eb7a7-3a38-4bcb-829a-07fc4799137b",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -556,7 +557,7 @@
                                         }
                                     },
                                     "containerUid": "f28e3f58-0005-4ca2-b07e-60b1ab2d2424",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -657,7 +658,7 @@
                                         }
                                     },
                                     "containerUid": "bcced08d-5236-4454-8c78-a9294bfc8973",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -758,7 +759,7 @@
                                         }
                                     },
                                     "containerUid": "f8220c49-8927-44f0-b754-cbdaa50955a5",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -859,7 +860,7 @@
                                         }
                                     },
                                     "containerUid": "93a7a94c-bdd1-4785-beba-d3ba8fc3314f",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -960,7 +961,7 @@
                                         }
                                     },
                                     "containerUid": "fe241379-5444-42c6-a6e4-e05f5cadc95a",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -1061,7 +1062,7 @@
                                         }
                                     },
                                     "containerUid": "07bedb72-06a1-44ac-90f7-377cb050b8ec",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -1162,7 +1163,7 @@
                                         }
                                     },
                                     "containerUid": "008920c0-0906-4b2b-b46c-555d7245d15f",
-                                    "dataSourceName": "SaleReps",
+                                    "dataSourceName": "",
                                     "events": {
                                         "onDataBound": "",
                                         "onSeriesClick": ""
@@ -1251,13 +1252,14 @@
                     "annotationRefs": {
                         "dataSourceName": {
                             "kind": "dataSourceName",
-                            "value": "64d38083-22d9-4860-8efd-6dc8c022ff4a.SaleReps"
+                            "value": "16da78af-5dbb-450f-b322-a3341e8cdb4c.SaleReps"
                         }
                     },
                     "annotations": {
                         "id": "componentIdentifier"
                     },
                     "containerUid": "bd40264e-b82a-4ab3-b525-e39df15c7e1f",
+                    "createSeries": [],
                     "dataSourceName": "SaleReps",
                     "events": {
                         "onDataBound": "",
@@ -1306,19 +1308,19 @@
             "dataSources": [
                 {
                     "batch": true,
-                    "dataProviderName": "OrderMgtDataService",
-                    "dataSourceName": "Salesrep",
+                    "dataProviderName": "SportsService",
+                    "dataSourceName": "SalesRep",
                     "name": "SaleReps",
                     "pageSize": 10,
-                    "uniqueID": "64d38083-22d9-4860-8efd-6dc8c022ff4a"
+                    "uniqueID": "16da78af-5dbb-450f-b322-a3341e8cdb4c"
                 },
                 {
                     "batch": true,
-                    "dataProviderName": "OrderMgtDataService",
-                    "dataSourceName": "CustOrderNSub.eOrder",
+                    "dataProviderName": "SportsService",
+                    "dataSourceName": "CustomerOrders.ttOrder",
                     "name": "Orders",
                     "pageSize": 10,
-                    "uniqueID": "df7aa068-3cc7-4ac5-9db0-9d434d176d87"
+                    "uniqueID": "43de2885-f614-4a4c-a9fb-88f806fcac0a"
                 }
             ],
             "events": {

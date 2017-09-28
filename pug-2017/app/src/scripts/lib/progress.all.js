@@ -1,5 +1,9 @@
+///////////////////
+// Auto-generated
+// Do not edit!!!
+///////////////////
 /*
-Progress JSDO Version: 4.4.0
+Progress JSDO Version: 4.4.1
 
 Copyright 2012-2017 Progress Software Corporation and/or its subsidiaries or affiliates.
 
@@ -16,7 +20,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 /* 
-progress.util.js    Version: 4.4.0-5
+progress.util.js    Version: 4.4.0-7
 
 Copyright (c) 2014-2017 Progress Software Corporation and/or its subsidiaries or affiliates.
 
@@ -401,17 +405,17 @@ limitations under the License.
             field = filter.field;
             value = filter.value;
 
-            if (tableRef._name) {
-                // Use original field name instead of serialized name
-                fieldInfo = tableRef._jsdo[tableRef._name]._fields[field.toLowerCase()];
-                if (fieldInfo && fieldInfo.origName) {
-                    field = fieldInfo.origName;
-                }
-            }
-
             if (filter.filters) {
                 filter = progress.util._convertToABLWhereString(tableRef, filter);
             } else {
+                // Use original field name instead of serialized name
+                if (field && tableRef._name) {
+                    fieldInfo = tableRef._jsdo[tableRef._name]._fields[field.toLowerCase()];
+                    if (fieldInfo && fieldInfo.origName) {
+                        field = fieldInfo.origName;
+                    }
+                }
+
                 operator = whereOperators[filter.operator];
 
                 if (operator === undefined) {
@@ -807,7 +811,7 @@ limitations under the License.
 }());
 //# sourceURL=progress.jsdo.js
 /* 
-progress.js    Version: 4.4.0-9
+progress.js    Version: 4.4.1-01
 
 Copyright (c) 2012-2017 Progress Software Corporation and/or its subsidiaries or affiliates.
  
@@ -913,8 +917,8 @@ limitations under the License.
     msg.msgs.jsdoMSG053 = "{1}: {2} was not executed because the AuthenticationProvider is not logged in.";
     msg.msgs.jsdoMSG054 = "{1}: Token refresh was not executed because the AuthenticationProvider does not have a refresh token.";
     msg.msgs.jsdoMSG055 = "{1}: Token refresh was not executed  because the authentication model is not sso.";
-    msg.msgs.jsdoMSG056 = "{1}: Already connected or logged in.";
-    msg.msgs.jsdoMSG057 = "{1}: Called {2} when authenticationModel is sso. Use {3} instead.";
+    msg.msgs.jsdoMSG056 = "{1}: Already logged in.";
+    msg.msgs.jsdoMSG057 = "{1}: Cannot call {2} when authenticationModel is SSO. Please use the AuthenticationProvider object instead.";
     msg.msgs.jsdoMSG058 = "{1}: Cannot pass username and password to addCatalog when authenticationModel " +
         "is sso. Pass an AuthenticationProvider instead.";
     msg.msgs.jsdoMSG059 = "{1}: Error in constructor. The authenticationModels of the " +
@@ -965,9 +969,9 @@ limitations under the License.
     msg.msgs.jsdoMSG507 = "{1}: '{2}' is an invalid value for the {3} parameter in {4} call.";
     msg.msgs.jsdoMSG508 = "JSDOSession: If a JSDOSession object is using the SSO authentication model, " +
         "the options object passed to its constructor must include an authProvider property.";
-    msg.msgs.jsdoMSG509 = "progress.data.getSession: If the getSession method is passed AUTH_TYPE_SSO as the authenticationModel, " +
-        "it must also be passed an authProvider and an authProviderAuthenticationModel.";
-    msg.msgs.jsdoMSG510 = "JSDOSession: connect() can only be called if an AuthenticationProvider was passed to the JSDOSession's constructor.";
+    msg.msgs.jsdoMSG509 = "progress.data.getSession: If the authenticationModel is AUTH_TYPE_SSO, " +
+        "authenticationURI and authProviderAuthenticationModel are required parameters.";
+    msg.msgs.jsdoMSG510 = "{1}: This session has been invalidated and cannot be used.";
     msg.msgs.jsdoMSG511 = "JSDOSession: addCatalog() can only be called if an AuthenticationProvider was passed as an argument or " +
         "connect() has been successfully called.";
 
@@ -3038,7 +3042,10 @@ limitations under the License.
             for (var i = 0; i < this._resource.relations.length; i++) {
                 var relationship = this._resource.relations[i];
 
-                if (relationship.childName && relationship.parentName) {
+                // Set relationship information ignoring self-referencing (recursive) relationships
+                if (relationship.childName &&
+                    relationship.parentName &&
+                    (relationship.childName !== relationship.parentName)) {
                     // Set casing of fields in relationFields to be the same as in the schema
                     if (relationship.relationFields instanceof Array) {
                         for (var j = 0; j < relationship.relationFields.length; j++) {
@@ -3527,13 +3534,16 @@ limitations under the License.
                 hasCommittedRecords,
                 i;
 
+            // Note: This function is a single one-stop convenient function to set             
+            // _allRecordsRejected and _someRecordsRejected.
+            // This logic can be optimized by setting the flags while processing the response.
             if (param instanceof Object) {
                 if (param instanceof Array) {
                     changes = param;
                     hasErrors = false;
 
                     this._allRecordsRejected = false;
-                    this._recordsRejected = false;
+                    this._someRecordsRejected = false;
 
                     for (var buf in this._buffers) {
                         if (this._buffers[buf]._lastErrors.length > 0) {
@@ -3542,7 +3552,7 @@ limitations under the License.
                     }
                     if (hasErrors) {
                         this._allRecordsRejected = true;
-                        this._recordsRejected = true;
+                        this._someRecordsRejected = true;
 
                         for (i = 0; i < changes.length; i += 1) {
                             if (changes[i].record && !changes[i].record.data._rejected) {
@@ -3552,19 +3562,19 @@ limitations under the License.
                         }
                     } else if (changes.length > 0) {
                         this._allRecordsRejected = true;
-                        this._recordsRejected = false;
+                        this._someRecordsRejected = false;
                         hasCommittedRecords = false;
 
                         for (i = 0; i < changes.length; i += 1) {
                             if (changes[i].record) {
                                 if (changes[i].record.data._rejected) {
-                                    this._recordsRejected = true;
+                                    this._someRecordsRejected = true;
                                 } else {
                                     hasCommittedRecords = true;
                                 }
                             }
                         }
-                        if (hasCommittedRecords && !this._recordsRejected) {
+                        if (hasCommittedRecords && !this._someRecordsRejected) {
                             this._allRecordsRejected = false;
                         }
                     }
@@ -3574,7 +3584,7 @@ limitations under the License.
                             !param.operations[0].success) {
                             // First operation failed
                             this._allRecordsRejected = true;
-                            this._recordsRejected = true;
+                            this._someRecordsRejected = true;
 
                             for (i = 0; i < param.operations.length; i += 1) {
                                 if (param.operations[i].success) {
@@ -3585,11 +3595,11 @@ limitations under the License.
                         } else {
                             // Not all operations were rejected
                             this._allRecordsRejected = false;
-                            this._recordsRejected = false;
+                            this._someRecordsRejected = false;
 
                             for (i = 0; i < param.operations.length; i += 1) {
                                 if (!param.operations[i].success) {
-                                    this._recordsRejected = true;
+                                    this._someRecordsRejected = true;
                                     return;
                                 }
                             }
@@ -3597,8 +3607,9 @@ limitations under the License.
                     }
                 }
             } else {
+                // Possible values: true, false, undefined
                 this._allRecordsRejected = param;
-                this._recordsRejected = param;
+                this._someRecordsRejected = param;
             }
         };
 
@@ -3615,8 +3626,7 @@ limitations under the License.
             this._clearErrors();
 
             // Reset _allRecordsRejected
-            this._allRecordsRejected = undefined;
-            this._recordsRejected = undefined;
+            this._setAllRecordsRejected(undefined);
 
             // Process parameters
             if (arguments.length !== 0) {
@@ -3707,6 +3717,22 @@ limitations under the License.
                     request.exception = e;
                     // get the Client Context ID (AppServer ID)
                     xhr.jsdo._session._checkServiceResponse(xhr, request.success, request);
+                }
+            }
+
+            // This is the scenario where the read.call did not reach server. i.e.,
+            // some problem in between making successful call to server and we are 
+            // completing the fill() operation with necessary cleanup operations
+            if (request.success == false && request.exception) {
+                if ((typeof xhr.onErrorFn) == 'function') {
+                    xhr.onErrorFn(xhr.jsdo, request.success, request);
+                }
+
+                // get the Client Context ID (AppServer ID)
+                xhr.jsdo._session._checkServiceResponse(xhr, request.success, request);
+
+                if ((typeof xhr.onCompleteFn) == 'function') {
+                    xhr.onCompleteFn(xhr.jsdo, request.success, request);
                 }
             }
 
@@ -3968,8 +3994,7 @@ limitations under the License.
             this._clearErrors();
 
             // Reset _allRecordsRejected
-            this._allRecordsRejected = undefined;
-            this._recordsRejected = undefined;
+            this._setAllRecordsRejected(undefined);
 
             request = {
                 jsdo: this
@@ -6394,7 +6419,7 @@ limitations under the License.
         this._saveChangesComplete = function(jsdo, success, request) {
             // Success with errors
             if ((request.xhr.status >= 200 && request.xhr.status < 300) &&
-                (jsdo._lastErrors.length > 0 || jsdo._recordsRejected)) {
+                (jsdo._lastErrors.length > 0 || jsdo._someRecordsRejected)) {
                 request.success = false;
             }
 
@@ -6593,7 +6618,7 @@ limitations under the License.
             } else if (request &&
                 !request.success &&
                 request.xhr &&
-                (request.xhr.status >= 400 && request.xhr.status < 600)) {
+                ((request.xhr.status >= 400 && request.xhr.status < 600) || request.xhr.status === 0)) {
                 errors = this._getErrorsFromRequest(request);
                 errorText = "";
                 for (j = 0; j < errors.length; j += 1) {
@@ -7980,9 +8005,8 @@ limitations under the License.
 
 //this is so that we can see the code in Chrome's Source tab when script is loaded via XHR
 //# sourceURL=progress.jsdo.js
-
 /* 
-progress.session.js    Version: 4.4.0-9
+progress.session.js    Version: 4.4.1-2
 
 Copyright (c) 2012-2017 Progress Software Corporation and/or its subsidiaries or affiliates.
  
@@ -8016,6 +8040,7 @@ limitations under the License.
     progress.data.ServicesManager._resources = [];
     progress.data.ServicesManager._data = [];
     progress.data.ServicesManager._sessions = [];
+    progress.data.ServicesManager._jsdosessions = [];
     /*
      progress.data.ServicesManager.put = function(id, jsdo) {
      progress.data.ServicesManager._data[id] = jsdo;
@@ -8049,11 +8074,61 @@ limitations under the License.
         else
             throw new Error("Cannot load catalog '" + catalogURI + "' multiple times.");
     };
+
+    progress.data.ServicesManager.addJSDOSession = function(catalogURI, jsdosession) {
+        if (progress.data.ServicesManager._jsdosessions[catalogURI] === undefined) {
+            progress.data.ServicesManager._jsdosessions[catalogURI] = jsdosession;
+        } else {
+            throw new Error("Cannot load catalog '" + catalogURI + "' multiple times.");
+        }
+    };
     progress.data.ServicesManager.getSession = function(catalogURI) {
         try {
             return progress.data.ServicesManager._sessions[catalogURI];
         } catch (e) {
             return null;
+        }
+    };
+
+    progress.data.ServicesManager.cleanSession = function(session) {
+        var servicesKey,
+            resourcesKey,
+            sessionsKey,
+            service,
+            services = progress.data.ServicesManager._services,
+            resources = progress.data.ServicesManager._resources,
+            sessions = progress.data.ServicesManager._sessions,
+            jsdosessions = progress.data.ServicesManager._jsdosessions;
+
+        // Delete the services and resources in the ServicesManager
+        // associated with the Session given
+        for (servicesKey in services) {
+            service = null;
+            if (services[servicesKey]._session === session) {
+                service = services[servicesKey];
+                delete services[servicesKey];
+            }
+
+            if (!service) {
+                continue;
+            }
+
+            for (resourcesKey in resources) {
+                if (resources[resourcesKey].service === service) {
+                    delete resources[resourcesKey];
+                }
+            }
+        }
+
+        // Delete the session and jsdosession from the ServicesManager
+        for (sessionsKey in sessions) {
+            if (sessions[sessionsKey] === session) {
+                delete sessions[sessionsKey];
+
+                if (jsdosessions[sessionsKey]) {
+                    delete jsdosessions[sessionsKey];
+                }
+            }
         }
     };
 
@@ -8666,9 +8741,9 @@ limitations under the License.
             oepingAvailable = false,
             defaultPartialPingURI = "/rest/_oeping",
             partialPingURI = defaultPartialPingURI,
-            needsReconnectAfterPageRefresh = false,
             _storageKey,
             _authProvider = null,
+            customCredentials = false,
 
             // Note: the variables above here are used during the lifetime of the object; the ones below
             // are only used while the constructor is executing
@@ -8676,6 +8751,11 @@ limitations under the License.
             storedURI,
             newURI,
             stateWasReadFromStorage = false;
+
+        // This is a hidden argument to suppress this warning and be re-used for future warnings
+        if (!options || options._silent !== true) {
+            console.warn("Session: As of JSDO 4.4, the Session object has been deprecated. Please use the JSDOSession object instead.");
+        }
 
         if (typeof navigator !== "undefined") {
             if (typeof navigator.userAgent !== "undefined") {
@@ -8887,6 +8967,17 @@ limitations under the License.
                 "_contextProperties", {
                     get: function() {
                         return _contextProperties;
+                    },
+                    enumerable: false
+                }
+            );
+
+            var isInvalidated = false;
+            Object.defineProperty(
+                this,
+                "_isInvalidated", {
+                    get: function() {
+                        return isInvalidated;
                     },
                     enumerable: false
                 }
@@ -9257,7 +9348,12 @@ limitations under the License.
                 }
             }
 
-            if (this.loginResult !== progress.data.Session.LOGIN_SUCCESS && this.authenticationModel) {
+            if (this._isInvalidated) {
+                // Session: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "Session"));
+            }
+
+            if (this.loginResult !== progress.data.Session.LOGIN_SUCCESS && !this._authProvider && this.authenticationModel) {
                 throw new Error("Attempted to make server request when there is no active session.");
             }
 
@@ -9330,145 +9426,6 @@ limitations under the License.
         };
 
         // Intended only for internal use by the JSDO library
-        // Confirm that the JSDOSession has access to the Web application at the specified serviceURI.
-        // The method does this by doing a GET of a specific resource (<serviceURI>/static/home.html by
-        // default, using the AuthenticationProvider passed in )
-        // Parameters:
-        //      authProvider  AuthenticationProvider; will be kept by the Session if _connect suceeds 
-        //      deferred      Deferred object created by caller, just attached to the xhr here
-        this._connect = function(deferred) {
-            var uriForRequest, // "decorated" version of serviceURI, used to actually send the request
-                xhr,
-                params,
-                that = this;
-
-            function _connectAfterOpen(errorObject) {
-                var result;
-
-                // need these set for _connectComplete even if we call it directly here 
-                // because we were passed an errorObject
-                xhr._jsdosession = jsdosession;
-                xhr._deferred = deferred;
-
-                if (errorObject) {
-                    try {
-                        that._processConnectResult(xhr);
-                    } catch (e) {
-                        // keep errorObject as it is (error not currently thrown from 
-                        // _processConnectResult anyway)
-                    }
-                    if (!result) {
-                        result = progress.data.Session.GENERAL_FAILURE;
-                    }
-                    that._connectComplete(xhr.pdsession, result, errorObject, xhr);
-                } else {
-                    progress.data.Session._setNoCacheHeaders(xhr);
-                    // set X-CLIENT-PROPS header
-                    setRequestHeaderFromContextProps(that, xhr);
-
-                    xhr.onreadystatechange = that._onReadyStateChangeGeneric;
-                    xhr.onResponseFn = that._processConnectResult;
-                    xhr.onResponseProcessedFn = that._connectComplete;
-
-                    if (typeof that.onOpenRequest === 'function') {
-
-                        //  set this here in case onOpenRequest checks it
-                        setLastSessionXHR(xhr, that);
-                        params = {
-                            "xhr": xhr,
-                            "verb": "GET",
-                            "uri": that.serviceURI + that.loginTarget,
-                            "async": true,
-                            "formPreTest": false,
-                            "session": that
-                        };
-                        that.onOpenRequest(params);
-                        xhr = params.xhr; // just in case it has been changed
-                    }
-                    setLastSessionXHR(xhr, that);
-                    xhr.send(null);
-                }
-            }
-
-            if (this.loginResult === progress.data.Session.LOGIN_SUCCESS &&
-                !needsReconnectAfterPageRefresh) {
-                // Session: Already connected or logged in.
-                throw new Error(progress.data._getMsgText("jsdoMSG056", "progress.data.Session"));
-            }
-
-            xhr = new XMLHttpRequest();
-            xhr.pdsession = this;
-
-            if (!this._authProvider) {
-                throw new Error(progress.data._getMsgText("jsdoMSG510"));
-            }
-
-            try {
-                uriForRequest = this.serviceURI + this.loginTarget;
-                if (progress.data.Session._useTimeStamp) {
-                    uriForRequest = progress.data.Session._addTimeStampToURL(uriForRequest);
-                }
-
-                this._authProvider._openRequestAndAuthorize(xhr,
-                    'GET',
-                    uriForRequest,
-                    true, // async
-                    _connectAfterOpen);
-            } catch (e) {
-                setLoginHttpStatus(xhr.status, this);
-                setLoginResult(progress.data.Session.LOGIN_GENERAL_FAILURE, this);
-                throw e;
-            }
-
-            // Note: although login returns ASYNC_PENDING, there is currently no need for connect
-            // to return anything. It either throws an error or eventually _processConnectResult will fire
-            // the "afterConnect" event. (In fact, the only reason login even returns ASYNC_PENDING when it is 
-            // invoked async is because it's documented as returning a result (and that's because login was 
-            // originally spec'ed to be called synchronously)
-        };
-
-        this._processConnectResult = function(xhr) {
-            var pdsession = xhr.pdsession,
-                contentType,
-                jsonObject,
-                pingTestArgs = {
-                    pingURI: null,
-                    async: true,
-                    onCompleteFn: null,
-                    fireEventIfOfflineChange: true,
-                    onReadyStateFn: pdsession._pingtestOnReadyStateChange
-                };
-
-            setLoginHttpStatus(xhr.status, xhr.pdsession);
-
-            if (pdsession.loginHttpStatus === 200) {
-                setLoginResult(progress.data.Session.LOGIN_SUCCESS, pdsession);
-                setRestApplicationIsOnline(true);
-                pdsession._saveClientContextId(xhr);
-                storeAllSessionInfo(); // save info to persistent storage 
-                needsReconnectAfterPageRefresh = false;
-
-                pingTestArgs.pingURI = pdsession._makePingURI();
-                pdsession._sendPing(pingTestArgs); // see whether the ping feature is available
-            } else {
-                if (pdsession.loginHttpStatus === 401) {
-                    setLoginResult(progress.data.AuthenticationProvider._getAuthFailureReason(xhr),
-                        pdsession);
-                } else {
-                    setLoginResult(progress.data.Session.LOGIN_GENERAL_FAILURE, pdsession);
-                }
-            }
-            setLastSessionXHR(xhr, pdsession);
-            updateContextPropsFromResponse(pdsession, xhr);
-
-            return pdsession.loginResult;
-        };
-
-        this._connectComplete = function(pdsession, result, errObj, xhr) {
-            pdsession.trigger("afterConnect", pdsession, result, errObj, xhr);
-        };
-
-        // Intended only for internal use by the JSDO library
         // NOTE: disconnect does not currently send a request to the Web application for the Anonymous or 
         // OE SSO models. It's conceivable, though unlikely, that it might. For that reason, the design is
         // similar to the functions that DO make a server request. There is a "setup" function (this one)
@@ -9535,11 +9492,12 @@ limitations under the License.
             }
 
             if (this.authenticationModel === progress.data.Session.AUTH_TYPE_SSO) {
-                // Session: Called login() when authenticationModel is SSO. Use connect() instead.
-                throw new Error(progress.data._getMsgText("jsdoMSG057", 'Session', 'login()', "connect()"));
+                // Session: Cannot call login() when authenticationModel is SSO. 
+                // Please use the AuthenticationProvider object instead.
+                throw new Error(progress.data._getMsgText("jsdoMSG057", 'Session', 'login()'));
             }
 
-            if (this.loginResult === progress.data.Session.LOGIN_SUCCESS) {
+            if (this.loginResult === progress.data.Session.LOGIN_SUCCESS || this._authProvider) {
                 throw new Error("Attempted to call login() on a Session object that is already logged in.");
             }
 
@@ -9840,7 +9798,7 @@ limitations under the License.
                     }
 
                     // j_username=username&j_password=password&submit=Submit
-                    xhr.send("j_username=" + args.uname + "&j_password=" + args.pw + "&submit=Submit");
+                    xhr.send("j_username=" + encodeURIComponent(args.uname) + "&j_password=" + encodeURIComponent(args.pw) + "&submit=Submit");
                 } catch (e) {
                     setLoginResult(progress.data.Session.LOGIN_GENERAL_FAILURE, theSession);
                     setLoginHttpStatus(xhr.status, theSession);
@@ -9957,9 +9915,6 @@ limitations under the License.
         // GET RID OF progress.data.Session logout CODE (AND RELATED) IF WE DROP SUPPORT FOR USING
         // THE OLD progress.data.Session API DIRECTLY (mainly a problem for existing code (tdriver),
         // or anyone who wants to call methods synchronously, which should be no one)
-        /* logout
-         *
-         */
         this.logout = function(args) {
             var isAsync = false,
                 errorObject = null,
@@ -9968,8 +9923,9 @@ limitations under the License.
                 params;
 
             if (this.authenticationModel === progress.data.Session.AUTH_TYPE_SSO) {
-                // Session: Called logout() when authenticationModel is SSO. Use disconnect() instead.
-                throw new Error(progress.data._getMsgText("jsdoMSG057", 'Session', 'logout()', "disconnect()"));
+                // Session: Cannot call logout() when authenticationModel is SSO. 
+                // Please use the AuthenticationProvider object instead.
+                throw new Error(progress.data._getMsgText("jsdoMSG057", 'Session', 'logout()'));
             }
 
             if (this.loginResult !== progress.data.Session.LOGIN_SUCCESS && this.authenticationModel) {
@@ -10070,6 +10026,13 @@ limitations under the License.
 
         };
 
+        // This function erases all evidence of itself from the ServicesManager and
+        // flips a bit to prevent it to be used in the future
+        this.invalidate = function() {
+            isInvalidated = true;
+            cleanServicesManager();
+        };
+
         this._logoutComplete = function(pdsession, result, errorObject, xhr) {
             // ignore result, it doesn't apply to logout -- is probably null or GENERAL_FAILURE
             // we include it so onReadyStateChangeGeneric calls this correctly
@@ -10122,6 +10085,7 @@ limitations under the License.
             setClientContextID(null, pdsession);
             setUserName(null, pdsession);
             _password = null;
+            setAuthProvider(null);
 
             if (success) {
                 setRestApplicationIsOnline(false);
@@ -10208,15 +10172,23 @@ limitations under the License.
 
             }
 
+            if (this._isInvalidated) {
+                // JSDOSession: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "JSDOSession"));
+            }
+
+            // Assume we're using a custom username/pw/authprovider
+            customCredentials = true;
+
             // check whether the args were passed in a single object. If so, copy them
             // to the named arguments and a variable
             if (arguments.length > 0) {
                 if (typeof arg1 === 'object') {
-
-                    // check whether OK to get catalog if offline
-                    if (!arg1.offlineAddCatalog) {
-                        if (this.loginResult !==
-                            progress.data.Session.LOGIN_SUCCESS && this.authenticationModel) {
+                    // check whether it's OK to add a catalog whilst offline
+                    if (!arguments[0].offlineAddCatalog) {
+                        if ((this.loginResult !== progress.data.Session.LOGIN_SUCCESS &&
+                                !this._authProvider) &&
+                            this.authenticationModel) {
                             throw new Error("Attempted to call addCatalog when there is no active session.");
                         }
                     }
@@ -10276,6 +10248,9 @@ limitations under the License.
 
             if (!authProvider) {
                 authProvider = this._authProvider;
+
+                // Guess we're using the default credentials passed earlier
+                customCredentials = false;
             }
 
             // TODO: we expect that there will always be an authProvider if a login has been done.
@@ -10338,10 +10313,13 @@ limitations under the License.
             var theSession = xhr.pdsession;
             var servicedata;
             var catalogURI = xhr._catalogURI,
-                serviceURL;
+                serviceURL,
+                theJSDOSession = jsdosession;
 
-            setLastSessionXHR(xhr, theSession);
-            updateContextPropsFromResponse(theSession, xhr);
+            // Only change the Session's state if the default AuthProv is being used
+            if (!customCredentials) {
+                toggleOnlineState(xhr);
+            }
 
             if ((_catalogHttpStatus == 200) || (_catalogHttpStatus === 0) && xhr.responseText) {
                 servicedata = theSession._parseCatalog(xhr);
@@ -10377,6 +10355,9 @@ limitations under the License.
                 }
                 pushCatalogURIs(catalogURI, theSession);
                 progress.data.ServicesManager.addSession(catalogURI, theSession);
+                if (theJSDOSession) {
+                    progress.data.ServicesManager.addJSDOSession(catalogURI, theJSDOSession);
+                }
             } else if (_catalogHttpStatus == 401) {
                 return progress.data.AuthenticationProvider._getAuthFailureReason(xhr);
             } else if (xhr._iosTimeOutExpired) {
@@ -10432,7 +10413,12 @@ limitations under the License.
                 offlineReason: null
             };
 
-            if (this.loginResult !== progress.data.Session.LOGIN_SUCCESS) {
+            if (this._isInvalidated) {
+                // Session: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "Session"));
+            }
+
+            if ((!this._authProvider) && (this.loginResult !== progress.data.Session.LOGIN_SUCCESS)) {
                 throw new Error("Attempted to call ping when not logged in.");
             }
 
@@ -10659,7 +10645,7 @@ limitations under the License.
                         console.error("Unable to parse ping response.");
                     }
                 }
-                setRestApplicationIsOnline(true);
+                toggleOnlineState(xhr);
             } else {
                 if (deviceIsOnline) {
                     if (xhr.status === 0) {
@@ -11077,6 +11063,39 @@ limitations under the License.
             }
         }
 
+        function toggleOnlineState(xhr) {
+            var pdsession = that;
+
+            setLoginHttpStatus(xhr.status, pdsession);
+
+            if (pdsession.loginHttpStatus >= 200 && pdsession.loginHttpStatus < 400) {
+                setLoginResult(progress.data.Session.LOGIN_SUCCESS, pdsession);
+                setRestApplicationIsOnline(true);
+                pdsession._saveClientContextId(xhr);
+                storeAllSessionInfo(); // save info to persistent storage
+            } else {
+                // Taking a page from _processPingResult where we set the rest application as offline if it's one of
+                // these error codes
+                if (pdsession.loginHttpStatus === 0 || pdsession.loginHttpStatus === 400 || pdsession.loginHttpStatus === 410) {
+                    setRestApplicationIsOnline(false);
+                    setLoginResult(progress.data.AuthenticationProvider._getAuthFailureReason(xhr),
+                        pdsession);
+                }
+                // Otherwise if it's probably an internal error or auth problem. Either way, we know it's still online.
+                else {
+
+                    setRestApplicationIsOnline(true);
+                    setLoginResult(progress.data.Session.LOGIN_GENERAL_FAILURE, pdsession);
+                }
+
+            }
+
+            setLastSessionXHR(xhr, pdsession);
+            updateContextPropsFromResponse(pdsession, xhr);
+
+            return pdsession.loginResult;
+        };
+
         function updateContextPropsFromResponse(session, xhr) {
             /* determine whether the response contains an X-CLIENT_PROPS header and, if so, 
                set the Session's context
@@ -11104,6 +11123,11 @@ limitations under the License.
             }
         }
 
+        // Remove all resources, services, and sessions related to this Session from the ServicesManager
+        function cleanServicesManager() {
+            progress.data.ServicesManager.cleanSession(that);
+        }
+
         // process constructor options and do other initialization
 
         // If a storage key (name property of a JSDOSession) was passed to the constructor, 
@@ -11115,6 +11139,10 @@ limitations under the License.
             jsdosession = options.jsdosession;
             newURI = options.serviceURI;
             setAuthProvider(options.authProvider); // do this BEFORE calling setSessionInfoFromStorage
+
+            if (options.authProvider && options.authProvider.hasClientCredentials()) {
+                _loginResult = progress.data.Session.LOGIN_SUCCESS;
+            }
 
             // get rid of trailing '/' because appending service url that starts with '/'
             // will cause request failures
@@ -11137,7 +11165,6 @@ limitations under the License.
                         // setSessionInfoFromStorage that re-creates an AuthenticationProvider
                         // after page refresh only gets used if the app is using the old JSDOSession.login)
                         setSessionInfoFromStorage(_storageKey);
-                        needsReconnectAfterPageRefresh = true;
                         stateWasReadFromStorage = true;
                     }
                 }
@@ -11362,7 +11389,7 @@ limitations under the License.
         }
     }
     // events supported by Session
-    progress.data.Session.prototype._eventNames = ["offline", "online", "afterLogin", "afterAddCatalog", "afterLogout", "afterConnect", "afterDisconnect"];
+    progress.data.Session.prototype._eventNames = ["offline", "online", "afterLogin", "afterAddCatalog", "afterLogout", "afterDisconnect"];
     // callback to validate subscribe and unsubscribe
     progress.data.Session.prototype.validateSubscribe = validateSessionSubscribe;
     progress.data.Session.prototype.toString = function(radix) {
@@ -11498,6 +11525,16 @@ limitations under the License.
             enumerable: true
         });
 
+        Object.defineProperty(
+            this,
+            "_isInvalidated", {
+                get: function() {
+                    return _pdsession._isInvalidated;
+                },
+                enumerable: false
+            }
+        );
+
         // PRIVATE FUNCTIONS
 
         // Wrapper to make it easier to change the promise implementation we use.
@@ -11532,7 +11569,13 @@ limitations under the License.
         function onAfterAddCatalog(pdsession, result, errorObject, xhr) {
             var deferred,
                 fulfill = false,
+                settleResult;
+
+            if (result === progress.data.Session.EXPIRED_TOKEN) {
+                settleResult = progress.data.Session.EXPIRED_TOKEN;
+            } else {
                 settleResult = progress.data.Session.GENERAL_FAILURE;
+            }
 
             if (xhr && xhr._deferred) {
                 deferred = xhr._deferred;
@@ -11619,8 +11662,8 @@ limitations under the License.
             var deferred = $.Deferred(),
                 iOSBasicAuthTimeout;
 
-            function callConnect() {
-                that.connect()
+            function callIsAuthorized() {
+                that.isAuthorized()
                     .then(function(jsdosession, result, info) {
                         deferred.resolve(that, result, info);
                     }, function(jsdosession, result, info) {
@@ -11628,12 +11671,17 @@ limitations under the License.
                     });
             }
 
+            if (this._isInvalidated) {
+                // JSDOSession: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "JSDOSession"));
+            }
+
             if (this.authenticationModel === progress.data.Session.AUTH_TYPE_SSO) {
-                // JSDOSession: Called login() when authenticationModel is SSO. Use connect() instead.
+                // JSDOSession: Cannot call login() when authenticationModel is SSO. 
+                // Please use the AuthenticationProvider object instead.
                 throw new Error(progress.data._getMsgText("jsdoMSG057",
                     'JSDOSession',
-                    'login()',
-                    "connect()"));
+                    'login()'));
             }
 
             if (typeof options === 'object') {
@@ -11649,41 +11697,17 @@ limitations under the License.
                 });
             }
 
-            if (_pdsession._authProvider.hasClientCredentials()) {
-                // the authProvider already has credentials (a page refresh may have happened),
-                // so do not call login
-                callConnect();
-            } else {
-                _pdsession._authProvider.login(username, password)
-                    .then(function() {
-                            callConnect();
-                        },
-                        function(provider, result, info) {
-                            deferred.reject(that, result, info);
-                        });
-            }
+            _pdsession._authProvider.logout()
+                .then(function() {
+                    return _pdsession._authProvider.login(username, password);
+                })
+                .then(function() {
+                    callIsAuthorized();
+                }, function(provider, result, info) {
+                    deferred.reject(that, result, info);
+                });
 
             return deferred.promise();
-        };
-
-        this.connect = function() {
-            var deferred = $.Deferred(),
-                errorObject;
-
-            try {
-                _pdsession.subscribe('afterConnect', genericSessionEventHandler, this);
-
-                _pdsession._connect(deferred);
-            } catch (e) {
-                // JSDOSession: Unexpected error calling connect: {e.message}
-                errorObject = new Error(progress.data._getMsgText("jsdoMSG049", "JSDOSession", "connect", e.message));
-            }
-
-            if (errorObject) {
-                throw errorObject;
-            } else {
-                return deferred.promise();
-            }
         };
 
         // This method terminates the JSDOSession's ability to send requests to its serviceURI. 
@@ -11725,8 +11749,12 @@ limitations under the License.
                 iOSBasicAuthTimeout,
                 username,
                 options,
-                authProvider,
-                customAuthProvider = false;
+                authProvider;
+
+            if (this._isInvalidated) {
+                // JSDOSession: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "JSDOSession"));
+            }
 
             // check whether 1st param is a string or an array
             if (typeof catalogURI === "string") {
@@ -11766,14 +11794,13 @@ limitations under the License.
                 iOSBasicAuthTimeout = options.iOSBasicAuthTimeout;
                 if (options.authProvider) {
                     authProvider = options.authProvider;
-                    customAuthProvider = true;
                 } else if (this.authProvider) {
                     authProvider = this.authProvider;
                 }
             }
 
-            // Error out if we are not connected and no customAuthProvider or username was given
-            if (!this.connected && !customAuthProvider && !username) {
+            // Error out if no authProvider or username was given
+            if (!authProvider && !this.authProvider && !username) {
                 throw new Error(progress.data._getMsgText("jsdoMSG511"));
             }
 
@@ -11875,21 +11902,27 @@ limitations under the License.
         //    - app created an AuthenticationProvider and passed it to connect, but now for some reason has
         //          called logout (this is actually a nice shortcut for someone who has used getSession)
         //          (NB: we should not allow this for SSO, tho)
+        // 
+        // Note that we also don't support login/logout on the JSDOSession for page refresh
         this.logout = function() {
             var deferred = $.Deferred(),
                 authProv = this.authProvider;
 
             if (this.authenticationModel === progress.data.Session.AUTH_TYPE_SSO) {
-                // JSDOSession: Called logout() when authenticationModel is SSO. Use disconnect() instead.
+                // JSDOSession: Cannot call logout() when authenticationModel is SSO. 
+                // Please use the AuthenticationProvider object instead.
                 throw new Error(progress.data._getMsgText("jsdoMSG057",
                     'JSDOSession',
-                    'logout()',
-                    "disconnect()"));
+                    'logout()'));
             }
 
             this.disconnect()
                 .then(function() {
-                    return authProv.logout();
+                    if (authProv) {
+                        return authProv.logout();
+                    }
+                    // if there's no AP, just resolve immediately
+                    deferred.resolve(that, progress.data.Session.SUCCESS, {});
                 })
                 .then(function(jsdosession, result, info) {
                         deferred.resolve(that, result, info);
@@ -11903,8 +11936,18 @@ limitations under the License.
             return deferred.promise();
         };
 
+        this.invalidate = function() {
+            _pdsession.invalidate();
+            return this.logout();
+        };
+
         this.ping = function() {
             var deferred = $.Deferred();
+
+            if (this._isInvalidated) {
+                // JSDOSession: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "JSDOSession"));
+            }
 
             try {
                 _pdsession.ping({
@@ -11930,7 +11973,13 @@ limitations under the License.
                 result,
                 that = this;
 
-            if (this.loginResult === progress.data.Session.LOGIN_SUCCESS) {
+            if (this._isInvalidated) {
+                // JSDOSession: This session has been invalidated and cannot be used.
+                throw new Error(progress.data._getMsgText("jsdoMSG510", "JSDOSession"));
+            }
+
+            // If we logged in successfuly using login() or if we have an AuthProvider, make the call
+            if (this.loginResult === progress.data.Session.LOGIN_SUCCESS || this.authProvider) {
                 _pdsession._openRequest(xhr, "GET", _pdsession.loginTarget, true,
                     function() {
                         xhr.onreadystatechange = function() {
@@ -12058,7 +12107,7 @@ limitations under the License.
             if (options.authProvider) {
                 if (typeof options.authProvider !== 'object') {
                     // JSDOSession: The 'options' parameter passed to the 'constructor' function
-                    //                          has an invalid value for the 'authProvider' property.
+                    //              has an invalid value for the 'authProvider' property.
                     throw new Error(progress.data._getMsgText(
                         "jsdoMSG502",
                         "JSDOSession",
@@ -12105,6 +12154,7 @@ limitations under the License.
 
         _pdsession = new progress.data.Session({
             _storageKey: _name,
+            _silent: true,
             authenticationModel: options.authenticationModel,
             serviceURI: options.serviceURI,
             jsdosession: this,
@@ -12205,20 +12255,20 @@ limitations under the License.
 
             try {
                 jsdosession = new progress.data.JSDOSession(options);
-                jsdosession.connect()
-                    .then(function() {
-                        try {
-                            jsdosession.addCatalog(options.catalogURI)
-                                .then(function(jsdosession, result, info) {
-                                    deferred.resolve(jsdosession, progress.data.Session.SUCCESS);
-                                }, sessionRejectHandler);
-                        } catch (e) {
-                            sessionRejectHandler(jsdosession,
-                                progress.data.Session.GENERAL_FAILURE, {
-                                    errorObject: e
-                                });
-                        }
-                    }, sessionRejectHandler);
+                try {
+                    jsdosession.isAuthorized()
+                        .then(function() {
+                            return jsdosession.addCatalog(options.catalogURI);
+                        }, sessionRejectHandler)
+                        .then(function(jsdosession, result, info) {
+                            deferred.resolve(jsdosession, progress.data.Session.SUCCESS);
+                        }, sessionRejectHandler);
+                } catch (e) {
+                    sessionRejectHandler(jsdosession,
+                        progress.data.Session.GENERAL_FAILURE, {
+                            errorObject: e
+                        });
+                }
             } catch (e) {
                 sessionRejectHandler(jsdosession,
                     progress.data.Session.GENERAL_FAILURE, {
@@ -12235,6 +12285,7 @@ limitations under the License.
             var errorObject;
 
             // Use the login callback if we are passed one 
+            // NOTE: Do we even use logincallback? Remove this???
             if (typeof options.loginCallback !== 'undefined') {
                 options.loginCallback()
                     .then(function(result) {
@@ -12308,7 +12359,7 @@ limitations under the License.
             if (options.authenticationModel === progress.data.Session.AUTH_TYPE_SSO) {
                 if (!options.authenticationURI || !options.authProviderAuthenticationModel) {
                     // "progress.data.getSession: If the getSession method is passed AUTH_TYPE_SSO as
-                    // the authenticationModel, it must also be passed an authProvider and an 
+                    // the authenticationModel, it must also be passed an authenticationURI and an 
                     // authProviderAuthenticationModel."
                     throw new Error(progress.data._getMsgText("jsdoMSG509"));
                 }
@@ -12360,6 +12411,32 @@ limitations under the License.
             );
         }
 
+        return deferred.promise();
+    };
+
+    progress.data.invalidateAllSessions = function() {
+        var jsdosession,
+            key,
+            deferred = $.Deferred(),
+            jsdosessions = progress.data.ServicesManager._jsdosessions,
+            invalidatePromises = [];
+
+        for (key in jsdosessions) {
+            if (jsdosessions.hasOwnProperty(key)) {
+                jsdosession = jsdosessions[key];
+
+                invalidatePromises.push(jsdosession.invalidate());
+            }
+        }
+
+        $.when.apply($, invalidatePromises)
+            .then(function() {
+                deferred.resolve(progress.data.Session.SUCCESS);
+            }, function(session, result, info) {
+                deferred.reject(progress.data.Session.GENERAL_FAILURE, info);
+            });
+
+        // Using beautiful jquery shenanigans
         return deferred.promise();
     };
 
@@ -13044,8 +13121,8 @@ limitations under the License.
         this._checkStringArg("login", userNameParam, 1, "userName");
         this._checkStringArg("login", passwordParam, 2, "password");
 
-        return this._loginProto("j_username=" + userNameParam +
-            "&j_password=" + passwordParam + "&submit=Submit");
+        return this._loginProto("j_username=" + encodeURIComponent(userNameParam) +
+            "&j_password=" + encodeURIComponent(passwordParam) + "&submit=Submit");
     };
 
     // login helper
@@ -13227,7 +13304,8 @@ limitations under the License.
                 // The time given for the access token's expiration is in seconds. We transform it
                 // into milliseconds and add it to date.getTime() for a more standard format.
                 date = new Date();
-                accessTokenExpiration = date.getTime() + (info.expires_in * 1000);
+                // This should probably be renamed accessTokenRefreshThreshold
+                accessTokenExpiration = date.getTime() + (info.expires_in * 1000 * 0.75);
                 that._storage.setItem(tokenDataKeys.accessTokenExpiration, JSON.stringify(accessTokenExpiration));
             } else {
                 // if there is no refresh token, remove any existing one. This handles the case where
@@ -13265,10 +13343,6 @@ limitations under the License.
 
         function retrieveAccessTokenExpiration() {
             return retrieveTokenProperty(tokenDataKeys.accessTokenExpiration);
-        }
-
-        function retrieveAccessTokenRefreshThreshold() {
-            return retrieveAccessTokenExpiration() * 0.75;
         }
 
         function retrieveTokenType() {
@@ -13470,7 +13544,7 @@ limitations under the License.
                 date = new Date();
                 if (this.automaticTokenRefresh &&
                     this.hasRefreshToken() &&
-                    date.getTime() > retrieveAccessTokenRefreshThreshold()) {
+                    date.getTime() > retrieveAccessTokenExpiration()) {
                     try {
                         this.refresh()
                             .always(function(provider, result, info) {
@@ -13640,7 +13714,7 @@ limitations under the License.
 /* 
 progress.data.kendo.js    Version: 4.4.0-01
 
-Copyright (c) 2015-2016 Progress Software Corporation and/or its subsidiaries or affiliates.
+Copyright (c) 2015-2017 Progress Software Corporation and/or its subsidiaries or affiliates.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

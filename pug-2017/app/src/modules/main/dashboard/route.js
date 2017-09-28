@@ -11,7 +11,7 @@ function routing($stateProvider) {
             controller: 'MainDashboardCtrl',
             controllerAs: 'vm',
             data: {
-                providers: ["OrderMgtDataService", "OrderMgtDataService"]
+                providers: ["SportsService", "SportsService"]
             },
             resolve: {
                 stateData: ['$ocLazyLoad', '$injector', '$stateParams', ($ocLazyLoad, $injector, $stateParams) => {

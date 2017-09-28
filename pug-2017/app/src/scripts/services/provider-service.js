@@ -1,3 +1,7 @@
+///////////////////
+// Auto-generated
+// Do not edit!!!
+///////////////////
 'use strict';
 
 class ProviderService {

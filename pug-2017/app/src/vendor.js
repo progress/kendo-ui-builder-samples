@@ -1,4 +1,9 @@
+///////////////////
+// Auto-generated
+// Do not edit!!!
+///////////////////
 // Javascript
+import 'babel-polyfill';
 import 'jquery';
 import 'angular';
 import 'angular-ui-router';

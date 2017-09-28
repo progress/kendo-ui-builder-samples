@@ -1,3 +1,7 @@
+///////////////////
+// Auto-generated
+// Do not edit!!!
+///////////////////
 import angular from 'angular';
 import modal from 'angular-ui-bootstrap/src/modal';
 

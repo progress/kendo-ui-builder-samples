@@ -32,12 +32,17 @@ class LoginStateCtrl {
 
         authService.authenticate(unregisteredProviders, (err) => this._$errorHandler(err))
             .then(() => {
-                if (providerService.registeredProviders.length) {
-                    $rootScope.hasAuthProviders = true;
-                    $state.go($stateParams.returnState || 'default.module.application.home');
-                } else if (!$rootScope.hasAuthProviders) {
-                    $state.reload();
-                }
+                providerService.providers().then((providers) => {
+                    let hasProviderWithAuthModel = Object.values(providers)
+                        .some(p => p.authenticationModel !== 'Anonymous');
+
+                    if (providerService.registeredProviders.length) {
+                        $rootScope.hasAuthProviders = true;
+                        $state.go($stateParams.returnState || 'default.module.application.home');
+                    } else if (!$rootScope.hasAuthProviders && hasProviderWithAuthModel) {
+                        $state.reload();
+                    }
+                });
             })
             .catch((err) => this._$errorHandler(err));
     }

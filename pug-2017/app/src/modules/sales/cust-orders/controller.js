@@ -15,9 +15,9 @@ class BaseController {
         var that = this;
 
         this.$parentDs = new kendo.data.DataSource({
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eCustomer"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttCustomer"
             }),
 
             requestStart: function(e) {
@@ -32,9 +32,9 @@ class BaseController {
 
         });
 
-        if (this.$dataProviderService.dataProviders['OrderMgtDataService'].type === 'progress-data-provider') {
+        if (this.$dataProviderService.dataProviders['SportsService'].type === 'progress-data-provider') {
             this.$jsdoInstance = new progress.data.JSDO({
-                name: 'CustOrderNSub'
+                name: 'CustomerOrders'
             });
             this.$parentDs.transport.jsdo = this.$jsdoInstance;
         }
@@ -43,9 +43,9 @@ class BaseController {
 
         this.$childDs = new kendo.data.DataSource({
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eOrder",
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttOrder",
                 "readLocal": true
             }),
 
@@ -66,7 +66,7 @@ class BaseController {
 
         });
 
-        if (this.$dataProviderService.dataProviders['OrderMgtDataService'].type === 'progress-data-provider') {
+        if (this.$dataProviderService.dataProviders['SportsService'].type === 'progress-data-provider') {
             this.$childDs.transport.jsdo = this.$jsdoInstance;
         }
 
@@ -117,8 +117,9 @@ class BaseController {
                         "encoded": true,
                         "field": "SalesRep",
                         "filterable": true,
+                        "format": "",
                         "sortable": true,
-                        "title": "Sales Rep"
+                        "title": "SalesRep"
                     }
                 ],
                 dataSource: this.$parentDs

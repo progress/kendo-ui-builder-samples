@@ -22,8 +22,8 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "Salesrep"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "SalesRep"
             }),
 
             type: "jsdo",
@@ -37,9 +37,9 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eOrder"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttOrder"
             }),
 
             type: "jsdo",
@@ -123,26 +123,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -152,8 +157,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_1",
-                        "name": "January"
+                        field: "MonthQuota_1",
+                        name: "January"
                     }
 
                 ],
@@ -185,26 +190,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -214,8 +224,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_2",
-                        "name": "February"
+                        field: "MonthQuota_2",
+                        name: "February"
                     }
 
                 ],
@@ -223,7 +233,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -247,26 +257,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -276,8 +291,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_3",
-                        "name": "March"
+                        field: "MonthQuota_3",
+                        name: "March"
                     }
 
                 ],
@@ -285,7 +300,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -309,26 +324,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -338,8 +358,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_4",
-                        "name": "April"
+                        field: "MonthQuota_4",
+                        name: "April"
                     }
 
                 ],
@@ -347,7 +367,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -371,26 +391,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -400,8 +425,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_5",
-                        "name": "May"
+                        field: "MonthQuota_5",
+                        name: "May"
                     }
 
                 ],
@@ -409,7 +434,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -433,26 +458,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -462,8 +492,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_6",
-                        "name": "June"
+                        field: "MonthQuota_6",
+                        name: "June"
                     }
 
                 ],
@@ -471,7 +501,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -495,26 +525,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -524,8 +559,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_7",
-                        "name": "July"
+                        field: "MonthQuota_7",
+                        name: "July"
                     }
 
                 ],
@@ -533,7 +568,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -557,26 +592,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -586,8 +626,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_8",
-                        "name": "August"
+                        field: "MonthQuota_8",
+                        name: "August"
                     }
 
                 ],
@@ -595,7 +635,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -619,26 +659,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -648,8 +693,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_9",
-                        "name": "September"
+                        field: "MonthQuota_9",
+                        name: "September"
                     }
 
                 ],
@@ -657,7 +702,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -681,26 +726,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -710,8 +760,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_10",
-                        "name": "October"
+                        field: "MonthQuota_10",
+                        name: "October"
                     }
 
                 ],
@@ -719,7 +769,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -743,26 +793,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -772,8 +827,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_11",
-                        "name": "November"
+                        field: "MonthQuota_11",
+                        name: "November"
                     }
 
                 ],
@@ -781,7 +836,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -805,26 +860,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '5000',
+
+                    min: 0,
+
+                    max: 5000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '90'
+                            angle: 90
                         }
+
                     }
                 },
                 seriesDefaults: {
@@ -834,8 +894,8 @@ class BaseController {
                     }
                 },
                 series: [{
-                        "field": "MonthQuota_12",
-                        "name": "December"
+                        field: "MonthQuota_12",
+                        name: "December"
                     }
 
                 ],
@@ -843,7 +903,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['SaleReps']
+                dataSource: this.$ds['']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -878,6 +938,7 @@ class BaseController {
                         "field": "YearQuota",
                         "categoryField": "SalesRep",
                         "startAngle": 90
+
                     }
 
                 ],

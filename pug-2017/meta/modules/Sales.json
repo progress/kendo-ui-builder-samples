@@ -1,7 +1,7 @@
 {
     "children": [
         {
-            "childDataSource": "CustOrderNSub.eOrder",
+            "childDataSource": "CustomerOrders.ttOrder",
             "childGridProperties": {
                 "altRowTemplateFunction": "",
                 "altRowTemplateId": "",
@@ -82,7 +82,7 @@
                 "topChild": "topChildSection.html",
                 "topParent": "topParentSection.html"
             },
-            "dataProvider": "OrderMgtDataService",
+            "dataProvider": "SportsService",
             "events": {
                 "hideEventHandler": "onHide",
                 "initEventHandler": "onInit",
@@ -93,7 +93,7 @@
             "hidden": false,
             "label": "Customer Orders",
             "name": "CustOrders",
-            "parentDataSource": "CustOrderNSub.eCustomer",
+            "parentDataSource": "CustomerOrders.ttCustomer",
             "parentGridProperties": {
                 "altRowTemplateFunction": "",
                 "altRowTemplateId": "",
@@ -126,8 +126,9 @@
                         "encoded": true,
                         "field": "SalesRep",
                         "filterable": true,
+                        "format": "",
                         "sortable": true,
-                        "title": "Sales Rep"
+                        "title": "SalesRep"
                     }
                 ],
                 "events": {
@@ -159,8 +160,7 @@
                 {
                     "annotationRefs": {
                         "dataSourceName": {
-                            "kind": "dataSourceName",
-                            "value": "70f15c30-2e37-4f31-9388-7ed4cb0fa994.ViewDataSource1"
+                            "kind": "dataSourceName"
                         }
                     },
                     "annotations": {
@@ -194,11 +194,11 @@
             "dataSources": [
                 {
                     "batch": true,
-                    "dataProviderName": "OrderMgtDataService",
+                    "dataProviderName": "SportsService",
                     "dataSourceName": "Item",
                     "name": "Items",
                     "pageSize": 45,
-                    "uniqueID": "70f15c30-2e37-4f31-9388-7ed4cb0fa994"
+                    "uniqueID": "a4e8893a-455e-4214-b59f-c83486584fca"
                 }
             ],
             "events": {
@@ -307,7 +307,7 @@
                     "filterable": true,
                     "format": "",
                     "sortable": true,
-                    "title": "Salesrep"
+                    "title": "SalesRep"
                 },
                 {
                     "encoded": true,
@@ -319,13 +319,15 @@
                 }
             ],
             "confirmRemove": true,
+            "createColumns": [],
+            "createGroups": [],
             "customSections": {
                 "bottom": "bottomSection.html",
                 "middle": "middleSection.html",
                 "top": "topSection.html"
             },
-            "dataProvider": "OrderMgtDataService",
-            "dataSource": "CustOrderNSub.eCustomer",
+            "dataProvider": "SportsService",
+            "dataSource": "CustomerOrders.ttCustomer",
             "editMode": "Edit",
             "editTitle": "Edit",
             "events": {
@@ -352,7 +354,7 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl37",
+                                "id": "ctl502",
                                 "model": "formModel.CustNum",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
@@ -360,14 +362,14 @@
                                 "step": 1,
                                 "title": "CustNum",
                                 "type": "integer-text-box",
-                                "uniqueID": "d94bad3c-8d30-4d16-84cf-45a99077bb0e",
+                                "uniqueID": "3960a6e7-8b6c-4183-8b7c-f77340c3225a",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl36",
+                            "id": "ctl501",
                             "itemType": "field",
                             "label": "CustNum",
                             "name": "CustNum"
@@ -383,19 +385,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl39",
+                                "id": "ctl504",
                                 "model": "formModel.Name",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "title": "Name",
                                 "type": "text-box",
-                                "uniqueID": "4ab3fd05-dafe-419f-bbb7-8271c8432bba",
+                                "uniqueID": "7547ce2f-a0ad-4b7b-845b-bffa085244dc",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl38",
+                            "id": "ctl503",
                             "itemType": "field",
                             "label": "Name",
                             "name": "Name"
@@ -411,19 +413,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl41",
+                                "id": "ctl506",
                                 "model": "formModel.Address",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "title": "Address",
                                 "type": "text-box",
-                                "uniqueID": "8c444e49-4e2e-4a84-b9ab-ba418ac460f3",
+                                "uniqueID": "5f0dfd93-7c6c-48da-afdf-6fea72f62a6e",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl40",
+                            "id": "ctl505",
                             "itemType": "field",
                             "label": "Address",
                             "name": "Address"
@@ -446,13 +448,13 @@
                                 },
                                 "filter": "None",
                                 "format": "",
-                                "id": "ctl53",
+                                "id": "ctl518",
                                 "model": "fkeyModels['ttStateFK1DSModel']",
                                 "schemaVersion": "1.0",
                                 "textField": "State",
                                 "title": "ttStateFK1",
                                 "type": "combo-box",
-                                "uniqueID": "7bf61d65-999b-4775-b2c2-169f5a1f3b60",
+                                "uniqueID": "2c402877-4f23-4c77-8fd0-2530011611cd",
                                 "validation": {
                                     "required": false
                                 },
@@ -460,7 +462,7 @@
                                 "valuePrimitive": false
                             },
                             "format": "",
-                            "id": "ctl52",
+                            "id": "ctl517",
                             "itemType": "field",
                             "label": "ttStateFK1",
                             "name": "ttStateFK1"
@@ -475,19 +477,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl43",
+                                "id": "ctl508",
                                 "mask": "(999) 000-0000",
                                 "model": "formModel.Phone",
                                 "schemaVersion": "1.0",
                                 "title": "Phone",
                                 "type": "phone-text-box",
-                                "uniqueID": "05319616-fff9-41cc-ba74-542fbae6daac",
+                                "uniqueID": "842271d2-01f2-43f1-9f9c-a41bc36150a5",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl42",
+                            "id": "ctl507",
                             "itemType": "field",
                             "label": "Phone",
                             "name": "Phone"
@@ -502,21 +504,21 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl47",
+                                "id": "ctl512",
                                 "model": "formModel.Balance",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "Balance",
                                 "type": "currency-text-box",
-                                "uniqueID": "79051bb1-ed63-4b02-9d7e-c6aa0e421fad",
+                                "uniqueID": "36d8e2bc-7f56-4235-a8ae-44bc737a27fd",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl46",
+                            "id": "ctl511",
                             "itemType": "field",
                             "label": "Balance",
                             "name": "Balance"
@@ -531,7 +533,7 @@
                                 "annotations": {
                                     "id": "componentIdentifier"
                                 },
-                                "dataSourceName": "ttSalesrepFK1DS",
+                                "dataSourceName": "ttSalesRepFK1DS",
                                 "events": {
                                     "onChange": "",
                                     "onFilter": "",
@@ -539,13 +541,13 @@
                                 },
                                 "filter": "None",
                                 "format": "",
-                                "id": "ctl51",
-                                "model": "fkeyModels['ttSalesrepFK1DSModel']",
+                                "id": "ctl516",
+                                "model": "fkeyModels['ttSalesRepFK1DSModel']",
                                 "schemaVersion": "1.0",
                                 "textField": "SalesRep",
-                                "title": "ttSalesrepFK1",
+                                "title": "ttSalesRepFK1",
                                 "type": "combo-box",
-                                "uniqueID": "9098523a-3556-4938-81f8-eb384a2b80a1",
+                                "uniqueID": "10af72f9-059a-40b3-b49e-747b09b8b934",
                                 "validation": {
                                     "required": false
                                 },
@@ -553,14 +555,14 @@
                                 "valuePrimitive": false
                             },
                             "format": "",
-                            "id": "ctl50",
+                            "id": "ctl515",
                             "itemType": "field",
-                            "label": "ttSalesrepFK1",
-                            "name": "ttSalesrepFK1"
+                            "label": "ttSalesRepFK1",
+                            "name": "ttSalesRepFK1"
                         }
                     ],
-                    "id": "ef67f0ed-f2ca-4104-bb56-8a4fd48f724e",
-                    "name": "New Group"
+                    "id": "224886cb-5b8b-4092-bba3-86be2042fd0e",
+                    "name": "Default Group"
                 }
             ],
             "hidden": false,

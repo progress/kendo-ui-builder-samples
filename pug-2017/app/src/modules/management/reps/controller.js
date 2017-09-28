@@ -20,8 +20,8 @@ class BaseController {
         this.$window = $injector.get('$window');
 
         this.$ds[this.$primeDSName] = new kendo.data.DataSource({
-            "transport": this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "Salesrep"
+            "transport": this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "SalesRep"
             }),
 
             "type": "jsdo",
@@ -69,6 +69,7 @@ class BaseController {
                         "encoded": true,
                         "field": "Region",
                         "filterable": true,
+                        "format": "",
                         "sortable": true,
                         "title": "Region"
                     }
@@ -97,7 +98,7 @@ class BaseController {
         this.$requestType = '';
         this.$components = {};
 
-        this.$components['ctl91'] = {
+        this.$components['ctl287'] = {
             events: {
                 onChange: (e) => {
 
@@ -108,7 +109,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl93'] = {
+        this.$components['ctl289'] = {
             events: {
                 onChange: (e) => {
 
@@ -119,7 +120,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl95'] = {
+        this.$components['ctl291'] = {
             events: {
                 onChange: (e) => {
 
@@ -130,30 +131,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl121'] = {
-            widget: null,
-            options: {
-                downArrowText: "",
-                format: "n0",
-                decimals: 0,
-                placeholder: "",
-
-                step: 1,
-
-                upArrowText: "",
-                spinners: false
-            },
-            events: {
-                onChange: (e) => {
-
-                },
-            },
-            validation: {
-                required: false
-            }
-        };
-
-        this.$components['ctl97'] = {
+        this.$components['ctl317'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -173,7 +151,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl99'] = {
+        this.$components['ctl389'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -193,7 +171,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl101'] = {
+        this.$components['ctl391'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -213,7 +191,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl103'] = {
+        this.$components['ctl393'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -233,7 +211,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl105'] = {
+        this.$components['ctl395'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -253,7 +231,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl107'] = {
+        this.$components['ctl397'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -273,7 +251,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl109'] = {
+        this.$components['ctl399'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -293,7 +271,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl111'] = {
+        this.$components['ctl401'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -313,7 +291,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl113'] = {
+        this.$components['ctl403'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -333,7 +311,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl115'] = {
+        this.$components['ctl405'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -353,7 +331,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl117'] = {
+        this.$components['ctl407'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -373,7 +351,27 @@ class BaseController {
             }
         };
 
-        this.$components['ctl119'] = {
+        this.$components['ctl409'] = {
+            widget: null,
+            options: {
+                downArrowText: "",
+                format: "c",
+                placeholder: "",
+
+                upArrowText: "",
+                spinners: false
+            },
+            events: {
+                onChange: (e) => {
+
+                }
+            },
+            validation: {
+                required: false
+            }
+        };
+
+        this.$components['ctl411'] = {
             widget: null,
             options: {
                 downArrowText: "",

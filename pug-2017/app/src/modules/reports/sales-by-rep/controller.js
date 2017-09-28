@@ -22,8 +22,8 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "Salesrep"
+            transport: this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "SalesRep"
             }),
 
             type: "jsdo",
@@ -53,26 +53,31 @@ class BaseController {
                     position: 'top'
                 },
                 valueAxis: {
-                    min: '0',
-                    max: '60000',
+
+                    min: 0,
+
+                    max: 60000,
+
                     line: {
                         visible: true
                     },
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
-                    },
-                    majorUnit: ''
+
+                    }
+
                 },
                 categoryAxis: {
                     field: 'RepName',
                     labels: {
                         format: '{0}',
                         rotation: {
-                            angle: '0'
+                            angle: 0
                         }
+
                     }
                 },
                 seriesDefaults: {

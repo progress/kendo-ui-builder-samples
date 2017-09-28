@@ -34,7 +34,7 @@
                 "middle": "middleSection.html",
                 "top": "topSection.html"
             },
-            "dataProvider": "OrderMgtDataService",
+            "dataProvider": "SportsService",
             "dataSource": "Warehouse",
             "editMode": "Read-Only to Edit",
             "editTitle": "Edit",
@@ -342,18 +342,21 @@
                     "encoded": true,
                     "field": "Region",
                     "filterable": true,
+                    "format": "",
                     "sortable": true,
                     "title": "Region"
                 }
             ],
             "confirmRemove": true,
+            "createColumns": [],
+            "createGroups": [],
             "customSections": {
                 "bottom": "bottomSection.html",
                 "middle": "middleSection.html",
                 "top": "topSection.html"
             },
-            "dataProvider": "OrderMgtDataService",
-            "dataSource": "Salesrep",
+            "dataProvider": "SportsService",
+            "dataSource": "SalesRep",
             "editMode": "Read-Only to Edit",
             "editTitle": "Edit",
             "events": {
@@ -381,19 +384,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl91",
+                                "id": "ctl287",
                                 "model": "formModel.SalesRep",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "title": "Sales Rep",
                                 "type": "text-box",
-                                "uniqueID": "1c4972e1-787d-43db-b275-8278149f2fa7",
+                                "uniqueID": "f56a8525-e842-4f7b-9902-ac4d50063cac",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl90",
+                            "id": "ctl286",
                             "itemType": "field",
                             "label": "Sales Rep",
                             "name": "SalesRep"
@@ -409,19 +412,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl93",
+                                "id": "ctl289",
                                 "model": "formModel.RepName",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "title": "Rep Name",
                                 "type": "text-box",
-                                "uniqueID": "24079261-8271-4a72-86f0-a488ad8b91a7",
+                                "uniqueID": "80bb5133-2527-4ca6-8a82-a1004a3cd31a",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl92",
+                            "id": "ctl288",
                             "itemType": "field",
                             "label": "Rep Name",
                             "name": "RepName"
@@ -437,19 +440,19 @@
                                     "onChange": ""
                                 },
                                 "format": "",
-                                "id": "ctl95",
+                                "id": "ctl291",
                                 "model": "formModel.Region",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "title": "Region",
                                 "type": "text-box",
-                                "uniqueID": "7d62a86a-6cc9-4e12-95fe-1328ebdadc64",
+                                "uniqueID": "be393d1a-d3f2-41f8-88fd-fb6b04439e17",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "",
-                            "id": "ctl94",
+                            "id": "ctl290",
                             "itemType": "field",
                             "label": "Region",
                             "name": "Region"
@@ -463,29 +466,28 @@
                                 "events": {
                                     "onChange": ""
                                 },
-                                "format": "",
-                                "id": "ctl121",
+                                "format": "{0:c}",
+                                "id": "ctl317",
                                 "model": "formModel.YearQuota",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
-                                "step": 1,
                                 "title": "YearQuota",
-                                "type": "integer-text-box",
-                                "uniqueID": "bd0c10a3-93bc-43be-aa83-1c094aca579f",
+                                "type": "currency-text-box",
+                                "uniqueID": "c16dba33-6aa2-49eb-bebb-ce2b89a84bb4",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl120",
+                            "id": "ctl316",
                             "itemType": "field",
                             "label": "YearQuota",
                             "name": "YearQuota"
                         }
                     ],
-                    "id": "87b87691-eb93-41c6-ac47-05993bed03b3",
+                    "id": "e1beea00-9876-4754-9beb-a3fa2157f2f6",
                     "name": "Details"
                 },
                 {
@@ -500,23 +502,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl97",
+                                "id": "ctl389",
                                 "model": "formModel.MonthQuota_1",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_1",
                                 "type": "currency-text-box",
-                                "uniqueID": "17026758-eab4-43a7-997a-83f8bc0c60be",
+                                "uniqueID": "5ebac464-f063-4357-ab54-bb34ae126fb1",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl96",
+                            "id": "ctl388",
                             "itemType": "field",
-                            "label": "January",
+                            "label": "MonthQuota_1",
                             "name": "MonthQuota_1"
                         },
                         {
@@ -529,23 +531,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl99",
+                                "id": "ctl391",
                                 "model": "formModel.MonthQuota_2",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_2",
                                 "type": "currency-text-box",
-                                "uniqueID": "d1151220-0362-4e3b-8f97-c1057b54fdf3",
+                                "uniqueID": "9c535a32-a598-43dd-bcc9-d83e08cc0847",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl98",
+                            "id": "ctl390",
                             "itemType": "field",
-                            "label": "February",
+                            "label": "MonthQuota_2",
                             "name": "MonthQuota_2"
                         },
                         {
@@ -558,23 +560,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl101",
+                                "id": "ctl393",
                                 "model": "formModel.MonthQuota_3",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_3",
                                 "type": "currency-text-box",
-                                "uniqueID": "8e7a0b05-40f4-4360-80f1-2ff81255cbd1",
+                                "uniqueID": "b3210c52-91b1-4031-a7e3-0c3ab7666707",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl100",
+                            "id": "ctl392",
                             "itemType": "field",
-                            "label": "March",
+                            "label": "MonthQuota_3",
                             "name": "MonthQuota_3"
                         },
                         {
@@ -587,23 +589,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl103",
+                                "id": "ctl395",
                                 "model": "formModel.MonthQuota_4",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_4",
                                 "type": "currency-text-box",
-                                "uniqueID": "1ec220a2-fea5-4fe9-9968-508add27416a",
+                                "uniqueID": "dd17e649-0152-4474-9fe8-c16183685245",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl102",
+                            "id": "ctl394",
                             "itemType": "field",
-                            "label": "April",
+                            "label": "MonthQuota_4",
                             "name": "MonthQuota_4"
                         },
                         {
@@ -616,23 +618,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl105",
+                                "id": "ctl397",
                                 "model": "formModel.MonthQuota_5",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_5",
                                 "type": "currency-text-box",
-                                "uniqueID": "70e0c52b-3737-495c-83d5-f545f4c9672b",
+                                "uniqueID": "e12c05af-4d24-4bd7-b8a6-d8ab1496fc87",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl104",
+                            "id": "ctl396",
                             "itemType": "field",
-                            "label": "May",
+                            "label": "MonthQuota_5",
                             "name": "MonthQuota_5"
                         },
                         {
@@ -645,23 +647,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl107",
+                                "id": "ctl399",
                                 "model": "formModel.MonthQuota_6",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_6",
                                 "type": "currency-text-box",
-                                "uniqueID": "42c1b71a-1be9-4243-bffd-25ec9276f891",
+                                "uniqueID": "daf5d75b-84e0-4873-9fcd-96313e8c7396",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl106",
+                            "id": "ctl398",
                             "itemType": "field",
-                            "label": "June",
+                            "label": "MonthQuota_6",
                             "name": "MonthQuota_6"
                         },
                         {
@@ -674,23 +676,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl109",
+                                "id": "ctl401",
                                 "model": "formModel.MonthQuota_7",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_7",
                                 "type": "currency-text-box",
-                                "uniqueID": "ded1ff2e-593f-4d3e-bd2b-f6a1edef670f",
+                                "uniqueID": "2c27f25e-eba5-47b8-b19f-d85dae62ee8d",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl108",
+                            "id": "ctl400",
                             "itemType": "field",
-                            "label": "July",
+                            "label": "MonthQuota_7",
                             "name": "MonthQuota_7"
                         },
                         {
@@ -703,23 +705,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl111",
+                                "id": "ctl403",
                                 "model": "formModel.MonthQuota_8",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_8",
                                 "type": "currency-text-box",
-                                "uniqueID": "f15d5ca0-2b97-4642-bde4-789eb698542e",
+                                "uniqueID": "0da379e8-851b-4ccc-8389-639593c6bf5e",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl110",
+                            "id": "ctl402",
                             "itemType": "field",
-                            "label": "August",
+                            "label": "MonthQuota_8",
                             "name": "MonthQuota_8"
                         },
                         {
@@ -732,23 +734,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl113",
+                                "id": "ctl405",
                                 "model": "formModel.MonthQuota_9",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_9",
                                 "type": "currency-text-box",
-                                "uniqueID": "5516b1d0-0d98-47a2-a88a-686d9270cbf5",
+                                "uniqueID": "6a433db3-ca8a-4631-9271-c5587e8eb3f3",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl112",
+                            "id": "ctl404",
                             "itemType": "field",
-                            "label": "September",
+                            "label": "MonthQuota_9",
                             "name": "MonthQuota_9"
                         },
                         {
@@ -761,23 +763,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl115",
+                                "id": "ctl407",
                                 "model": "formModel.MonthQuota_10",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_10",
                                 "type": "currency-text-box",
-                                "uniqueID": "a7df198d-9dfb-4319-9bcb-2979011c5611",
+                                "uniqueID": "360ea18d-4d2f-4317-9aa2-4c01bffe8032",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl114",
+                            "id": "ctl406",
                             "itemType": "field",
-                            "label": "October",
+                            "label": "MonthQuota_10",
                             "name": "MonthQuota_10"
                         },
                         {
@@ -790,23 +792,23 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl117",
+                                "id": "ctl409",
                                 "model": "formModel.MonthQuota_11",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_11",
                                 "type": "currency-text-box",
-                                "uniqueID": "9071f463-b830-475d-98e4-6f5ee3d3a9fb",
+                                "uniqueID": "3146ca7b-62b8-4eff-b66c-91d90284742f",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl116",
+                            "id": "ctl408",
                             "itemType": "field",
-                            "label": "November",
+                            "label": "MonthQuota_11",
                             "name": "MonthQuota_11"
                         },
                         {
@@ -819,27 +821,27 @@
                                     "onChange": ""
                                 },
                                 "format": "{0:c}",
-                                "id": "ctl119",
+                                "id": "ctl411",
                                 "model": "formModel.MonthQuota_12",
                                 "placeholder": "",
                                 "schemaVersion": "1.0",
                                 "spinners": false,
                                 "title": "MonthQuota_12",
                                 "type": "currency-text-box",
-                                "uniqueID": "9b5071e5-76fe-4918-9038-9a69a4e3c724",
+                                "uniqueID": "7cde6248-06e3-4323-80c2-909c5ed835aa",
                                 "upArrowText": "",
                                 "validation": {
                                     "required": false
                                 }
                             },
                             "format": "{0:c}",
-                            "id": "ctl118",
+                            "id": "ctl410",
                             "itemType": "field",
-                            "label": "December",
+                            "label": "MonthQuota_12",
                             "name": "MonthQuota_12"
                         }
                     ],
-                    "id": "ctl154",
+                    "id": "ctl414",
                     "itemType": "group",
                     "name": "Sales"
                 }

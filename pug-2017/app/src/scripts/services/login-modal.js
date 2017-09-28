@@ -9,7 +9,7 @@ function service($injector, $uibModal) {
         getInstance: function(resolve) {
             var instance = $uibModal.open({
                 backdrop: false,
-                templateUrl: 'src/modules/application/login/index.html',
+                template: require('./../../modules/application/login/index.html'),
                 controller: 'LoginCtrl',
                 controllerAs: 'loginCtrl',
                 resolve: resolve

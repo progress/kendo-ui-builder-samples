@@ -27,6 +27,7 @@
         "angular-sanitize": "^1.6.1",
         "angular-ui-bootstrap": "^2.3.2",
         "angular-ui-router": "^0.3.2",
+        "babel-polyfill": "^6.26.0",
         "bootstrap": "^3.3.7",
         "font-awesome": "^4.7.0",
         "jquery": "^2.2.2",

@@ -22,7 +22,7 @@ class BaseController {
 
             batch: true,
 
-            transport: this.$dataProviderService.getTransport('OrderMgtDataService', {
+            transport: this.$dataProviderService.getTransport('SportsService', {
                 "jsdo": "Item"
             }),
 

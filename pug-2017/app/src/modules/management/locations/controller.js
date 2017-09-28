@@ -20,7 +20,7 @@ class BaseController {
         this.$window = $injector.get('$window');
 
         this.$ds[this.$primeDSName] = new kendo.data.DataSource({
-            "transport": this.$dataProviderService.getTransport('OrderMgtDataService', {
+            "transport": this.$dataProviderService.getTransport('SportsService', {
                 "jsdo": "Warehouse"
             }),
 

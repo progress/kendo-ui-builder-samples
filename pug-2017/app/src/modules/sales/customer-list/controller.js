@@ -21,9 +21,9 @@ class BaseController {
         this.$primeDSName = '$primeDS';
 
         this.$ds[this.$primeDSName] = new kendo.data.DataSource({
-            "transport": this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "CustOrderNSub",
-                "tableRef": "eCustomer"
+            "transport": this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "CustomerOrders",
+                "tableRef": "ttCustomer"
             }),
 
             "type": "jsdo",
@@ -40,7 +40,7 @@ class BaseController {
 
         this.$viewModels.fkeyModels['$cachedttStateFK1DSModel'] = {};
         this.$ds['ttStateFK1DS'] = new kendo.data.DataSource({
-            "transport": this.$dataProviderService.getTransport('OrderMgtDataService', {
+            "transport": this.$dataProviderService.getTransport('SportsService', {
                 "jsdo": "State"
             }),
 
@@ -68,10 +68,10 @@ class BaseController {
         this._$createPristineModel('ttStateFK1DS');
         this._$watchForeignKeyModel('ttStateFK1DSModel', 'State', 'State');
 
-        this.$viewModels.fkeyModels['$cachedttSalesrepFK1DSModel'] = {};
-        this.$ds['ttSalesrepFK1DS'] = new kendo.data.DataSource({
-            "transport": this.$dataProviderService.getTransport('OrderMgtDataService', {
-                "jsdo": "Salesrep"
+        this.$viewModels.fkeyModels['$cachedttSalesRepFK1DSModel'] = {};
+        this.$ds['ttSalesRepFK1DS'] = new kendo.data.DataSource({
+            "transport": this.$dataProviderService.getTransport('SportsService', {
+                "jsdo": "SalesRep"
             }),
 
             "type": "jsdo",
@@ -81,22 +81,22 @@ class BaseController {
                 var view = ds.view();
                 if (ds.filter() && ds.filter().filters.length > 0) {
                     if (view.length > 0) {
-                        that.$viewModels.fkeyModels['$cachedttSalesrepFK1DSModel'] = view[0];
+                        that.$viewModels.fkeyModels['$cachedttSalesRepFK1DSModel'] = view[0];
                     } else {
-                        that.$viewModels.fkeyModels['$cachedttSalesrepFK1DSModel'] = {};
+                        that.$viewModels.fkeyModels['$cachedttSalesRepFK1DSModel'] = {};
                     }
                 } else {
                     that.$scope.$applyAsync(function() {
-                        that.$viewModels.fkeyModels['ttSalesrepFK1DSModel'] = that.$viewModels.fkeyModels['$cachedttSalesrepFK1DSModel'];
+                        that.$viewModels.fkeyModels['ttSalesRepFK1DSModel'] = that.$viewModels.fkeyModels['$cachedttSalesRepFK1DSModel'];
                     });
                 }
             }
         });
-        this.$ds['ttSalesrepFK1DS']
+        this.$ds['ttSalesRepFK1DS']
             .bind('error', this._$errorHandlerForeignKeys.bind(this));
 
-        this._$createPristineModel('ttSalesrepFK1DS');
-        this._$watchForeignKeyModel('ttSalesrepFK1DSModel', 'SalesRep', 'SalesRep');
+        this._$createPristineModel('ttSalesRepFK1DS');
+        this._$watchForeignKeyModel('ttSalesRepFK1DSModel', 'SalesRep', 'SalesRep');
 
         this.$model = {
             title: 'customers',
@@ -166,7 +166,7 @@ class BaseController {
                         "filterable": true,
                         "format": "",
                         "sortable": true,
-                        "title": "Salesrep"
+                        "title": "SalesRep"
                     },
                     {
                         "encoded": true,
@@ -202,7 +202,7 @@ class BaseController {
         this.$showForm = false;
         this.$components = {};
 
-        this.$components['ctl37'] = {
+        this.$components['ctl502'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -225,7 +225,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl39'] = {
+        this.$components['ctl504'] = {
             events: {
                 onChange: (e) => {
 
@@ -236,7 +236,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl41'] = {
+        this.$components['ctl506'] = {
             events: {
                 onChange: (e) => {
 
@@ -247,7 +247,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl53'] = {
+        this.$components['ctl518'] = {
             widget: null,
             options: {
                 dataSource: this.$ds['ttStateFK1DS'],
@@ -272,7 +272,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl43'] = {
+        this.$components['ctl508'] = {
             widget: null,
             options: {
 
@@ -290,7 +290,7 @@ class BaseController {
             }
         };
 
-        this.$components['ctl47'] = {
+        this.$components['ctl512'] = {
             widget: null,
             options: {
                 downArrowText: "",
@@ -310,10 +310,10 @@ class BaseController {
             }
         };
 
-        this.$components['ctl51'] = {
+        this.$components['ctl516'] = {
             widget: null,
             options: {
-                dataSource: this.$ds['ttSalesrepFK1DS'],
+                dataSource: this.$ds['ttSalesRepFK1DS'],
                 dataTextField: "SalesRep",
                 dataValueField: "SalesRep",
                 valuePrimitive: false,
@@ -502,16 +502,16 @@ class BaseController {
             this.$ds['ttStateFK1DS'].filter({});
         });
 
-        this._$createPristineModel('ttSalesrepFK1DS');
+        this._$createPristineModel('ttSalesRepFK1DS');
 
-        this.$ds['ttSalesrepFK1DS'].query({
+        this.$ds['ttSalesRepFK1DS'].query({
             filter: {
                 field: 'SalesRep',
                 operator: "eq",
                 value: this.$viewModels.formModel['SalesRep']
             }
         }).then(() => {
-            this.$ds['ttSalesrepFK1DS'].filter({});
+            this.$ds['ttSalesRepFK1DS'].filter({});
         });
 
     }

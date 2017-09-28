@@ -108,17 +108,13 @@ function service($q, loginModal) {
                     var session = this.sessions[key];
 
                     if (session.loginResult === 1) {
-                        promises.push(wrapInResolvedPromise(session.logout()));
+                        // Instead of calling logout, we call invalidate()
+                        promises.push(wrapInResolvedPromise(session.invalidate()));
                     }
                 }
 
                 $q.all(promises).then((errors) => {
                     this.sessions = {};
-
-                    progress.data.ServicesManager._services = [];
-                    progress.data.ServicesManager._resources = [];
-                    progress.data.ServicesManager._data = [];
-                    progress.data.ServicesManager._sessions = [];
 
                     resolve();
                 });

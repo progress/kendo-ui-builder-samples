@@ -22,7 +22,7 @@ class ManagementRepsCtrl extends BaseController {
         $scope.$on("kendoRendered", function(event) {
             // Find control by using it's ID and disable it
             // ID can be found by using the Web Inspector
-            angular.element("#ctl121").attr("disabled", true);
+            angular.element("#ctl317").attr("disabled", true);
         });        
     }
     /* Kendo event object*/
