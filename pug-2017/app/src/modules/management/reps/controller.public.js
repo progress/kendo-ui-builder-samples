@@ -21,7 +21,10 @@ class ManagementRepsCtrl extends BaseController {
 
         $scope.$on("kendoRendered", function(event) {
             // Find control by using it's ID and disable it
-            // ID can be found by using the Web Inspector
+            // ID can be found by using the Web Inspector.
+            // Can also be found using KUIB tool, when you bring up 
+            // 'Form Fields' dialog, and then select the field. 
+            // Id is displayed in Properties List.
             angular.element("#ctl317").attr("disabled", true);
         });        
     }

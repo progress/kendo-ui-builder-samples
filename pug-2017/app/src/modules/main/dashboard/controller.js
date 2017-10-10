@@ -233,7 +233,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -300,7 +300,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -367,7 +367,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -434,7 +434,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -501,7 +501,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -553,7 +553,7 @@ class BaseController {
                     }
                 },
                 seriesDefaults: {
-                    type: 'bar',
+                    type: 'column',
                     labels: {
                         visible: false
                     }
@@ -568,7 +568,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -635,7 +635,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -702,7 +702,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -769,7 +769,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -836,7 +836,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {
@@ -903,7 +903,7 @@ class BaseController {
                     format: '',
                     visible: false
                 },
-                dataSource: this.$ds['']
+                dataSource: this.$ds['SaleReps']
             },
             events: {
                 onSeriesClick: (e) => {

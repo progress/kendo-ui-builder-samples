@@ -452,7 +452,7 @@
                                 "model": "fkeyModels['ttStateFK1DSModel']",
                                 "schemaVersion": "1.0",
                                 "textField": "State",
-                                "title": "ttStateFK1",
+                                "title": "State",
                                 "type": "combo-box",
                                 "uniqueID": "2c402877-4f23-4c77-8fd0-2530011611cd",
                                 "validation": {
@@ -464,7 +464,7 @@
                             "format": "",
                             "id": "ctl517",
                             "itemType": "field",
-                            "label": "ttStateFK1",
+                            "label": "State",
                             "name": "ttStateFK1"
                         },
                         {
@@ -545,7 +545,7 @@
                                 "model": "fkeyModels['ttSalesRepFK1DSModel']",
                                 "schemaVersion": "1.0",
                                 "textField": "SalesRep",
-                                "title": "ttSalesRepFK1",
+                                "title": "SalesRep",
                                 "type": "combo-box",
                                 "uniqueID": "10af72f9-059a-40b3-b49e-747b09b8b934",
                                 "validation": {
@@ -557,7 +557,7 @@
                             "format": "",
                             "id": "ctl515",
                             "itemType": "field",
-                            "label": "ttSalesRepFK1",
+                            "label": "SalesRep",
                             "name": "ttSalesRepFK1"
                         }
                     ],
