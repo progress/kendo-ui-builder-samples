@@ -2,7 +2,7 @@
 
 Collection of sample projects using Kendo UI Builder for OpenEdge.
 
-## Importing an existing project into Kendo UI Builder 2.0
+## Importing an existing project into Kendo UI Builder 2.1
 
 Existing projects can be imported into Kendo UI Builder using the Import App option in Kendo UI Builder.
 For projects from a previous version can be migrated to the new version by selecting the project from the main page in Kendo UI Builder. This will update the metadata. Custom code should be migrated manually.
