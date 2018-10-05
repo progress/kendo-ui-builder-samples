@@ -1,0 +1,408 @@
+{
+    "authorization": {
+        "allowedRoles": []
+    },
+    "description": "A list of all items and their prices.",
+    "label": "Inventory",
+    "moduleType": "default",
+    "name": "Inventory",
+    "order": 2,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#00a8a6",
+        "color": "#ffffff",
+        "icon": "fa-cubes"
+    },
+    "type": "module",
+    "uniqueID": "d4ee1175-ec6d-4efd-83af-c92dd8c5e85c",
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "authorization": {
+                "allowedRoles": []
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "f117b81b-48d4-4086-850b-97cfd18b2ae8.itemsDS"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "categoryAxis": {
+                        "field": "ItemName",
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 270
+                            }
+                        }
+                    },
+                    "containerUid": "c39e9a03-b6e9-4bbd-9fbc-308b158e83ff",
+                    "dataSourceName": "itemsDS",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": ""
+                    },
+                    "id": "priceChart",
+                    "legend": {
+                        "background": "white",
+                        "position": "Top",
+                        "visible": true
+                    },
+                    "model": "",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "field": "Price",
+                            "labels": {},
+                            "name": ""
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "visible": true
+                        },
+                        "typeChart": "Column"
+                    },
+                    "title": {
+                        "text": ""
+                    },
+                    "tooltip": {
+                        "templateFunction": "",
+                        "templateId": "",
+                        "visible": false
+                    },
+                    "type": "bar-charts",
+                    "uniqueID": "163adfa4-a8b4-4f15-8e0c-23d508454243",
+                    "valueAxis": {
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 0
+                            }
+                        },
+                        "line": {
+                            "visible": true
+                        }
+                    }
+                },
+                {
+                    "annotationRefs": {
+                        "forAttribute": {
+                            "kind": "componentIdentifier"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "6c8f2515-890a-4c3e-8854-14a825238ea5",
+                    "forAttribute": "",
+                    "id": "label0",
+                    "schemaVersion": "1.0",
+                    "text": "Click the \"price\" column header to sort the items in ascending or descending order.",
+                    "type": "label",
+                    "uniqueID": "d8fd7dcb-aad8-4226-b34f-491882d6d4e1"
+                },
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "f117b81b-48d4-4086-850b-97cfd18b2ae8.itemsDS"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "3a8cf771-5c4c-4afb-bb6b-69bccc5f01e1",
+                    "dataSourceName": "itemsDS",
+                    "events": {
+                        "onChange": "",
+                        "onFilter": "",
+                        "onSelect": ""
+                    },
+                    "filter": "Contains",
+                    "id": "searchBar",
+                    "model": "",
+                    "name": "",
+                    "schemaVersion": "1.0",
+                    "textField": "ItemName",
+                    "title": "",
+                    "type": "auto-complete",
+                    "uniqueID": "2e52d90c-66d9-4ff2-b133-ec2e52a14ecb",
+                    "validation": {
+                        "required": false
+                    },
+                    "valuePrimitive": true
+                },
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "f117b81b-48d4-4086-850b-97cfd18b2ae8.ViewDataSource1"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl27",
+                                "model": "",
+                                "name": "ItemName",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Item Name",
+                                "type": "text-box",
+                                "uniqueID": "f99f3bca-c03d-4e55-ba98-08eefbd17653",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "ItemName",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Item Name"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl28",
+                                "model": "",
+                                "name": "Price",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "Price",
+                                "type": "numeric-text-box",
+                                "uniqueID": "f384ca24-aeb5-4b30-858b-fa0940608d20",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Price",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Price"
+                        }
+                    ],
+                    "containerUid": "e51e39b1-6116-41d7-8567-513d55ce9ba9",
+                    "dataSourceName": "itemsDS",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonIcons": {
+                            "destroy": "k-icon k-i-close",
+                            "edit": "k-icon k-i-edit"
+                        },
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonIcons": {
+                            "cancel": "k-icon k-i-cancel",
+                            "create": "k-icon k-i-add",
+                            "save": "k-icon k-i-checkmark"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "ReadOnly",
+                    "events": {
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": false,
+                    "groupable": false,
+                    "id": "grid0",
+                    "model": "",
+                    "reorderable": false,
+                    "resizable": false,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "Single",
+                    "sortable": true,
+                    "type": "grid",
+                    "uniqueID": "52c81a4a-c9e4-44c7-9022-82f072c177ba"
+                }
+            ],
+            "classList": "",
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "Sports",
+                    "dataSourceName": "Items",
+                    "name": "itemsDS",
+                    "pageSize": 20,
+                    "uniqueID": "f117b81b-48d4-4086-850b-97cfd18b2ae8"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "hidden": false,
+            "label": "Items (Graphical View)",
+            "name": "inventory_graphical",
+            "rows": [
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "c39e9a03-b6e9-4bbd-9fbc-308b158e83ff"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "6c8f2515-890a-4c3e-8854-14a825238ea5"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "3a8cf771-5c4c-4afb-bb6b-69bccc5f01e1"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "e51e39b1-6116-41d7-8567-513d55ce9ba9"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "48725af4-a041-47ec-927b-9842c9b1c6dd"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "3fd9f17d-fb99-4f79-9230-b4f5e9e55f70"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "73f9c9a9-4550-4ee8-abb6-7d3958d0133b"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "925a15c2-4354-471a-a2a3-81c29308b97a",
+            "viewType": "blank"
+        }
+    ]
+}

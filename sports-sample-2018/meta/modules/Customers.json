@@ -1,0 +1,878 @@
+{
+    "authorization": {
+        "allowedRoles": []
+    },
+    "description": "Displays some sample customer information.",
+    "label": "Customers",
+    "moduleType": "default",
+    "name": "Customers",
+    "order": 3,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#3fb4c0",
+        "color": "#ffffff",
+        "icon": "fa-group"
+    },
+    "type": "module",
+    "uniqueID": "708700b8-8669-49cb-8079-44028b348622",
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "authorization": {
+                "allowedRoles": []
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "cb91449d-819d-4213-bf44-91f87b178d25.CustomerData"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "categoryAxis": {
+                        "field": "Country",
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 0
+                            }
+                        }
+                    },
+                    "containerUid": "a971c89a-8de9-4b41-b340-5dcdc74185c5",
+                    "dataSourceName": "CustomerData",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": ""
+                    },
+                    "id": "countryChart",
+                    "legend": {
+                        "background": "white",
+                        "position": "Top",
+                        "visible": true
+                    },
+                    "model": "",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "field": "Balance",
+                            "labels": {},
+                            "name": "balance"
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "visible": false
+                        },
+                        "typeChart": "Column"
+                    },
+                    "title": {
+                        "text": "Total Customers by Country"
+                    },
+                    "tooltip": {
+                        "format": "{0}",
+                        "templateFunction": "",
+                        "templateId": "",
+                        "visible": true
+                    },
+                    "type": "bar-charts",
+                    "uniqueID": "7435392c-7f63-44c0-9d67-c088cb2887e7",
+                    "valueAxis": {
+                        "labels": {
+                            "format": "{0}",
+                            "rotation": {
+                                "angle": 270
+                            }
+                        },
+                        "line": {
+                            "visible": true
+                        }
+                    }
+                },
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "cb91449d-819d-4213-bf44-91f87b178d25.CustomerData"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "af626ee3-08c0-483f-9845-826f026faf8c",
+                    "dataSourceName": "CustomerData",
+                    "events": {
+                        "onDataBound": "",
+                        "onSeriesClick": ""
+                    },
+                    "id": "pieChart",
+                    "legend": {
+                        "background": "white",
+                        "position": "Right",
+                        "visible": true
+                    },
+                    "model": "CustomerDataModel",
+                    "schemaVersion": "1.0",
+                    "series": [
+                        {
+                            "field": "Balance",
+                            "labels": {},
+                            "name": "item1",
+                            "startAngle": 90
+                        }
+                    ],
+                    "seriesDefaults": {
+                        "labels": {
+                            "background": "white",
+                            "templateFunction": "",
+                            "templateId": "",
+                            "visible": false
+                        },
+                        "typeChart": "Pie"
+                    },
+                    "title": {
+                        "text": "Average Balance by Country"
+                    },
+                    "tooltip": {
+                        "format": "",
+                        "templateFunction": "",
+                        "templateId": "",
+                        "visible": true
+                    },
+                    "type": "pie-charts",
+                    "uniqueID": "192ce3f5-00b6-4d07-885d-74137fb96a8a"
+                },
+                {
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "b6603148-f262-42cf-a142-73109bdbf0a1.Country"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "containerUid": "c066e8d4-773e-4be7-bd70-262cd8216d7c",
+                    "dataSourceName": "Country",
+                    "events": {
+                        "onChange": "changeEvent",
+                        "onFilter": "",
+                        "onSelect": ""
+                    },
+                    "filter": "Contains",
+                    "id": "searchBar",
+                    "model": "",
+                    "name": "",
+                    "schemaVersion": "1.0",
+                    "textField": "Country",
+                    "title": "",
+                    "type": "auto-complete",
+                    "uniqueID": "e4d0ebf5-ed01-4fe9-9690-b0adb9da0244",
+                    "validation": {
+                        "required": false
+                    },
+                    "valuePrimitive": true
+                },
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "cb91449d-819d-4213-bf44-91f87b178d25.CustomerData"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl54",
+                                "model": "",
+                                "name": "CustNum",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "Cust Num",
+                                "type": "integer-text-box",
+                                "uniqueID": "9af55ecc-0658-478a-ae88-b29065863ddd",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "CustNum",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Cust Num"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl56",
+                                "model": "",
+                                "name": "Name",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Name",
+                                "type": "text-box",
+                                "uniqueID": "73d320f2-b32a-4fdb-b0ed-16323a061834",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Name",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Name"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl55",
+                                "model": "",
+                                "name": "Country",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Country",
+                                "type": "text-box",
+                                "uniqueID": "10562cb8-b7fd-4449-8c07-7a13e543f5fc",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Country",
+                            "filterable": false,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Country"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "downArrowText": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl66",
+                                "model": "",
+                                "name": "Balance",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "spinners": false,
+                                "step": 1,
+                                "title": "Balance",
+                                "type": "numeric-text-box",
+                                "uniqueID": "0e72ab74-14df-4bd4-a836-2911607a6522",
+                                "upArrowText": "",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Balance",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Balance"
+                        }
+                    ],
+                    "containerUid": "7f71dc1b-1086-4fea-9cfe-825fa039ff88",
+                    "dataSourceName": "CustomerData",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonIcons": {
+                            "destroy": "k-icon k-i-close",
+                            "edit": "k-icon k-i-edit"
+                        },
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonIcons": {
+                            "cancel": "k-icon k-i-cancel",
+                            "create": "k-icon k-i-add",
+                            "save": "k-icon k-i-checkmark"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "New",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "ReadOnly",
+                    "events": {
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": true,
+                    "groupable": true,
+                    "id": "customerGrid",
+                    "model": "",
+                    "reorderable": true,
+                    "resizable": true,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "Multiple",
+                    "sortable": true,
+                    "type": "grid",
+                    "uniqueID": "55c43c85-339f-4b02-9703-628e9af40dec"
+                }
+            ],
+            "classList": "",
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "Sports",
+                    "dataSourceName": "Customer",
+                    "name": "CustomerData",
+                    "pageSize": 10,
+                    "uniqueID": "cb91449d-819d-4213-bf44-91f87b178d25"
+                },
+                {
+                    "batch": true,
+                    "dataProviderName": "Sports",
+                    "dataSourceName": "Country",
+                    "name": "Country",
+                    "pageSize": 20,
+                    "uniqueID": "b6603148-f262-42cf-a142-73109bdbf0a1"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "hidden": false,
+            "label": "Customers (Graphical View)",
+            "name": "CustomersGraphical",
+            "rows": [
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "a971c89a-8de9-4b41-b340-5dcdc74185c5"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "af626ee3-08c0-483f-9845-826f026faf8c"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "135c4c64-3bac-4da1-a911-7a9107ea7af5"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "c066e8d4-773e-4be7-bd70-262cd8216d7c"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "7f71dc1b-1086-4fea-9cfe-825fa039ff88"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "533b531f-4fd6-433d-a063-0b16adf63dcd"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "439d6e0a-53f4-4776-b1d0-ef5ff08ed9b6"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "9c40f256-d268-4714-8419-31d944699d9d"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "0032a54d-d40c-494d-9c47-ae35575931ab"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "b17af6a4-1df7-4095-9366-b881b4c7cbff"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "01589cab-a09d-474c-a6cf-3ac792790879"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "dc572d81-2c44-47dc-9cf7-cc434da49102"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "e7fe4d8e-fb55-4fa5-8413-326ed9fe9a66"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "f5012bda-b79d-4ad6-9581-03e234d4b027"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "e875c712-320c-41ef-ab49-cc5b9b3e2195"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "d72a7f6b-603e-44a9-82e9-1ca038e32b17"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "64831ffa-e4a6-445a-a3dd-bcd85f86f92e"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "81a3af47-c56d-43e9-b76d-ea611213bbc1"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "8a33b167-9e32-4b35-9836-75590d4ed3d9"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "a1d2687e-8694-4865-979c-b65f7a3df1aa"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "efc74e9c-51c5-4aa0-8c0d-2a6203577414"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "7bbec4e8-87a8-4fd1-81e0-f622a7c3aba3"
+                        },
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 6
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "2c5574da-7707-4cf2-972c-b2b707e22d49"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "c8d1aa5e-296e-4902-ae4b-1fc786228006"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "ab99edab-d295-4719-ba7b-658381a8305f"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "0c3e77da-aced-4627-aff6-5b01a6119853"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "452e3918-a0f9-49a5-9c79-69788efaf793",
+            "viewType": "blank"
+        }
+    ]
+}

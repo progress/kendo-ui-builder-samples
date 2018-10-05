@@ -1,0 +1,318 @@
+{
+    "authorization": {
+        "allowedRoles": []
+    },
+    "description": "Shows the personal information (e.g. family) of sample individuals.",
+    "label": "Personal",
+    "moduleType": "default",
+    "name": "Personal",
+    "order": 4,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#009a98",
+        "color": "#ffffff",
+        "icon": "fa-user"
+    },
+    "type": "module",
+    "uniqueID": "e89aab2f-55ab-4d62-a4c3-4bac52e70ee3",
+    "children": [
+        {
+            "annotations": {
+                "dataSources": {
+                    "name": "dataSourceName"
+                }
+            },
+            "authorization": {
+                "allowedRoles": []
+            },
+            "children": [
+                {
+                    "annotationRefs": {
+                        "cascadeFrom": {
+                            "kind": "componentIdentifier"
+                        },
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "0589b8bc-168b-451f-8aee-190645a5c535.FamilyList"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "cascadeFromField": "RelativeName",
+                    "containerUid": "a2d83e72-c907-4fae-821b-7615d1feeb71",
+                    "dataSourceName": "FamilyList",
+                    "events": {
+                        "onChange": "",
+                        "onFilter": "",
+                        "onSelect": ""
+                    },
+                    "filter": "Contains",
+                    "id": "comboBox",
+                    "model": "FamilyListModel",
+                    "name": "",
+                    "schemaVersion": "1.0",
+                    "textField": "RelativeName",
+                    "title": "",
+                    "type": "combo-box",
+                    "uniqueID": "51f3f7dd-5503-43aa-92c1-b807e169abea",
+                    "validation": {
+                        "required": false
+                    },
+                    "valueField": "RelativeName",
+                    "valuePrimitive": false
+                },
+                {
+                    "altRowTemplateFunction": "",
+                    "altRowTemplateId": "",
+                    "annotationRefs": {
+                        "dataSourceName": {
+                            "kind": "dataSourceName",
+                            "value": "0589b8bc-168b-451f-8aee-190645a5c535.FamilyList"
+                        }
+                    },
+                    "annotations": {
+                        "id": "componentIdentifier"
+                    },
+                    "columns": [
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl1",
+                                "model": "",
+                                "name": "RelativeName",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Relative Name",
+                                "type": "text-box",
+                                "uniqueID": "9f9e62c7-8458-4dfc-bbc7-8e774230db0d",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "RelativeName",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Relative Name"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "debounce": 0,
+                                "defaultValue": "",
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl2",
+                                "model": "",
+                                "name": "Relation",
+                                "placeholder": "",
+                                "schemaVersion": "1.0",
+                                "title": "Relation",
+                                "type": "text-box",
+                                "uniqueID": "784508b1-8630-4fb7-b150-37fdaabb4afb",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Relation",
+                            "filterable": true,
+                            "format": "",
+                            "sortable": true,
+                            "title": "Relation"
+                        },
+                        {
+                            "componentOptions": {
+                                "annotations": {
+                                    "id": "componentIdentifier"
+                                },
+                                "events": {
+                                    "onChange": ""
+                                },
+                                "id": "ctl3",
+                                "maxDate": "2099-12-30T22:00:00.000Z",
+                                "minDate": "1899-12-31T22:00:00.000Z",
+                                "model": "",
+                                "name": "Birthdate",
+                                "schemaVersion": "1.0",
+                                "title": "Birthdate",
+                                "type": "date-picker",
+                                "uniqueID": "87901442-add5-4442-a892-aab15d48dc02",
+                                "validation": {
+                                    "required": false
+                                }
+                            },
+                            "editable": true,
+                            "encoded": true,
+                            "field": "Birthdate",
+                            "filterable": true,
+                            "format": "{0:d}",
+                            "sortable": true,
+                            "title": "Birthdate"
+                        }
+                    ],
+                    "containerUid": "6d8ab17c-1796-45de-bf7a-6d4352fa55cb",
+                    "dataSourceName": "FamilyList",
+                    "editOptions": {
+                        "allowDelete": true,
+                        "allowEdit": true,
+                        "allowInsert": true,
+                        "rowButtonIcons": {
+                            "destroy": "k-icon k-i-close",
+                            "edit": "k-icon k-i-edit"
+                        },
+                        "rowButtonLabels": {
+                            "canceledit": "Cancel",
+                            "destroy": "Delete",
+                            "edit": "Edit",
+                            "update": "Update"
+                        },
+                        "toolbarButtonIcons": {
+                            "cancel": "k-icon k-i-cancel",
+                            "create": "k-icon k-i-add",
+                            "save": "k-icon k-i-checkmark"
+                        },
+                        "toolbarButtonLabels": {
+                            "cancel": "Cancel changes",
+                            "create": "Add a family member",
+                            "save": "Save changes"
+                        }
+                    },
+                    "editable": "Popup",
+                    "events": {
+                        "onDataBound": "",
+                        "onRowCreate": "",
+                        "onRowDelete": "",
+                        "onRowSelect": "",
+                        "onRowUpdate": ""
+                    },
+                    "filterable": false,
+                    "groupable": true,
+                    "id": "FamilyGrid",
+                    "model": "FamilyListModel",
+                    "reorderable": true,
+                    "resizable": true,
+                    "rowTemplateFunction": "",
+                    "rowTemplateId": "",
+                    "schemaVersion": "1.0",
+                    "selectable": "Multiple",
+                    "sortable": true,
+                    "type": "grid",
+                    "uniqueID": "39ee2141-de84-49dc-b6dd-04958d8e109d"
+                }
+            ],
+            "classList": "",
+            "customSections": {
+                "top": "topSection.html"
+            },
+            "dataSources": [
+                {
+                    "batch": true,
+                    "dataProviderName": "Sports",
+                    "dataSourceName": "Family",
+                    "name": "FamilyList",
+                    "pageSize": 20,
+                    "uniqueID": "0589b8bc-168b-451f-8aee-190645a5c535"
+                }
+            ],
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "hidden": false,
+            "label": "Family (Graphical view)",
+            "name": "FamilyGraphical",
+            "rows": [
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "a2d83e72-c907-4fae-821b-7615d1feeb71"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "2c32853a-3536-40df-8938-9c4a896b639a"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [
+                        {
+                            "authorization": {
+                                "allowedRoles": []
+                            },
+                            "breakpoints": {
+                                "sm": 12
+                            },
+                            "classList": "",
+                            "hidden": {
+                                "lg": false,
+                                "md": false,
+                                "sm": false,
+                                "xs": false
+                            },
+                            "rows": [],
+                            "schemaVersion": "1.0",
+                            "type": "col",
+                            "uniqueID": "6d8ab17c-1796-45de-bf7a-6d4352fa55cb"
+                        }
+                    ],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "13cbc925-69f8-458a-b981-517d3d607370"
+                },
+                {
+                    "authorization": {
+                        "allowedRoles": []
+                    },
+                    "classList": "",
+                    "cols": [],
+                    "schemaVersion": "1.0",
+                    "type": "row",
+                    "uniqueID": "b72adbaa-a035-43a9-b4dd-828870540da1"
+                }
+            ],
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "4d0f4fb2-c6f2-493b-bd14-0fd5e7cc735d",
+            "viewType": "blank"
+        }
+    ]
+}

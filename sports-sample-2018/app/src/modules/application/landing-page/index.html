@@ -1,0 +1,14 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div ng-include="vm.$customSections.top" class="custom-section">
+</div>
+<div _application_landing-page class="modules-list-wrapper">
+    <a ng-repeat='module in vm.allowedModules' ng-click="_$onHideTooltip()" ui-sref="{{ module.state }}" ng-attr-title="{{ module.description.length > 0 ? module.description : undefined}}" class="module-thumbnail">
+        <i class="fa {{ module.thumbnail.icon }}" ng-style="{ background: module.thumbnail.background, color:module.thumbnail.color }"></i>
+        <span title="{{ module.label && module.label.trim() ? module.label : module.name }}">{{ module.label && module.label.trim() ? module.label : module.name }}</span>
+    </a>
+</div>
+<div ng-include="vm.$customSections.bottom" class="custom-section">
+</div>

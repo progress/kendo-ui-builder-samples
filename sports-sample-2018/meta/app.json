@@ -1,0 +1,24 @@
+{
+    "authorization": {
+        "roles": []
+    },
+    "build": {
+        "debug": {
+            "baseHref": ""
+        },
+        "release": {
+            "baseHref": ""
+        }
+    },
+    "children": [],
+    "defaultLangaugeCulture": "en-US",
+    "defaultLanguageLabel": "English",
+    "description": "A sample application for the Sports database.",
+    "layout": {},
+    "name": "SportsSample",
+    "schemaVersion": "1.4.21",
+    "targetFramework": "AngularJS",
+    "theme": "bootstrap",
+    "type": "app",
+    "uniqueID": "eab789ff-8634-47da-8dfc-61c9e1b2d221"
+}

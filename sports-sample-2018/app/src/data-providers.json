@@ -1,0 +1,14 @@
+{
+    "Sports": {
+        "authenticationModel": "Anonymous",
+        "catalogUris": [
+            "http://localhost:8810/Sports/static/SportsService.json"
+        ],
+        "generateChildTables": true,
+        "name": "Sports",
+        "schemaVersion": "1.0",
+        "serviceUri": "http://localhost:8810/Sports",
+        "type": "progress-data-provider",
+        "uniqueID": "baeccc7c-f788-4ced-88a5-03dfeeb37ec5"
+    }
+}

@@ -1,0 +1,695 @@
+{
+    "authorization": {
+        "allowedRoles": []
+    },
+    "description": "A list of sample orders.",
+    "label": "Order",
+    "moduleType": "default",
+    "name": "Order",
+    "order": 1,
+    "schemaVersion": "1.0",
+    "thumbnail": {
+        "background": "#008886",
+        "color": "#ffffff",
+        "icon": "fa-edit"
+    },
+    "type": "module",
+    "uniqueID": "b049c4e6-1c9d-436b-9054-ce6a76d36cf0",
+    "children": [
+        {
+            "altRowTemplateFunction": "",
+            "altRowTemplateId": "",
+            "authorization": {
+                "allowedRoles": []
+            },
+            "classList": "",
+            "columns": [
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "downArrowText": "",
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl0",
+                        "model": "",
+                        "name": "Ordernum",
+                        "placeholder": "",
+                        "schemaVersion": "1.0",
+                        "spinners": false,
+                        "step": 1,
+                        "title": "Order Number",
+                        "type": "integer-text-box",
+                        "uniqueID": "21171ce7-d747-47da-9814-1b065a77a7fe",
+                        "upArrowText": "",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "Ordernum",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Order Number"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "downArrowText": "",
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl1",
+                        "model": "",
+                        "name": "CustNum",
+                        "placeholder": "",
+                        "schemaVersion": "1.0",
+                        "spinners": false,
+                        "step": 1,
+                        "title": "Customer Number",
+                        "type": "integer-text-box",
+                        "uniqueID": "fdc59d32-98c7-4525-899f-fbb1469ae2ec",
+                        "upArrowText": "",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "CustNum",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Customer Number"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl2",
+                        "maxDate": "2099-12-30T22:00:00.000Z",
+                        "minDate": "1899-12-31T22:00:00.000Z",
+                        "model": "",
+                        "name": "OrderDate",
+                        "schemaVersion": "1.0",
+                        "title": "Date Ordered",
+                        "type": "date-picker",
+                        "uniqueID": "4a97cb8c-2aa0-4617-adb1-d379c8b75bc8",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "OrderDate",
+                    "filterable": true,
+                    "format": "{0:d}",
+                    "sortable": true,
+                    "title": "Date Ordered"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "debounce": 0,
+                        "defaultValue": "",
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl12",
+                        "model": "",
+                        "name": "OrderStatus",
+                        "placeholder": "",
+                        "schemaVersion": "1.0",
+                        "title": "Order Status",
+                        "type": "text-box",
+                        "uniqueID": "2b535c2f-4547-450c-974e-c95a3424d56d",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "OrderStatus",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Order Status"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl3",
+                        "maxDate": "2099-12-30T22:00:00.000Z",
+                        "minDate": "1899-12-31T22:00:00.000Z",
+                        "model": "",
+                        "name": "ShipDate",
+                        "schemaVersion": "1.0",
+                        "title": "Date Shipped",
+                        "type": "date-picker",
+                        "uniqueID": "dd666d70-1f86-4e71-9f51-cf2b27896291",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "ShipDate",
+                    "filterable": true,
+                    "format": "{0:d}",
+                    "sortable": true,
+                    "title": "Date Shipped"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl4",
+                        "maxDate": "2099-12-30T22:00:00.000Z",
+                        "minDate": "1899-12-31T22:00:00.000Z",
+                        "model": "",
+                        "name": "PromiseDate",
+                        "schemaVersion": "1.0",
+                        "title": "Date Promised",
+                        "type": "date-picker",
+                        "uniqueID": "7061d9a4-88fc-4685-be6a-b29ca3ed919b",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "PromiseDate",
+                    "filterable": true,
+                    "format": "{0:d}",
+                    "sortable": true,
+                    "title": "Date Promised"
+                },
+                {
+                    "componentOptions": {
+                        "annotations": {
+                            "id": "componentIdentifier"
+                        },
+                        "debounce": 0,
+                        "defaultValue": "",
+                        "events": {
+                            "onChange": ""
+                        },
+                        "id": "ctl5",
+                        "model": "",
+                        "name": "Carrier",
+                        "placeholder": "",
+                        "schemaVersion": "1.0",
+                        "title": "Carrier",
+                        "type": "text-box",
+                        "uniqueID": "faa1a34d-610f-4411-92c1-216696710d65",
+                        "validation": {
+                            "required": false
+                        }
+                    },
+                    "editable": true,
+                    "encoded": true,
+                    "field": "Carrier",
+                    "filterable": true,
+                    "format": "",
+                    "sortable": true,
+                    "title": "Carrier"
+                }
+            ],
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html"
+            },
+            "dataProvider": "Sports",
+            "dataSource": "Orders",
+            "editOptions": {
+                "allowDelete": true,
+                "allowEdit": true,
+                "allowInsert": true,
+                "batch": true,
+                "rowButtonIcons": {
+                    "destroy": "k-icon k-i-close",
+                    "edit": "k-icon k-i-edit"
+                },
+                "rowButtonLabels": {
+                    "canceledit": "Cancel",
+                    "destroy": "Delete",
+                    "edit": "Edit",
+                    "update": "Update"
+                },
+                "toolbarButtonIcons": {
+                    "cancel": "k-icon k-i-cancel",
+                    "create": "k-icon k-i-add",
+                    "save": "k-icon k-i-checkmark"
+                },
+                "toolbarButtonLabels": {
+                    "cancel": "Cancel changes",
+                    "create": "New",
+                    "save": "Save changes"
+                }
+            },
+            "editable": "ReadOnly",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "onRowCreate": "",
+                "onRowDelete": "",
+                "onRowSelect": "onRowSelect",
+                "onRowUpdate": "",
+                "showEventHandler": "onShow"
+            },
+            "filterable": false,
+            "groupable": false,
+            "hidden": false,
+            "label": "Orders",
+            "name": "Orders",
+            "pageSize": 15,
+            "reorderable": false,
+            "resizable": false,
+            "rowTemplateFunction": "",
+            "rowTemplateId": "",
+            "schemaVersion": "1.0",
+            "sortable": false,
+            "title": "Orders (Basic Grid)",
+            "type": "view",
+            "uniqueID": "3c92e18c-51f5-4b2f-88b3-53a84ef596c4",
+            "viewType": "data-grid"
+        },
+        {
+            "authorization": {
+                "allowedRoles": []
+            },
+            "childDataSource": "OrderOrderLine.ttOrderLine",
+            "childGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl0",
+                            "model": "",
+                            "name": "Ordernum",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Order Num",
+                            "type": "integer-text-box",
+                            "uniqueID": "a3a381dd-7575-4599-9a20-c85bbd34ae78",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Ordernum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Order Num"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl1",
+                            "model": "",
+                            "name": "Linenum",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Line Num",
+                            "type": "integer-text-box",
+                            "uniqueID": "38a316b4-ff43-467d-98fa-a238aab14a2e",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Linenum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Line Num"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl2",
+                            "model": "",
+                            "name": "Itemnum",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Item Num",
+                            "type": "integer-text-box",
+                            "uniqueID": "8cc72084-1b52-485e-a6b5-765ba4b32cc8",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Itemnum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Item Num"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl3",
+                            "model": "",
+                            "name": "Price",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Price",
+                            "type": "numeric-text-box",
+                            "uniqueID": "da3861d9-0676-45c0-9213-6290b910fd62",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Price",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Price"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl4",
+                            "model": "",
+                            "name": "Qty",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Qty",
+                            "type": "integer-text-box",
+                            "uniqueID": "f7dd4310-d4d8-4d70-a9c9-51d4b3917cc2",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Qty",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Qty"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl5",
+                            "model": "",
+                            "name": "Discount",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Discount",
+                            "type": "integer-text-box",
+                            "uniqueID": "c442a188-8606-4fb1-b7b2-8fd768d9e142",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Discount",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Discount"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "downArrowText": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl6",
+                            "model": "",
+                            "name": "ExtendedPrice",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "spinners": false,
+                            "step": 1,
+                            "title": "Extended Price",
+                            "type": "numeric-text-box",
+                            "uniqueID": "98ada451-44fd-4a60-bdac-efbba13dbc11",
+                            "upArrowText": "",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "ExtendedPrice",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Extended Price"
+                    },
+                    {
+                        "componentOptions": {
+                            "annotations": {
+                                "id": "componentIdentifier"
+                            },
+                            "debounce": 0,
+                            "defaultValue": "",
+                            "events": {
+                                "onChange": ""
+                            },
+                            "id": "ctl7",
+                            "model": "",
+                            "name": "OrderLineStatus",
+                            "placeholder": "",
+                            "schemaVersion": "1.0",
+                            "title": "Order Line Status",
+                            "type": "text-box",
+                            "uniqueID": "2f036ca3-b197-4ddb-9e9b-cdeebab2d885",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        "editable": true,
+                        "encoded": true,
+                        "field": "OrderLineStatus",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Order Line Status"
+                    }
+                ],
+                "editOptions": {
+                    "allowDelete": true,
+                    "allowEdit": true,
+                    "allowInsert": true,
+                    "batch": true,
+                    "rowButtonIcons": {
+                        "destroy": "k-icon k-i-close",
+                        "edit": "k-icon k-i-edit"
+                    },
+                    "rowButtonLabels": {
+                        "canceledit": "Cancel",
+                        "destroy": "Delete",
+                        "edit": "Edit",
+                        "update": "Update"
+                    },
+                    "toolbarButtonIcons": {
+                        "cancel": "k-icon k-i-cancel",
+                        "create": "k-icon k-i-add",
+                        "save": "k-icon k-i-checkmark"
+                    },
+                    "toolbarButtonLabels": {
+                        "cancel": "Cancel changes",
+                        "create": "New",
+                        "save": "Save changes"
+                    }
+                },
+                "editable": "Inline",
+                "events": {
+                    "onDataBound": "",
+                    "onRowCreate": "",
+                    "onRowDelete": "",
+                    "onRowSelect": "onChildRowSelect",
+                    "onRowUpdate": ""
+                },
+                "filterable": false,
+                "groupable": false,
+                "pageSize": 5,
+                "reorderable": false,
+                "resizable": false,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "selectable": "Single",
+                "sortable": false,
+                "title": "<Title>"
+            },
+            "classList": "",
+            "customSections": {
+                "bottom": "bottomSection.html",
+                "middle": "middleSection.html",
+                "top": "topSection.html",
+                "topChild": "topChildSection.html",
+                "topParent": "topParentSection.html"
+            },
+            "dataProvider": "Sports",
+            "events": {
+                "hideEventHandler": "onHide",
+                "initEventHandler": "onInit",
+                "showEventHandler": "onShow"
+            },
+            "hidden": false,
+            "name": "OrderOrderLine",
+            "parentDataSource": "OrderOrderLine.ttOrder",
+            "parentGridProperties": {
+                "altRowTemplateFunction": "",
+                "altRowTemplateId": "",
+                "columns": [
+                    {
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Ordernum",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Order Num"
+                    },
+                    {
+                        "editable": true,
+                        "encoded": true,
+                        "field": "OrderDate",
+                        "filterable": true,
+                        "format": "{0:d}",
+                        "sortable": true,
+                        "title": "Ordered"
+                    },
+                    {
+                        "editable": true,
+                        "encoded": true,
+                        "field": "ShipDate",
+                        "filterable": true,
+                        "format": "{0:d}",
+                        "sortable": true,
+                        "title": "Shipped"
+                    },
+                    {
+                        "editable": true,
+                        "encoded": true,
+                        "field": "Carrier",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Carrier"
+                    },
+                    {
+                        "editable": true,
+                        "encoded": true,
+                        "field": "SalesRep",
+                        "filterable": true,
+                        "format": "",
+                        "sortable": true,
+                        "title": "Sales Rep"
+                    }
+                ],
+                "events": {
+                    "onDataBound": "",
+                    "onRowSelect": "onParentRowSelect"
+                },
+                "filterable": true,
+                "groupable": true,
+                "pageSize": 5,
+                "reorderable": true,
+                "resizable": true,
+                "rowTemplateFunction": "",
+                "rowTemplateId": "",
+                "sortable": true,
+                "title": "Order OrderLine (Hierarchical View)"
+            },
+            "schemaVersion": "1.0",
+            "type": "view",
+            "uniqueID": "0599e8fb-8d04-4206-b3cf-1a2ffb497cca",
+            "viewType": "stacked-data-grids"
+        }
+    ]
+}
