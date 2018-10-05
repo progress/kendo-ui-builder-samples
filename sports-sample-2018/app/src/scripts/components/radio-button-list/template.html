@@ -1,0 +1,11 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<ul id="{{vm.id}}" class="kuib-radio-button-list" ng-class="{ '-horizontal': vm.options.orientation.toLowerCase() === 'horizontal' }" ng-attr-style="{{vm.options.style}}">
+    <li ng-repeat="item in vm.data track by $index">
+        <input type="radio" name="{{vm.name}}" class="k-radio" id="{{vm.id + '_' + $index}}" ng-model="vm.model" ng-value="item" ng-checked="vm.options.valuePrimitive ? item[vm.options.dataValueField] === vm.model : item[vm.options.dataValueField] === vm.model[vm.options.dataValueField]"
+            ng-change="vm.onChange(this)" />
+        <label class="k-radio-label" for="{{vm.id + '_' + $index}}">{{item[vm.options.dataTextField]}}</label>
+    </li>
+</ul>

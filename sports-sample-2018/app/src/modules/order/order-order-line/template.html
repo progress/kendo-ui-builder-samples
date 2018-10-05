@@ -1,0 +1,46 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div _order_order-order-line class="kuib-stacked-data-grid">
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.top">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 ng-bind-html="vm.$model.parentTitle"></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.topParent">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <grid data-id="parentGrid" data-options="vm.$model.parentGridOptions" data-widget="vm.$parentGrid" data-events="vm.$model.parentGridEvents"></grid>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.middle">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 ng-bind-html="vm.$model.childTitle"></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.topChild">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <grid data-id="childGrid" data-options="vm.$model.childGridOptions" data-widget="vm.$childGrid" data-events="vm.$model.childGridEvents"></grid>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.bottom">
+        </div>
+    </div>
+</div>

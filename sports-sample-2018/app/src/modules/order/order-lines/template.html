@@ -1,0 +1,198 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div _order_order-lines class="data-grid-form">
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.top">
+        </div>
+    </div>
+    <div class="row data-grid-form-header">
+        <div class="col-xs-8">
+            <h2 ng-if="!vm.$updateInProcess && !vm.$insertInProcess" ng-bind-html="vm.$model.title"></h2>
+            <h2 ng-if="vm.$updateInProcess" ng-bind-html="vm.$model.editTitle"></h2>
+            <h2 ng-if="vm.$insertInProcess" ng-bind-html="vm.$model.newTitle"></h2>
+        </div>
+        <div class="col-xs-4 text-right" ng-if="vm.$model.editMode === 'Read-Only to Edit'">
+            <a ng-click="vm._$insert()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess" class="k-button k-button-icontext">
+                <span class="k-icon k-i-add"></span> New
+            </a>
+
+            <a ng-click="vm._$edit()" ng-if="!vm.$insertInProcess && !vm.$updateInProcess" class="k-button k-button-icontext" ng-class="{'kuib-disabled': !vm.$selectedId }">
+                <span class="k-icon k-i-edit"></span> Edit
+            </a>
+            <a ng-click="vm._$save()" ng-if="vm.$insertInProcess || vm.$updateInProcess" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                <span class="k-icon k-i-checkmark"></span> Save
+            </a>
+            <a ng-click="vm._$cancel()" ng-if="vm.$insertInProcess || vm.$updateInProcess" class="k-button k-button-icontext k-grid-cancel">
+                <span class="k-icon k-i-cancel"></span> Cancel
+            </a>
+            <a ng-click="vm._$delete()" ng-if="vm.$updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                <span class="k-icon k-i-close"></span> Delete
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.middle">
+        </div>
+    </div>
+    <hr class="k-separator">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="overlay k-overlay ng-scope" ng-if="vm.$updateInProcess || vm.$insertInProcess"></div>
+            <grid data-options="vm.$model.gridOptions" data-model="vm.$gridModel" data-widget="vm.$grid" data-events="vm.$model.events"></grid>
+        </div>
+        <div class="col-md-8">
+            <div class="data-form-wrapper k-widget">
+                <data-data-form data-model="vm.$model.formOptions" data-validator="vm.$validator" data-update-in-process="vm.$updateInProcess" data-insert-in-process="vm.$insertInProcess" data-selected="vm.$viewModels.formModel">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Ordernum'| translate }}
+                                </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Ordernum | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl30">{{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Ordernum'| translate }}</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl31" data-name="Ordernum" data-widget="vm.$components.ctl31.widget" data-title="Order Number" data-options="vm.$components.ctl31.options" data-model="vm.$viewModels.formModel.Ordernum" data-events="vm.$components.ctl31.events"
+                                        data-validation="vm.$components.ctl31.validation">
+                                        </integer-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Linenum'| translate }}
+                                </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Linenum | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl32">{{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Linenum'| translate }}</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl33" data-name="Linenum" data-widget="vm.$components.ctl33.widget" data-title="Line Number" data-options="vm.$components.ctl33.options" data-model="vm.$viewModels.formModel.Linenum" data-events="vm.$components.ctl33.events"
+                                        data-validation="vm.$components.ctl33.validation">
+                                        </integer-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Itemnum'| translate }}
+                                </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Itemnum | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl34">{{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Itemnum'| translate }}</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl35" data-name="Itemnum" data-widget="vm.$components.ctl35.widget" data-title="Item Number" data-options="vm.$components.ctl35.options" data-model="vm.$viewModels.formModel.Itemnum" data-events="vm.$components.ctl35.events"
+                                        data-validation="vm.$components.ctl35.validation">
+                                        </integer-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Price'| translate }}
+                                </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Price | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl36">{{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Price'| translate }}</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <numeric-text-box data-id="ctl37" data-name="Price" data-widget="vm.$components.ctl37.widget" data-title="Price" data-options="vm.$components.ctl37.options" data-model="vm.$viewModels.formModel.Price" data-events="vm.$components.ctl37.events" data-validation="vm.$components.ctl37.validation">
+                                    </numeric-text-box>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Qty'| translate }} </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Qty | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl38"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Qty'| translate }} </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl39" data-name="Qty" data-widget="vm.$components.ctl39.widget" data-title="Quantity" data-options="vm.$components.ctl39.options" data-model="vm.$viewModels.formModel.Qty" data-events="vm.$components.ctl39.events" data-validation="vm.$components.ctl39.validation">
+                                    </integer-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Discount'| translate }} </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.Discount | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl40"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.Discount'| translate }} </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <integer-text-box data-id="ctl41" data-name="Discount" data-widget="vm.$components.ctl41.widget" data-title="Discount" data-options="vm.$components.ctl41.options" data-model="vm.$viewModels.formModel.Discount" data-events="vm.$components.ctl41.events"
+                                        data-validation="vm.$components.ctl41.validation">
+                                        </integer-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.ExtendedPrice'| translate }} </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.ExtendedPrice | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl42"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.ExtendedPrice'| translate }} </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <numeric-text-box data-id="ctl43" data-name="ExtendedPrice" data-widget="vm.$components.ctl43.widget" data-title="Extended Price" data-options="vm.$components.ctl43.options" data-model="vm.$viewModels.formModel.ExtendedPrice" data-events="vm.$components.ctl43.events"
+                                        data-validation="vm.$components.ctl43.validation">
+                                        </numeric-text-box>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="!vm.$updateInProcess && !vm.$insertInProcess">
+                                <div class="col-md-5"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.OrderLineStatus'| translate }} </div>
+                                <div class="col-md-7" ng-bind-html="vm.$viewModels.formModel.OrderLineStatus | formatValue: ''"></div>
+                            </div>
+                            <div class="row" ng-if="vm.$updateInProcess || vm.$insertInProcess">
+                                <div class="col-md-5">
+                                    <label for="ctl44"> {{ 'modules.Order.views.OrderLines.groups.3353ab8b-b88e-48bc-bb7d-f291e216a909.fields.OrderLineStatus'| translate }} </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <text-box data-id="ctl45" data-name="OrderLineStatus" data-title="Order Line Status" data-model="vm.$viewModels.formModel.OrderLineStatus" data-debounce="0" data-default-value="" data-events="vm.$components.ctl45.events" data-validation="vm.$components.ctl45.validation">
+                                    </text-box>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </data-data-form>
+
+                <div class="row" ng-if="vm.$model.editMode === 'Read-Only to Edit'">
+                    <div class="col-xs-12 data-form-commands">
+                        <hr class="k-separator">
+                        <a ng-click="vm._$edit()" ng-if="!vm.$updateInProcess && !vm.$insertInProcess" class="k-button k-button-icontext" ng-class="{'kuib-disabled': !vm.$selectedId }">
+                            <span class="k-icon k-i-edit"></span> Edit
+                        </a>
+                        <a ng-click="vm._$save()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-primary k-grid-update" ng-class="{'kuib-disabled': !vm.$viewModels.formModel.dirty }">
+                            <span class="k-icon k-i-checkmark"></span> Save
+                        </a>
+                        <a ng-click="vm._$cancel()" ng-if="vm.$updateInProcess || vm.$insertInProcess" class="k-button k-button-icontext k-grid-cancel">
+                            <span class="k-icon k-i-cancel"></span> Cancel
+                        </a>
+                        <a ng-click="vm._$delete()" ng-if="vm.$updateInProcess" class="k-button k-button-icontext k-grid-delete">
+                            <span class="k-icon k-i-close"></span> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" ng-include="vm.$model.customSections.bottom">
+        </div>
+    </div>
+</div>

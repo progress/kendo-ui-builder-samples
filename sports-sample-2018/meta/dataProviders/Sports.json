@@ -1,0 +1,1025 @@
+{
+    "authenticationModel": "Anonymous",
+    "catalogUris": [
+        "http://localhost:8810/Sports/static/SportsService.json"
+    ],
+    "children": [
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "State",
+                    "name": "State",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "State Name",
+                    "name": "StateName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Region",
+                    "name": "Region",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "State",
+            "resourceName": "State",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "State",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Emp No",
+                    "name": "EmpNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Health Care",
+                    "name": "HealthCare",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Life Insurance",
+                    "name": "LifeInsurance",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Pension401K",
+                    "name": "Pension401K",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Stock Purchase",
+                    "name": "StockPurchase",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Medical Spending",
+                    "name": "MedicalSpending",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Dependent Care",
+                    "name": "DependentCare",
+                    "semanticType": "Integer"
+                }
+            ],
+            "name": "Benefits",
+            "resourceName": "Benefits",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Benefits",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cust Num",
+                    "name": "CustNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "USA",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Country",
+                    "name": "Country",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Name",
+                    "name": "Name",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Address",
+                    "name": "Address",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Address2",
+                    "name": "Address2",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "City",
+                    "name": "City",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "State",
+                    "name": "State",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Postal Code",
+                    "name": "PostalCode",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Contact",
+                    "name": "Contact",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Phone",
+                    "name": "Phone",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Sales Rep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 1500,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Credit Limit",
+                    "name": "CreditLimit",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Balance",
+                    "name": "Balance",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": "Net30",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Terms",
+                    "name": "Terms",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Discount",
+                    "name": "Discount",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Comments",
+                    "name": "Comments",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Fax",
+                    "name": "Fax",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Email",
+                    "name": "EmailAddress",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "Customer",
+            "resourceName": "Customer",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Customer",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Emp No",
+                    "name": "EmpNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Relative Name",
+                    "name": "RelativeName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Relation",
+                    "name": "Relation",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Birthdate",
+                    "name": "Birthdate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": false,
+                    "editorType": "check-box",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Covered On Benefits",
+                    "name": "CoveredOnBenefits",
+                    "semanticType": "Boolean"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Benefit Date",
+                    "name": "BenefitDate",
+                    "semanticType": "Date"
+                }
+            ],
+            "name": "Family",
+            "resourceName": "Family",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Family",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Num",
+                    "name": "Ordernum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Line Num",
+                    "name": "Linenum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Num",
+                    "name": "Itemnum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Price",
+                    "name": "Price",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Qty",
+                    "name": "Qty",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Discount",
+                    "name": "Discount",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Extended Price",
+                    "name": "ExtendedPrice",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": "Ordered",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Line Status",
+                    "name": "OrderLineStatus",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "OrderLine",
+            "resourceName": "OrderLine",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "OrderLine",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Num",
+                    "name": "Ordernum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cust Num",
+                    "name": "CustNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "today",
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Ordered",
+                    "name": "OrderDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Shipped",
+                    "name": "ShipDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Promised",
+                    "name": "PromiseDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Carrier",
+                    "name": "Carrier",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Instructions",
+                    "name": "Instructions",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "PO",
+                    "name": "PO",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "Net30",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Terms",
+                    "name": "Terms",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Sales Rep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Bill To ID",
+                    "name": "BillToID",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Ship To ID",
+                    "name": "ShipToID",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "Ordered",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Status",
+                    "name": "OrderStatus",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Warehouse Num",
+                    "name": "WarehouseNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "Visa",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Credit Card",
+                    "name": "Creditcard",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "Orders",
+            "resourceName": "Orders",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Orders",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Num",
+                    "name": "Itemnum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Name",
+                    "name": "ItemName",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Price",
+                    "name": "Price",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "On Hand",
+                    "name": "Onhand",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Allocated",
+                    "name": "Allocated",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Re Order",
+                    "name": "ReOrder",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "On Order",
+                    "name": "OnOrder",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cat Page",
+                    "name": "CatPage",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cat-Description",
+                    "name": "CatDescription",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Category1",
+                    "name": "Category1",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Category2",
+                    "name": "Category2",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Special",
+                    "name": "Special",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Weight",
+                    "name": "Weight",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Min Qty",
+                    "name": "Minqty",
+                    "semanticType": "Integer"
+                }
+            ],
+            "name": "Items",
+            "resourceName": "Items",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Items",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Num",
+                    "name": "Ordernum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Cust Num",
+                    "name": "CustNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "today",
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Ordered",
+                    "name": "OrderDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Shipped",
+                    "name": "ShipDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": null,
+                    "editorType": "date-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Promised",
+                    "name": "PromiseDate",
+                    "semanticType": "Date"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Carrier",
+                    "name": "Carrier",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Instructions",
+                    "name": "Instructions",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "PO",
+                    "name": "PO",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "Net30",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Terms",
+                    "name": "Terms",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": "",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Sales Rep",
+                    "name": "SalesRep",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Bill To ID",
+                    "name": "BillToID",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Ship To ID",
+                    "name": "ShipToID",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "Ordered",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Status",
+                    "name": "OrderStatus",
+                    "semanticType": "Text"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Warehouse Num",
+                    "name": "WarehouseNum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": "Visa",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Credit Card",
+                    "name": "Creditcard",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "OrderOrderLine.ttOrder",
+            "relations": [
+                {
+                    "childName": "ttOrderLine",
+                    "parentName": "ttOrder",
+                    "relationFields": [
+                        {
+                            "childFieldName": "Ordernum",
+                            "parentFieldName": "Ordernum"
+                        }
+                    ],
+                    "relationName": "OrderLine"
+                }
+            ],
+            "resourceName": "OrderOrderLine",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "OrderOrderLine.ttOrder",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Num",
+                    "name": "Ordernum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Line Num",
+                    "name": "Linenum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Item Num",
+                    "name": "Itemnum",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Price",
+                    "name": "Price",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Qty",
+                    "name": "Qty",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "integer-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Discount",
+                    "name": "Discount",
+                    "semanticType": "Integer"
+                },
+                {
+                    "defaultValue": 0,
+                    "editorType": "numeric-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Extended Price",
+                    "name": "ExtendedPrice",
+                    "semanticType": "Number"
+                },
+                {
+                    "defaultValue": "Ordered",
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Order Line Status",
+                    "name": "OrderLineStatus",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "OrderOrderLine.ttOrderLine",
+            "relations": [
+                {
+                    "childName": "ttOrderLine",
+                    "parentName": "ttOrder",
+                    "relationFields": [
+                        {
+                            "childFieldName": "Ordernum",
+                            "parentFieldName": "Ordernum"
+                        }
+                    ],
+                    "relationName": "OrderLine"
+                }
+            ],
+            "resourceName": "OrderOrderLine",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "OrderOrderLine.ttOrderLine",
+            "type": "progress-data-source",
+            "uniqueID": "c064e5fc-6973-4c8e-8f5e-8f2a2fe9b0aa"
+        },
+        {
+            "clientSideProcessing": true,
+            "countFnName": "",
+            "fields": [
+                {
+                    "editorType": "text-input",
+                    "fieldType": "field",
+                    "format": "",
+                    "label": "Country",
+                    "name": "Country",
+                    "semanticType": "Text"
+                }
+            ],
+            "name": "Country",
+            "relations": [],
+            "resourceName": "Country",
+            "schemaVersion": "1.0",
+            "serviceName": "SportsService",
+            "tableName": "Country",
+            "type": "progress-data-source",
+            "uniqueID": "677f60f7-4820-490d-83d6-c2c113a975dd"
+        }
+    ],
+    "generateChildTables": true,
+    "name": "Sports",
+    "schemaVersion": "1.0",
+    "serviceUri": "http://localhost:8810/Sports",
+    "type": "progress-data-provider",
+    "uniqueID": "baeccc7c-f788-4ced-88a5-03dfeeb37ec5"
+}

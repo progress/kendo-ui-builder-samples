@@ -1,0 +1,49 @@
+{
+    "name": "sports-sample",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "babel-core": "^6.14.0",
+        "babel-loader": "^6.2.5",
+        "babel-preset-es2015": "^6.14.0",
+        "compression-webpack-plugin": "^0.3.2",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.26.1",
+        "expose-loader": "^0.7.1",
+        "extract-text-webpack-plugin": "^2.0.0-beta.4",
+        "file-loader": "^0.9.0",
+        "html-loader": "^0.4.4",
+        "html-webpack-plugin": "^2.24.1",
+        "ngtemplate-loader": "^1.3.1",
+        "postcss-loader": "^2.0.6",
+        "postcss-rule-scope": "file:local_modules/postcss-rule-scope",
+        "style-loader": "^0.13.1",
+        "url-loader": "^0.5.7",
+        "webpack": "^2.2.0",
+        "webpack-dev-server": "^2.2.0"
+    },
+    "dependencies": {
+        "@progress/kendo-ui": "2017.3.1026",
+        "angular": "^1.5.9",
+        "angular-animate": "^1.5.9",
+        "angular-sanitize": "^1.6.1",
+        "angular-translate": "^2.15.2",
+        "angular-ui-bootstrap": "^2.3.2",
+        "angular-ui-router": "^0.3.2",
+        "babel-polyfill": "^6.26.0",
+        "bootstrap": "^3.3.7",
+        "font-awesome": "^4.7.0",
+        "jquery": "^2.2.2",
+        "oclazyload": "^1.0.9",
+        "oidc-client": "^1.4.1"
+    },
+    "engines": {
+        "node": ">=4.3.0 <5.0.0 || >=5.10",
+        "npm": ">= 3.0.0"
+    },
+    "scripts": {
+        "start": "node_modules/.bin/webpack-dev-server",
+        "build:dev": "node_modules/.bin/webpack --config webpack.config.js",
+        "build:prod": "node_modules/.bin/webpack --config webpack.config.production.js"
+    }
+}
